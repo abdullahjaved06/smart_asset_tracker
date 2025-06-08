@@ -1,0 +1,158 @@
+#include <zephyr/dt-bindings/mipi_dbi/mipi_dbi.h>
+#include <zephyr/dt-bindings/display/ili9xxx.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+/ {
+    chosen {
+        zephyr,display = &ili9341;
+    };
+
+    aliases {
+        wifi0 = &nrf700x;
+    };
+
+    CUSTOM_PINS_PCB {
+        compatible = "gpio-keys";
+
+        backlight: backlight {
+            gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;   /* P0.08 for backlight */
+            label = "Enable/Disable Backlight";
+        };
+    };
+
+    mipi_dbi {
+        compatible = "zephyr,mipi-dbi-spi";
+        reset-gpios = <&gpio0 7 GPIO_ACTIVE_LOW>;  // Display reset
+        dc-gpios = <&gpio0 23 GPIO_ACTIVE_HIGH>;   // Data/command select
+        spi-dev = <&spi3>;
+
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        ili9341: ili9341@0 {
+            compatible = "ilitek,ili9341";
+            reg = <0>;                             // CS index 0 (gpio0.22)
+            mipi-max-frequency = <32000000>;
+
+            width = <240>;
+            height = <320>;
+            rotation = <0>;
+
+            ifmode = [40];
+            ifctl = [01 00 00];
+            pwctrla = [39 2c 00 34 02];
+            pwctrlb = [00 8b 30];
+            pwseqctrl = [55 01 23 01];
+            timctrla = [84 11 7a];
+            timctrlb = [00 00];
+            pumpratioctrl = [10];
+            enable3g = [02];
+            etmod = [06];
+            gamset = [01];
+            frmctr1 = [00 1b];
+            disctrl = [0a 82 27 04];
+            pwctrl1 = [21];
+            pwctrl2 = [10];
+            vmctrl1 = [31 3c];
+            vmctrl2 = [c0];
+
+            pgamctrl = [
+                0f 22 1f 0a 0e 06 4d 76 3b 03 0e 04 13 0e 0c
+            ];
+            ngamctrl = [
+                0c 23 26 04 10 04 39 24 4b 03 0b 0b 33 37 0f
+            ];
+
+            status = "okay";
+        };
+    };
+};
+
+&spi3 {
+    status = "okay";
+
+    cs-gpios = <&gpio0 22 GPIO_ACTIVE_LOW>,   // CS0: Display
+               <&gpio0 1 GPIO_ACTIVE_LOW>,    // CS1: nRF7002
+               <&gpio0 0 GPIO_ACTIVE_LOW>;    // CS2: Flash
+
+    pinctrl-0 = <&spi3_default>;
+    pinctrl-1 = <&spi3_sleep>;
+    pinctrl-names = "default", "sleep";
+
+    /* nRF7002 Wi-Fi */
+    nrf700x: nrf7002@1 {
+        compatible = "nordic,nrf7002-spi";
+        reg = <1>;                                 // CS index 1
+        spi-max-frequency = <8000000>;
+        status = "okay";
+
+        iovdd-ctrl-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
+        bucken-gpios = <&gpio0 5 GPIO_ACTIVE_HIGH>;
+        host-irq-gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
+    };
+
+    /* MX25R16 External SPI NOR Flash */
+    mx25r16: mx25r16@2 {
+        compatible = "jedec,spi-nor";
+        reg = <2>;                                 // CS index 2
+        spi-max-frequency = <80000000>;
+        label = "MX25R16";
+        jedec-id = [c2 28 15];
+        size = <0x1000000>;                        // 2 MB
+        has-dpd;
+        t-enter-dpd = <10000>;                     // 10 us
+        t-exit-dpd = <35000>;                      // 35 us
+    };
+};
+
+&pinctrl {
+    spi3_default: spi3_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 20)>,
+                    <NRF_PSEL(SPIM_MOSI, 0, 3)>,
+                    <NRF_PSEL(SPIM_MISO, 0, 21)>;
+        };
+    };
+
+    spi3_sleep: spi3_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 20)>,
+                    <NRF_PSEL(SPIM_MOSI, 0, 3)>,
+                    <NRF_PSEL(SPIM_MISO, 0, 21)>;
+            low-power-enable;
+        };
+    };
+}
+
+&i2c0 {
+    status = "okay";
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-1 = <&i2c0_sleep>;
+    pinctrl-names = "default", "sleep";
+    clock-frequency = <I2C_BITRATE_STANDARD>;
+
+    lis2dh12@18 {
+        compatible = "st,lis2dh";
+        reg = <0x18>;  // LIS2DH I²C address when SDO/SA0 is LOW (your case)
+        label = "LIS2DH12";
+        irq-gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>;  // Connect LIS_INT1 to GPIO0.31 (adjust if different)
+        int-gpios = <&gpio0 30 GPIO_ACTIVE_HIGH>;
+    };
+};
+
+&pinctrl {
+    i2c0_default: i2c0_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SCL, 0, 25)>,
+                    <NRF_PSEL(TWIM_SDA, 0, 24)>;
+        };
+    };
+
+    i2c0_sleep: i2c0_sleep {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SCL, 0, 25)>,
+                    <NRF_PSEL(TWIM_SDA, 0, 24)>;
+            low-power-enable;
+        };
+    };
+};

@@ -1,0 +1,2 @@
+osource "/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/boards/shields/*/Kconfig.shield"
+osource "/home/abdullah/ncs/v2.9.0/nrf/boards/shields/*/Kconfig.shield"

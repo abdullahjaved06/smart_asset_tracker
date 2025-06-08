@@ -1,0 +1,156 @@
+#include <zephyr/dt-bindings/mipi_dbi/mipi_dbi.h>
+#include <zephyr/dt-bindings/display/ili9xxx.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+&spi1 {
+    status = "okay";
+    cs-gpios = <&gpio1 15 GPIO_ACTIVE_LOW>;
+};
+
+
+
+
+/{
+    chosen{
+        zephyr,display = &ili9341;
+    };
+
+	CUSTOM_PINS_PCB {
+        compatible = "gpio-keys";
+        backlight:backlight{
+            gpios = <&gpio1 8 GPIO_ACTIVE_HIGH >;   /*GPIO PIN P0.08 */
+            label = "Enable/Disale Backlight";
+        };
+        
+    };
+
+    
+    mipi_dbi {
+    compatible = "zephyr,mipi-dbi-spi";
+    reset-gpios = <&gpio0 28 GPIO_ACTIVE_LOW>;
+    dc-gpios = <&gpio0 3 GPIO_ACTIVE_HIGH>;
+	// cmd-data-gpios = <&gpio0 3 GPIO_ACTIVE_LOW>; 
+
+
+    spi-dev = <&spi1>;
+    #address-cells = <1>;
+    #size-cells = <0>;
+
+    ili9341: ili9341@0 {
+        compatible = "ilitek,ili9341";
+        reg = <0>;
+        mipi-max-frequency = <32000000>;
+       
+		// reset-gpios = <&gpio0 28 GPIO_ACTIVE_LOW>;
+	
+		width = <240>;
+		height = <320>;
+	
+		// pixel-format = "rgb565";
+		rotation = <0>;
+		// display-inversion = <0>;
+	
+		ifmode = [40];
+		ifctl = [01 00 00];
+		pwctrla = [39 2c 00 34 02];
+		pwctrlb = [00 8b 30];
+		pwseqctrl = [55 01 23 01];
+		timctrla = [84 11 7a];
+		timctrlb = [00 00];
+		pumpratioctrl = [10];
+		enable3g = [02];
+		etmod = [06];
+		gamset = [01];
+		frmctr1 = [00 1b];
+		disctrl = [0a 82 27 04];
+		pwctrl1 = [21];
+		pwctrl2 = [10];
+		vmctrl1 = [31 3c];
+		vmctrl2 = [c0];
+	
+		pgamctrl = [
+			0f 22 1f 0a 0e 06 4d 76 3b 03 0e 04 13 0e 0c
+		];
+		ngamctrl = [
+			0c 23 26 04 10 04 39 24 4b 03 0b 0b 33 37 0f
+		];
+        status = "okay";
+        };
+    };
+};
+
+
+
+/* NCS: 2.5.0 */
+
+// /{
+//     chosen{
+//         zephyr,display = &ili9341;
+//     };
+// };
+
+// &spi1 {
+//     status = "okay";
+//     cs-gpios = <&gpio1 15 GPIO_ACTIVE_LOW>;
+
+//     ili9341: ili9341@0 {
+// 		compatible = "ilitek,ili9341";
+// 		reg = <0>;
+// 		spi-max-frequency = <10000000>;
+// 		label = "ILI9341";
+	
+// 		reset-gpios = <&gpio0 28 GPIO_ACTIVE_LOW>;
+// 		cmd-data-gpios = <&gpio0 3 GPIO_ACTIVE_LOW>;
+	
+// 		width = <240>;
+// 		height = <320>;
+	
+// 		// pixel-format = "rgb565";
+// 		rotation = <0>;
+// 		// display-inversion = <0>;
+	
+// 		ifmode = [40];
+// 		ifctl = [01 00 00];
+// 		pwctrla = [39 2c 00 34 02];
+// 		pwctrlb = [00 8b 30];
+// 		pwseqctrl = [55 01 23 01];
+// 		timctrla = [84 11 7a];
+// 		timctrlb = [00 00];
+// 		pumpratioctrl = [10];
+// 		enable3g = [02];
+// 		etmod = [06];
+// 		gamset = [01];
+// 		frmctr1 = [00 1b];
+// 		disctrl = [0a 82 27 04];
+// 		pwctrl1 = [21];
+// 		pwctrl2 = [10];
+// 		vmctrl1 = [31 3c];
+// 		vmctrl2 = [c0];
+	
+// 		pgamctrl = [
+// 			0f 22 1f 0a 0e 06 4d 76 3b 03 0e 04 13 0e 0c
+// 		];
+// 		ngamctrl = [
+// 			0c 23 26 04 10 04 39 24 4b 03 0b 0b 33 37 0f
+// 		];
+// 	};
+// };
+
+&pinctrl {
+	spi1_default: spi1_default {
+		group1 {
+			psels = <NRF_PSEL(SPIM_SCK, 0, 31)>,
+			        <NRF_PSEL(SPIM_MOSI, 0, 29)>,
+			        <NRF_PSEL(SPIM_MISO, 0, 30)>;
+		};
+	};
+
+	spi1_sleep: spi1_sleep {
+		group1 {
+			psels = <NRF_PSEL(SPIM_SCK, 0, 31)>,
+			        <NRF_PSEL(SPIM_MOSI, 0, 29)>,
+			        <NRF_PSEL(SPIM_MISO, 0, 30)>;
+			low-power-enable;
+		};
+	};
+};
