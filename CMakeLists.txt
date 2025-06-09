@@ -6,10 +6,18 @@ project(blinky)
 
 target_sources(app PRIVATE src/main.c)
 
-# Add the component AWS_IOT_MQTT
+# Add the component DISPLAY
 target_sources(app PRIVATE
     components/ILI9341_display/ili9341_display.c)
 target_include_directories(app
     PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/components/ILI9341_display
+)
+
+# Add the component LIS2DH
+target_sources(app PRIVATE
+    components/lis2dh/lis2dh.c)
+target_include_directories(app
+    PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/components/lis2dh
 )

@@ -4,6 +4,7 @@
         "kernel.h": "c",
         "display.h": "c",
         "ili9341_display.h": "c",
-        "device.h": "c"
+        "device.h": "c",
+        "lis2dh.h": "c"
     }
 }

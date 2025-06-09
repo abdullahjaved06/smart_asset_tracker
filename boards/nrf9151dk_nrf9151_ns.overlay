@@ -9,6 +9,7 @@
 
     aliases {
         wifi0 = &nrf700x;
+         lis2dh = &lis2dh12; 
     };
 
     CUSTOM_PINS_PCB {
@@ -128,7 +129,7 @@ nrf700x: nrf7002@1 {
     pinctrl-names = "default", "sleep";
     clock-frequency = <I2C_BITRATE_STANDARD>;
 
-    lis2dh12@18 {
+    lis2dh12: lis2dh@18 {
         compatible = "st,lis2dh";
         reg = <0x18>;  // LIS2DH I²C address when SDO/SA0 is LOW (your case)
         label = "LIS2DH12";

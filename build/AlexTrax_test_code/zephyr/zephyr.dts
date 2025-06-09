@@ -31,6 +31,7 @@
 		mcuboot-led0 = &led0;
 		watchdog0 = &wdt0;
 		wifi0 = &nrf700x;
+		lis2dh = &lis2dh12;
 	};
 	soc {
 		#address-cells = < 0x1 >;
@@ -244,7 +245,7 @@
 				pinctrl-1 = < &i2c0_sleep >;
 				pinctrl-names = "default", "sleep";
 				clock-frequency = < 0x186a0 >;
-				lis2dh12@18 {
+				lis2dh12: lis2dh@18 {
 					compatible = "st,lis2dh";
 					reg = < 0x18 >;
 					label = "LIS2DH12";

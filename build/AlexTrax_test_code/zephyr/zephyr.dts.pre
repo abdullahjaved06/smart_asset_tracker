@@ -1055,6 +1055,7 @@ arduino_spi: &spi3 {
 
     aliases {
         wifi0 = &nrf700x;
+         lis2dh = &lis2dh12;
     };
 
     CUSTOM_PINS_PCB {
@@ -1174,7 +1175,7 @@ nrf700x: nrf7002@1 {
     pinctrl-names = "default", "sleep";
     clock-frequency = <100000>;
 
-    lis2dh12@18 {
+    lis2dh12: lis2dh@18 {
         compatible = "st,lis2dh";
         reg = <0x18>;
         label = "LIS2DH12";
