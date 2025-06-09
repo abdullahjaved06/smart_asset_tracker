@@ -6,10 +6,10 @@
 #include <lvgl.h>
 
 #define SLEEP_TIME_MS 10
+
 #define BACKLIGHTNODE DT_NODELABEL(backlight)
 
 static const struct gpio_dt_spec backlight_gpio = GPIO_DT_SPEC_GET(BACKLIGHTNODE, gpios);
-
 void main(void) {
     const struct device *display_dev;
 
@@ -25,6 +25,7 @@ void main(void) {
         return;
     }
     printk("Display ready...\n");
+    
 
     // Set screen background color
     // lv_obj_set_style_bg_color(lv_scr_act(), lv_color_white(), LV_PART_MAIN);
@@ -56,6 +57,7 @@ void main(void) {
     display_blanking_off(display_dev);
 
     while (1) {
+        
         lv_timer_handler();
         k_msleep(SLEEP_TIME_MS);
     }
