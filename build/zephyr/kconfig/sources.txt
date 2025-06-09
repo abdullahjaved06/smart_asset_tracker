@@ -1,8 +1,8 @@
-/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/Kconfig/Kconfig.sysbuild.modules
-/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/Kconfig/boards/Kconfig.nrf52840dk
-/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/Kconfig/boards/Kconfig.sysbuild
-/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/Kconfig/soc/Kconfig.soc
-/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/Kconfig/soc/Kconfig.sysbuild
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/Kconfig/Kconfig.sysbuild.modules
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/Kconfig/boards/Kconfig.nrf9151dk
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/Kconfig/boards/Kconfig.sysbuild
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/Kconfig/soc/Kconfig.soc
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/Kconfig/soc/Kconfig.sysbuild
 /home/abdullah/ncs/v2.9.0/nrf/sysbuild/Kconfig.appcore
 /home/abdullah/ncs/v2.9.0/nrf/sysbuild/Kconfig.approtect
 /home/abdullah/ncs/v2.9.0/nrf/sysbuild/Kconfig.bt_fast_pair
@@ -20,7 +20,7 @@
 /home/abdullah/ncs/v2.9.0/nrf/sysbuild/Kconfig.xip
 /home/abdullah/ncs/v2.9.0/nrf/sysbuild/Kconfig.zip
 /home/abdullah/ncs/v2.9.0/zephyr/boards/Kconfig.v2
-/home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf52840dk/Kconfig.nrf52840dk
+/home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk/Kconfig.nrf9151dk
 /home/abdullah/ncs/v2.9.0/zephyr/modules/Kconfig.sysbuild
 /home/abdullah/ncs/v2.9.0/zephyr/share/sysbuild/Kconfig
 /home/abdullah/ncs/v2.9.0/zephyr/share/sysbuild/Kconfig.v2

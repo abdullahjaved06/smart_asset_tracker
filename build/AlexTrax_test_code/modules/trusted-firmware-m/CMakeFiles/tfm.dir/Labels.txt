@@ -1,0 +1,13 @@
+# Target labels
+ tfm
+# Source files and their labels
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/trusted-firmware-m/CMakeFiles/tfm
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/trusted-firmware-m/CMakeFiles/tfm.rule
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/trusted-firmware-m/CMakeFiles/tfm-complete.rule
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/trusted-firmware-m/tfm-prefix/src/tfm-stamp/tfm-build.rule
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/trusted-firmware-m/tfm-prefix/src/tfm-stamp/tfm-configure.rule
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/trusted-firmware-m/tfm-prefix/src/tfm-stamp/tfm-download.rule
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/trusted-firmware-m/tfm-prefix/src/tfm-stamp/tfm-install.rule
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/trusted-firmware-m/tfm-prefix/src/tfm-stamp/tfm-mkdir.rule
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/trusted-firmware-m/tfm-prefix/src/tfm-stamp/tfm-patch.rule
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/trusted-firmware-m/tfm-prefix/src/tfm-stamp/tfm-update.rule

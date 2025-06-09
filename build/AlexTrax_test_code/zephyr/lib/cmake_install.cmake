@@ -39,41 +39,41 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/lib/crc/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/lib/crc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/lib/libc/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/lib/libc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/lib/posix/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/lib/posix/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/lib/hash/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/lib/hash/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/lib/heap/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/lib/heap/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/lib/mem_blocks/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/lib/mem_blocks/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/lib/os/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/lib/os/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/lib/utils/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/lib/utils/cmake_install.cmake")
 endif()
 

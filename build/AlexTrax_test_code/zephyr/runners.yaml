@@ -1,10 +1,7 @@
 # Available runners configured by board.cmake.
 runners:
 - nrfjprog
-- nrfutil
 - jlink
-- pyocd
-- openocd
 
 # Default flash runner if --runner is not given.
 flash-runner: nrfjprog
@@ -14,10 +11,10 @@ debug-runner: jlink
 
 # Common runner configuration values.
 config:
-  board_dir: /home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf52840dk
+  board_dir: /home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk
   # Build outputs:
   elf_file: zephyr.elf
-  hex_file: /home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/merged.hex
+  hex_file: /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/merged.hex
   bin_file: zephyr.bin
   # Host tools:
   gdb: /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb
@@ -27,27 +24,7 @@ args:
   nrfjprog:
     []
 
-  nrfutil:
-    []
-
   jlink:
     - --dt-flash=y
-    - --device=nRF52840_xxAA
+    - --device=nRF9160_xxAA
     - --speed=4000
-  pyocd:
-    - --dt-flash=y
-    - --target=nrf52840
-    - --frequency=4000000
-  openocd:
-    - --cmd-load
-    - flash write_image erase
-    - --cmd-verify
-    - verify_image
-    - --cmd-pre-init
-    - set WORKAREASIZE 0x4000
-    - --cmd-pre-init
-    - source [find interface/jlink.cfg]
-    - --cmd-pre-init
-    - transport select swd
-    - --cmd-pre-init
-    - source [find target/nrf52.cfg]

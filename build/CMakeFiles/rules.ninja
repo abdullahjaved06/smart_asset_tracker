@@ -23,7 +23,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake --regenerate-during-build -S/home/abdullah/ncs/v2.9.0/zephyr/share/sysbuild -B/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build
+  command = /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake --regenerate-during-build -S/home/abdullah/ncs/v2.9.0/zephyr/share/sysbuild -B/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build
   description = Re-running CMake...
   generator = 1
 

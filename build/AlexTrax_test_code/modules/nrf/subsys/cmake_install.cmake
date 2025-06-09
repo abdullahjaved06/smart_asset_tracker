@@ -39,41 +39,46 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/net/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/nrf_security/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/dfu/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/net/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/mpsl/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/dfu/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/logging/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/mpsl/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/shell/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/logging/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/debug/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/shell/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/partition_manager/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/debug/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/suit/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/partition_manager/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/suit/cmake_install.cmake")
 endif()
 

@@ -39,26 +39,26 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/_sysbuild/sysbuild/images/bootloader/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/_sysbuild/sysbuild/images/bootloader/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/modules/nrf/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/modules/nrf/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/modules/mcuboot/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/modules/mcuboot/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/_sysbuild/sysbuild/images/boards/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/_sysbuild/sysbuild/images/boards/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/_sysbuild/sysbuild/images/soc/cmake_install.cmake")
+  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/_sysbuild/sysbuild/images/soc/cmake_install.cmake")
 endif()
 

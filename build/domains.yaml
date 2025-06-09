@@ -1,7 +1,7 @@
 default: AlexTrax_test_code
-build_dir: /home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build
+build_dir: /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build
 domains:
   - name: AlexTrax_test_code
-    build_dir: /home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/AlexTrax_test_code
+    build_dir: /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code
 flash_order:
   - AlexTrax_test_code

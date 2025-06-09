@@ -1,13 +1,13 @@
 # Target labels
  AlexTrax_test_code
 # Source files and their labels
-/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/_sysbuild/sysbuild/images/CMakeFiles/AlexTrax_test_code
-/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/_sysbuild/sysbuild/images/CMakeFiles/AlexTrax_test_code.rule
-/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/_sysbuild/sysbuild/images/CMakeFiles/AlexTrax_test_code-complete.rule
-/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/_sysbuild/sysbuild/images/AlexTrax_test_code-prefix/src/AlexTrax_test_code-stamp/AlexTrax_test_code-build.rule
-/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/_sysbuild/sysbuild/images/AlexTrax_test_code-prefix/src/AlexTrax_test_code-stamp/AlexTrax_test_code-configure.rule
-/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/_sysbuild/sysbuild/images/AlexTrax_test_code-prefix/src/AlexTrax_test_code-stamp/AlexTrax_test_code-download.rule
-/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/_sysbuild/sysbuild/images/AlexTrax_test_code-prefix/src/AlexTrax_test_code-stamp/AlexTrax_test_code-install.rule
-/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/_sysbuild/sysbuild/images/AlexTrax_test_code-prefix/src/AlexTrax_test_code-stamp/AlexTrax_test_code-mkdir.rule
-/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/_sysbuild/sysbuild/images/AlexTrax_test_code-prefix/src/AlexTrax_test_code-stamp/AlexTrax_test_code-patch.rule
-/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/_sysbuild/sysbuild/images/AlexTrax_test_code-prefix/src/AlexTrax_test_code-stamp/AlexTrax_test_code-update.rule
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/_sysbuild/sysbuild/images/CMakeFiles/AlexTrax_test_code
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/_sysbuild/sysbuild/images/CMakeFiles/AlexTrax_test_code.rule
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/_sysbuild/sysbuild/images/CMakeFiles/AlexTrax_test_code-complete.rule
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/_sysbuild/sysbuild/images/AlexTrax_test_code-prefix/src/AlexTrax_test_code-stamp/AlexTrax_test_code-build.rule
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/_sysbuild/sysbuild/images/AlexTrax_test_code-prefix/src/AlexTrax_test_code-stamp/AlexTrax_test_code-configure.rule
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/_sysbuild/sysbuild/images/AlexTrax_test_code-prefix/src/AlexTrax_test_code-stamp/AlexTrax_test_code-download.rule
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/_sysbuild/sysbuild/images/AlexTrax_test_code-prefix/src/AlexTrax_test_code-stamp/AlexTrax_test_code-install.rule
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/_sysbuild/sysbuild/images/AlexTrax_test_code-prefix/src/AlexTrax_test_code-stamp/AlexTrax_test_code-mkdir.rule
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/_sysbuild/sysbuild/images/AlexTrax_test_code-prefix/src/AlexTrax_test_code-stamp/AlexTrax_test_code-patch.rule
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/_sysbuild/sysbuild/images/AlexTrax_test_code-prefix/src/AlexTrax_test_code-stamp/AlexTrax_test_code-update.rule

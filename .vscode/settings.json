@@ -2,6 +2,8 @@
     "files.associations": {
         "devicetree.h": "c",
         "kernel.h": "c",
-        "display.h": "c"
+        "display.h": "c",
+        "ili9341_display.h": "c",
+        "device.h": "c"
     }
 }

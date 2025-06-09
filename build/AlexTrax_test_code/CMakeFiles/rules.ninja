@@ -52,7 +52,7 @@ rule C_COMPILER__zephyr_final_MinSizeRel
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__zephyr_final_MinSizeRel
-  command = $PRE_LINK && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $FLAGS $LINK_FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES -L"/home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v7e-m/nofp" -lc -lgcc && $POST_BUILD
+  command = $PRE_LINK && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $FLAGS $LINK_FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES -L"/home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp" -lc -lgcc && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
 
@@ -90,7 +90,7 @@ rule C_COMPILER__zephyr_pre0_MinSizeRel
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__zephyr_pre0_MinSizeRel
-  command = $PRE_LINK && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $FLAGS $LINK_FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES -L"/home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v7e-m/nofp" -lc -lgcc && $POST_BUILD
+  command = $PRE_LINK && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $FLAGS $LINK_FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES -L"/home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp" -lc -lgcc && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
 
@@ -196,6 +196,25 @@ rule C_COMPILER__arch__arm__core__cortex_m_MinSizeRel
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__arch__arm__core__cortex_m_MinSizeRel
+  command = $PRE_LINK && ccache /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__arch__arm__core__cortex_m__cmse_MinSizeRel
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__arch__arm__core__cortex_m__cmse_MinSizeRel
   command = $PRE_LINK && ccache /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -489,7 +508,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__timer_MinSizeRel
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__.2e.2e__nrf__drivers__hw_cc3xx_MinSizeRel
+rule C_COMPILER__.2e.2e__nrf__lib__nrf_modem_lib_MinSizeRel
   depfile = $DEP_FILE
   deps = gcc
   command = ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -499,7 +518,159 @@ rule C_COMPILER__.2e.2e__nrf__drivers__hw_cc3xx_MinSizeRel
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__drivers__hw_cc3xx_MinSizeRel
+rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__lib__nrf_modem_lib_MinSizeRel
+  command = $PRE_LINK && ccache /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__.2e.2e__nrf__lib__modem_antenna_MinSizeRel
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__lib__modem_antenna_MinSizeRel
+  command = $PRE_LINK && ccache /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__mbedcrypto_MinSizeRel
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__mbedcrypto_MinSizeRel
+  command = $PRE_LINK && ccache /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__nrf_security_utils_MinSizeRel
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__nrf_security_utils_MinSizeRel
+  command = $PRE_LINK && ccache /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__mbedcrypto_base_MinSizeRel
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__mbedcrypto_base_MinSizeRel
+  command = $PRE_LINK && ccache /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__mbedtls_zephyr_MinSizeRel
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__mbedtls_zephyr_MinSizeRel
+  command = $PRE_LINK && ccache /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__tfm_api_nrf_MinSizeRel
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__tfm_api_nrf_MinSizeRel
+  command = $PRE_LINK && ccache /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__.2e.2e__nrf__modules__trusted-firmware-m_MinSizeRel
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__modules__trusted-firmware-m_MinSizeRel
+  command = $PRE_LINK && ccache /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__tfm_api_MinSizeRel
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__tfm_api_MinSizeRel
   command = $PRE_LINK && ccache /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -585,7 +756,7 @@ rule C_STATIC_LIBRARY_LINKER__kernel_MinSizeRel
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake --regenerate-during-build -S/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code -B/home/abdullah/Abdullah/Projects/projects/ili9341_display_project/AlexTrax_test_code/build/AlexTrax_test_code
+  command = /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake --regenerate-during-build -S/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code -B/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code
   description = Re-running CMake...
   generator = 1
 

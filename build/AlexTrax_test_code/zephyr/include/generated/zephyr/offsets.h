@@ -21,11 +21,13 @@
 #define ___thread_t_arch_OFFSET 0xac
 #define ___thread_t_stack_info_OFFSET 0x98
 #define ___thread_t_tls_OFFSET 0xa8
-#define __z_interrupt_stack_SIZEOF 0x840
-#define __z_interrupt_all_stacks_SIZEOF 0x840
+#define __z_interrupt_stack_SIZEOF 0x800
+#define __z_interrupt_all_stacks_SIZEOF 0x800
 #define _PM_DEVICE_STRUCT_FLAGS_OFFSET 0x0
 #define ___thread_arch_t_basepri_OFFSET 0x0
 #define ___thread_arch_t_swap_return_value_OFFSET 0x4
+#define ___thread_arch_t_mode_OFFSET 0x8
+#define ___thread_arch_t_mode_exc_return_OFFSET 0x9
 #define ___basic_sf_t_pc_OFFSET 0x18
 #define ___basic_sf_t_xpsr_OFFSET 0x1c
 #define ___esf_t_SIZEOF 0x20

@@ -2,8 +2,8 @@
 _region_min_align = 32;
 MEMORY
     {
-    FLASH (rx) : ORIGIN = 0x0, LENGTH = 0x100000
-    RAM (wx) : ORIGIN = 0x20000000, LENGTH = 0x40000
+    FLASH (rx) : ORIGIN = 0x10000, LENGTH = 0xf0000
+    RAM (wx) : ORIGIN = 0x2000c568, LENGTH = 0x33a98
    
     IDT_LIST (wx) : ORIGIN = 0xFFFF7FFF, LENGTH = 32K
     }
@@ -41,7 +41,7 @@ SECTIONS
  *(.iplt)
  }
    
- __rom_region_start = 0x0;
+ __rom_region_start = 0x10000;
     rom_start :
  {
 HIDDEN(__rom_start_address = .);
@@ -49,7 +49,7 @@ FILL(0x00);
 . += 0x0 - (. - __rom_start_address);
 . = ALIGN(4);
 . = ALIGN( 1 << LOG2CEIL(4 * 32) );
-. = ALIGN( 1 << LOG2CEIL(4 * (16 + 48)) );
+. = ALIGN( 1 << LOG2CEIL(4 * (16 + 65)) );
 _vector_start = .;
 KEEP(*(.exc_vector_table))
 KEEP(*(".exc_vector_table.*"))
@@ -177,10 +177,24 @@ ztest :
  *(.rodata)
  *(".rodata.*")
  *(.gnu.linkonce.r.*)
+. = ALIGN(4);
+_nrf_modem_lib_at_cfun_cb_list_start = .;
+KEEP(*(SORT_BY_NAME("._nrf_modem_lib_at_cfun_cb.*")));
+_nrf_modem_lib_at_cfun_cb_list_end = .;
+. = ALIGN(4);
+_nrf_modem_lib_dfu_cb_list_start = .;
+KEEP(*(SORT_BY_NAME("._nrf_modem_lib_dfu_cb.*")));
+_nrf_modem_lib_dfu_cb_list_end = .;
+_nrf_modem_lib_init_cb_list_start = .;
+KEEP(*(SORT_BY_NAME("._nrf_modem_lib_init_cb.*")));
+_nrf_modem_lib_init_cb_list_end = .;
+_nrf_modem_lib_shutdown_cb_list_start = .;
+KEEP(*(SORT_BY_NAME("._nrf_modem_lib_shutdown_cb.*")));
+_nrf_modem_lib_shutdown_cb_list_end = .;
  . = ALIGN(4);
  } > FLASH
  __rodata_region_end = .;
- . = ALIGN(_region_min_align); . = ALIGN( 1 << LOG2CEIL(__rodata_region_end - ADDR(rom_start)));
+ . = ALIGN(_region_min_align);
  __rom_region_end = __rom_region_start + . - ADDR(rom_start);
    
     /DISCARD/ : {
@@ -190,7 +204,7 @@ ztest :
  *(.igot)
  }
    
- . = 0x20000000;
+ . = 0x2000c568;
  . = ALIGN(_region_min_align);
  _image_ram_start = .;
 _RTT_SECTION_NAME (NOLOAD) : ALIGN_WITH_INPUT
@@ -202,11 +216,11 @@ __rtt_buff_data_end = ALIGN(4);
 __rtt_buff_data_size = __rtt_buff_data_end - __rtt_buff_data_start;
 .ramfunc : ALIGN_WITH_INPUT
 {
- . = ALIGN(_region_min_align); . = ALIGN( 1 << LOG2CEIL(__ramfunc_size));
+ . = ALIGN(_region_min_align);
  __ramfunc_start = .;
  *(.ramfunc)
  *(".ramfunc.*")
- . = ALIGN(_region_min_align); . = ALIGN( 1 << LOG2CEIL(__ramfunc_size));
+ . = ALIGN(_region_min_align);
  __ramfunc_end = .;
 } > RAM AT > FLASH
 __ramfunc_size = __ramfunc_end - __ramfunc_start;
@@ -268,7 +282,7 @@ __ramfunc_load_start = LOADADDR(.ramfunc);
         *(".noinit.*")
  *(".kernel_noinit.*")
         } > RAM AT > RAM
-    __kernel_ram_end = 0x20000000 + 0x40000;
+    __kernel_ram_end = 0x2000c568 + 0x33a98;
     __kernel_ram_size = __kernel_ram_end - __kernel_ram_start;
 PROVIDE(soc_reset_hook = SystemInit);
 .intList :

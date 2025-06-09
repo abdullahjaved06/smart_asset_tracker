@@ -5,3 +5,11 @@ find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 project(blinky)
 
 target_sources(app PRIVATE src/main.c)
+
+# Add the component AWS_IOT_MQTT
+target_sources(app PRIVATE
+    components/ILI9341_display/ili9341_display.c)
+target_include_directories(app
+    PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/components/ILI9341_display
+)
