@@ -251,6 +251,12 @@
 					label = "LIS2DH12";
 					irq-gpios = < &gpio0 0x6 0x1 >, < &gpio0 0x7 0x1 >;
 				};
+				sht4x: sht4x@44 {
+					compatible = "sensirion,sht4x";
+					repeatability = < 0x0 >;
+					reg = < 0x44 >;
+					label = "SHT4X";
+				};
 			};
 			i2c1: i2c@9000 {
 				compatible = "nordic,nrf-twim";

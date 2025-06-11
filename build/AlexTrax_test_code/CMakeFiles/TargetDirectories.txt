@@ -253,6 +253,9 @@
 /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/drivers/sensor/seeed/CMakeFiles/edit_cache.dir
 /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/drivers/sensor/sensirion/CMakeFiles/rebuild_cache.dir
 /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/drivers/sensor/sensirion/CMakeFiles/edit_cache.dir
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/drivers/sensor/sensirion/sht4x/CMakeFiles/rebuild_cache.dir
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/drivers/sensor/sensirion/sht4x/CMakeFiles/edit_cache.dir
+/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/drivers/sensor/sensirion/sht4x/CMakeFiles/drivers__sensor__sensirion__sht4x.dir
 /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/drivers/sensor/silabs/CMakeFiles/rebuild_cache.dir
 /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/drivers/sensor/silabs/CMakeFiles/edit_cache.dir
 /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/drivers/sensor/st/CMakeFiles/rebuild_cache.dir
