@@ -1183,7 +1183,6 @@ arduino_spi: &spi3 {
 
     };
       sht4x: sht4x@44 {
-
         compatible="sensirion,sht4x";
         repeatability = <0>;
         reg = <0x44>;

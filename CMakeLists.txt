@@ -21,3 +21,11 @@ target_include_directories(app
     PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/components/lis2dh
 )
+
+# Add the component LIS2DH
+target_sources(app PRIVATE
+    components/sht4x/sht4x.c)
+target_include_directories(app
+    PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/components/sht4x
+)

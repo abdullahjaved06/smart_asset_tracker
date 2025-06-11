@@ -4,7 +4,11 @@
 
 #include "../components/ILI9341_display/ili9341_display.h"
 #include "../components/lis2dh/lis2dh.h"
+#include "../components/sht4x/sht4x.h"
+
     const struct device *sensor = DEVICE_DT_GET(DT_NODELABEL(lis2dh12));
+    const struct device *sht4x_sensor = DEVICE_DT_GET(DT_NODELABEL(sht4x));
+
 
 #define SLEEP_TIME_MS 2000
 
