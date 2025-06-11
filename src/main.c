@@ -7,13 +7,23 @@
 #include "../components/sht4x/sht4x.h"
 
     const struct device *sensor = DEVICE_DT_GET(DT_NODELABEL(lis2dh12));
-    const struct device *sht4x_sensor = DEVICE_DT_GET(DT_NODELABEL(sht4x));
 
 
 #define SLEEP_TIME_MS 2000
+#define SHT4X_NODE DT_NODELABEL(sht4x)
 
 void main(void) {
+    
+    const struct device *sht4x_sensor = DEVICE_DT_GET(SHT4X_NODE);
+    int ret;
     ili9341_display_init();
+       /* Initialize the SHT4x sensor */
+    ret = init_sht4x_sensor(&sht4x_sensor);
+    if (ret) {
+        return;
+    }
+
+   
 
     // const struct device *sensor = DEVICE_DT_GET_ANY(st_lis2dh);
 
@@ -22,7 +32,15 @@ void main(void) {
     while (1) {
         lv_timer_handler();                 // Update display
         lisd2h_poll_once(sensor);          // Read sensor and print
+         /* Fetch sensor data and print it */
+        ret = sht4x_sensor_data(sht4x_sensor);
+        if (ret) {
+            return;
+        }
         k_msleep(SLEEP_TIME_MS);
     }
 }
 
+
+
+ 

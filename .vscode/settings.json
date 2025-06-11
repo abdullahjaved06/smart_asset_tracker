@@ -6,6 +6,8 @@
         "ili9341_display.h": "c",
         "device.h": "c",
         "lis2dh.h": "c",
-        "sht4x.h": "c"
+        "sht4x.h": "c",
+        "stdio.h": "c",
+        "sensor.h": "c"
     }
 }
