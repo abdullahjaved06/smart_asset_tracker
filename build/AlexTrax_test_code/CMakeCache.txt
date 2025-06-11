@@ -592,7 +592,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=204
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=208
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -651,9 +651,9 @@ HWM:INTERNAL=v2
 HWMv2:INTERNAL=True
 KERNEL_META_PATH:INTERNAL=/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/zephyr.meta
 //shared var
-PM_YML_DEP_FILES:INTERNAL=/home/abdullah/ncs/v2.9.0/nrf/subsys/partition_manager/pm.yml.libmodem;/home/abdullah/ncs/v2.9.0/nrf/subsys/partition_manager/pm.yml.tfm;/home/abdullah/ncs/v2.9.0/nrf/subsys/partition_manager/pm.yml.trustzone
+PM_YML_DEP_FILES:INTERNAL=/home/abdullah/ncs/v2.9.0/nrf/subsys/partition_manager/pm.yml.libmodem;/home/abdullah/ncs/v2.9.0/nrf/subsys/partition_manager/pm.yml.tfm;/home/abdullah/ncs/v2.9.0/nrf/subsys/partition_manager/pm.yml.trustzone;/home/abdullah/ncs/v2.9.0/nrf/subsys/partition_manager/pm.yml.file_system
 //shared var
-PM_YML_FILES:INTERNAL=/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/partition_manager/pm.yml.libmodem;/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/partition_manager/pm.yml.tfm;/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/partition_manager/pm.yml.trustzone
+PM_YML_FILES:INTERNAL=/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/partition_manager/pm.yml.libmodem;/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/partition_manager/pm.yml.tfm;/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/partition_manager/pm.yml.trustzone;/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/partition_manager/pm.yml.file_system
 //List of SoC directories for SoC (nrf9151)
 SOC_DIRECTORIES:INTERNAL=/home/abdullah/ncs/v2.9.0/zephyr/soc/nordic
 //SoC Linker script

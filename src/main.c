@@ -5,6 +5,7 @@
 #include "../components/ILI9341_display/ili9341_display.h"
 #include "../components/lis2dh/lis2dh.h"
 #include "../components/sht4x/sht4x.h"
+#include "../components/ext_flash/max25r16.h"
 
     const struct device *sensor = DEVICE_DT_GET(DT_NODELABEL(lis2dh12));
 

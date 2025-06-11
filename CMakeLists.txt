@@ -22,10 +22,18 @@ target_include_directories(app
     ${CMAKE_CURRENT_SOURCE_DIR}/components/lis2dh
 )
 
-# Add the component LIS2DH
+# Add the component SHT4X
 target_sources(app PRIVATE
     components/sht4x/sht4x.c)
 target_include_directories(app
     PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/components/sht4x
+)
+
+# Add the component Flash
+target_sources(app PRIVATE
+    components/ext_flash/max25r16.c)
+target_include_directories(app
+    PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/components/ext_flash
 )
