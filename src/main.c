@@ -19,7 +19,7 @@ void main(void) {
     int ret;
     ili9341_display_init();
        /* Initialize the SHT4x sensor */
-    ret = init_sht4x_sensor(&sht4x_sensor);
+    // ret = init_sht4x_sensor(&sht4x_sensor);
     if (ret) {
         return;
     }

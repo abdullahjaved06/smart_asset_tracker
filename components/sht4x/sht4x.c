@@ -1,53 +1,93 @@
-#include "sht4x.h"
-#include <stdio.h>
 #include <zephyr/kernel.h>
+#include <math.h>
+#include <zephyr/device.h>
+#include <zephyr/devicetree.h>
 #include <zephyr/drivers/sensor.h>
+#include <zephyr/logging/log.h>
+#include <zephyr/drivers/sensor/sht4x.h>
 
-#define SHT4X_NODE DT_NODELABEL(sht4x)  // Assuming device tree label
+#include "sht4x.h"
 
-/* Function to initialize the SHT4x sensor */
-int init_sht4x_sensor(const struct device *sht4x_sensor)
+#if !DT_HAS_COMPAT_STATUS_OKAY(sensirion_sht4x)
+#error "No sensirion,sht4x compatible node found in the device tree"
+#endif
+
+LOG_MODULE_DECLARE(SHT4X);
+
+#if CONFIG_MCP9808
+static const struct device *tempDev = DEVICE_DT_GET_ANY(microchip_mcp9808);
+#elif CONFIG_SHT4X
+static const struct device *tempDev = DEVICE_DT_GET_ANY(sensirion_sht4x);
+#elif CONFIG_ENS210
+static const struct device *tempDev = DEVICE_DT_GET_ANY(ams_ens210);
+#endif
+
+K_MUTEX_DEFINE(tempMutex);
+
+int initTemp()
 {
-    /* Check if the sensor device is ready */
-    if (!device_is_ready(sht4x_sensor)) {
-        printf("SHT4x sensor device not found or not ready\n");
-        return -ENODEV;
-    }
+	if (!device_is_ready(tempDev)) {
+		LOG_ERR("Could not get %s device\n", tempDev->name);
+	} else
+		LOG_INF("Bound %s device\n", tempDev->name);
 
-    printf("SHT4x sensor device is ready\n");
-    return 0;
+	return (tempDev != NULL);
 }
 
-/* Function to fetch sensor data and print it */
-int sht4x_sensor_data(const struct device *sht4x_sensor)
+SYS_INIT(initTemp, APPLICATION, CONFIG_APPLICATION_INIT_PRIORITY);
+
+double tempC()
 {
-    int ret;
-    struct sensor_value temp, humidity;
+	struct sensor_value temp;
+	int rc;
 
-    /* Fetch the sensor sample (temperature and humidity) */
-    ret = sensor_sample_fetch(sht4x_sensor);
-    if (ret) {
-        printf("Failed to fetch data from the sensor\n");
-        return ret;
-    }
+	k_mutex_lock(&tempMutex, K_FOREVER);
+	rc = sensor_sample_fetch(tempDev);
+	if (rc != 0) {
+		LOG_DBG("sensor_sample_fetch error: %d\n", rc);
+		return -99;
+	}
 
-    /* Get temperature data */
-    ret = sensor_channel_get(sht4x_sensor, SENSOR_CHAN_AMBIENT_TEMP, &temp);
-    if (ret) {
-        printf("Failed to get temperature data\n");
-        return ret;
-    }
+	rc = sensor_channel_get(tempDev, SENSOR_CHAN_AMBIENT_TEMP, &temp);
+	if (rc != 0) {
+		LOG_DBG("sensor_channel_get error: %d\n", rc);
+		return -99;
+	}
 
-    /* Get humidity data */
-    ret = sensor_channel_get(sht4x_sensor, SENSOR_CHAN_HUMIDITY, &humidity);
-    if (ret) {
-        printf("Failed to get humidity data\n");
-        return ret;
-    }
+	// printf("%g C\n", sensor_value_to_double(&temp));
+	k_mutex_unlock(&tempMutex);
+	return sensor_value_to_double(&temp);
+}
 
-    /* Print the temperature and humidity data */
-    printf("Temperature: %d.%02d C\n", temp.val1, temp.val2);
-    printf("Humidity: %d.%02d %%\n", humidity.val1, humidity.val2);
+double tempF()
+{
+	double temp = tempC();
 
-    return 0;
+	if (temp != -99.0)
+		temp = temp * 1.8 + 32.0;
+
+	return temp;
+}
+
+double getHumidity()
+{
+	struct sensor_value humidity;
+	int rc;
+
+	k_mutex_lock(&tempMutex, K_FOREVER);
+	rc = sensor_sample_fetch(tempDev);
+	if (rc != 0) {
+		LOG_DBG("sensor_sample_fetch error: %d\n", rc);
+		return -99;
+	}
+
+	rc = sensor_channel_get(tempDev, SENSOR_CHAN_HUMIDITY, &humidity);
+	if (rc != 0) {
+		LOG_DBG("sensor_channel_get error: %d\n", rc);
+		return -99;
+	}
+
+	// printf("%g C\n", sensor_value_to_double(&temp));
+	k_mutex_unlock(&tempMutex);
+	return sensor_value_to_double(&humidity);
 }
