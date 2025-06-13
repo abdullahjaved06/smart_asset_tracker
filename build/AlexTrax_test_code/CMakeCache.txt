@@ -129,8 +129,8 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//Path to a program.
-CMAKE_C_COMPILER:FILEPATH=/home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc
+//C compiler
+CMAKE_C_COMPILER:STRING=/home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -536,6 +536,8 @@ CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER
+CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_AR
 CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
@@ -651,9 +653,9 @@ HWM:INTERNAL=v2
 HWMv2:INTERNAL=True
 KERNEL_META_PATH:INTERNAL=/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/zephyr.meta
 //shared var
-PM_YML_DEP_FILES:INTERNAL=/home/abdullah/ncs/v2.9.0/nrf/subsys/partition_manager/pm.yml.libmodem;/home/abdullah/ncs/v2.9.0/nrf/subsys/partition_manager/pm.yml.tfm;/home/abdullah/ncs/v2.9.0/nrf/subsys/partition_manager/pm.yml.trustzone;/home/abdullah/ncs/v2.9.0/nrf/subsys/partition_manager/pm.yml.file_system
+PM_YML_DEP_FILES:INTERNAL=/home/abdullah/ncs/v2.9.0/nrf/subsys/partition_manager/pm.yml.file_system;/home/abdullah/ncs/v2.9.0/nrf/subsys/partition_manager/pm.yml.libmodem;/home/abdullah/ncs/v2.9.0/nrf/subsys/partition_manager/pm.yml.tfm;/home/abdullah/ncs/v2.9.0/nrf/subsys/partition_manager/pm.yml.trustzone
 //shared var
-PM_YML_FILES:INTERNAL=/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/partition_manager/pm.yml.libmodem;/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/partition_manager/pm.yml.tfm;/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/partition_manager/pm.yml.trustzone;/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/partition_manager/pm.yml.file_system
+PM_YML_FILES:INTERNAL=/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/partition_manager/pm.yml.file_system;/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/partition_manager/pm.yml.libmodem;/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/partition_manager/pm.yml.tfm;/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/partition_manager/pm.yml.trustzone
 //List of SoC directories for SoC (nrf9151)
 SOC_DIRECTORIES:INTERNAL=/home/abdullah/ncs/v2.9.0/zephyr/soc/nordic
 //SoC Linker script

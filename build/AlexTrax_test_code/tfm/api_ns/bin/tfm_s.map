@@ -4099,7 +4099,7 @@ LOAD /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin
                                          0x10 (size before relaxing)
                 0x0000000000000888                __exidx_end = .
 
-.ER_TFM_CODE    0x0000000000000888     0x79e3
+.ER_TFM_CODE    0x0000000000000888     0x7a1b
                 0x0000000000000888                . = ALIGN (0x4)
                 0x0000000000000888                PROVIDE (__preinit_array_start = .)
  *(.preinit_array)
@@ -4826,671 +4826,671 @@ LOAD /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin
                 0x0000000000006d80       0x1c secure_fw/spm/libtfm_spm.a(target_cfg.o)
                 0x0000000000006d80                sau_and_idau_cfg
  .text.spu_init_cfg
-                0x0000000000006d9c       0xcc secure_fw/spm/libtfm_spm.a(target_cfg.o)
+                0x0000000000006d9c       0xf4 secure_fw/spm/libtfm_spm.a(target_cfg.o)
                 0x0000000000006d9c                spu_init_cfg
  .text.dppi_channel_configuration
-                0x0000000000006e68       0x24 secure_fw/spm/libtfm_spm.a(target_cfg.o)
+                0x0000000000006e90       0x24 secure_fw/spm/libtfm_spm.a(target_cfg.o)
  .text.spu_periph_init_cfg
-                0x0000000000006e8c       0x7c secure_fw/spm/libtfm_spm.a(target_cfg.o)
-                0x0000000000006e8c                spu_periph_init_cfg
+                0x0000000000006eb4       0x7c secure_fw/spm/libtfm_spm.a(target_cfg.o)
+                0x0000000000006eb4                spu_periph_init_cfg
  .text.tfm_core_check_boot_data_access_policy
-                0x0000000000006f08       0x58 secure_fw/spm/libtfm_spm.a(tfm_boot_data.o)
+                0x0000000000006f30       0x58 secure_fw/spm/libtfm_spm.a(tfm_boot_data.o)
  .text.tfm_core_validate_boot_data
-                0x0000000000006f60       0x18 secure_fw/spm/libtfm_spm.a(tfm_boot_data.o)
-                0x0000000000006f60                tfm_core_validate_boot_data
+                0x0000000000006f88       0x18 secure_fw/spm/libtfm_spm.a(tfm_boot_data.o)
+                0x0000000000006f88                tfm_core_validate_boot_data
  .text.tfm_core_get_boot_data_handler
-                0x0000000000006f78       0xac secure_fw/spm/libtfm_spm.a(tfm_boot_data.o)
-                0x0000000000006f78                tfm_core_get_boot_data_handler
+                0x0000000000006fa0       0xac secure_fw/spm/libtfm_spm.a(tfm_boot_data.o)
+                0x0000000000006fa0                tfm_core_get_boot_data_handler
  .text.tfm_arch_check_msp_sealing
-                0x0000000000007024       0x4c secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
+                0x000000000000704c       0x4c secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
  .text.handle_spm_svc_requests
-                0x0000000000007070       0xbc secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
+                0x0000000000007098       0xbc secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
  .text.spm_svc_handler
-                0x000000000000712c       0xcc secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
-                0x000000000000712c                spm_svc_handler
+                0x0000000000007154       0xcc secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
+                0x0000000000007154                spm_svc_handler
  .text.tfm_core_panic
-                0x00000000000071f8        0xc secure_fw/spm/libtfm_spm.a(utilities.o)
-                0x00000000000071f8                tfm_core_panic
+                0x0000000000007220        0xc secure_fw/spm/libtfm_spm.a(utilities.o)
+                0x0000000000007220                tfm_core_panic
  .text.spm_log_msgval
-                0x0000000000007204       0x62 secure_fw/spm/libtfm_spm.a(spm_log.o)
-                0x0000000000007204                spm_log_msgval
+                0x000000000000722c       0x62 secure_fw/spm/libtfm_spm.a(spm_log.o)
+                0x000000000000722c                spm_log_msgval
  .text.tfm_arch_set_msplim
-                0x0000000000007266       0x1e secure_fw/spm/libtfm_spm.a(main.o)
+                0x000000000000728e       0x1e secure_fw/spm/libtfm_spm.a(main.o)
  .text.__save_disable_irq
-                0x0000000000007284       0x1a secure_fw/spm/libtfm_spm.a(spm_ipc.o)
+                0x00000000000072ac       0x1a secure_fw/spm/libtfm_spm.a(spm_ipc.o)
  .text.__restore_irq
-                0x000000000000729e       0x18 secure_fw/spm/libtfm_spm.a(spm_ipc.o)
+                0x00000000000072c6       0x18 secure_fw/spm/libtfm_spm.a(spm_ipc.o)
  .text.spm_msg_handle_to_connection
-                0x00000000000072b6       0x44 secure_fw/spm/libtfm_spm.a(spm_ipc.o)
-                0x00000000000072b6                spm_msg_handle_to_connection
+                0x00000000000072de       0x44 secure_fw/spm/libtfm_spm.a(spm_ipc.o)
+                0x00000000000072de                spm_msg_handle_to_connection
  .text.tfm_spm_get_client_id
-                0x00000000000072fa       0x38 secure_fw/spm/libtfm_spm.a(spm_ipc.o)
-                0x00000000000072fa                tfm_spm_get_client_id
+                0x0000000000007322       0x38 secure_fw/spm/libtfm_spm.a(spm_ipc.o)
+                0x0000000000007322                tfm_spm_get_client_id
  .text.load_services_assuredly
-                0x0000000000007332      0x148 secure_fw/spm/libtfm_spm.a(rom_loader.o)
-                0x0000000000007332                load_services_assuredly
+                0x000000000000735a      0x148 secure_fw/spm/libtfm_spm.a(rom_loader.o)
+                0x000000000000735a                load_services_assuredly
  .text.load_irqs_assuredly
-                0x000000000000747a       0x12 secure_fw/spm/libtfm_spm.a(rom_loader.o)
-                0x000000000000747a                load_irqs_assuredly
+                0x00000000000074a2       0x12 secure_fw/spm/libtfm_spm.a(rom_loader.o)
+                0x00000000000074a2                load_irqs_assuredly
  .text.__save_disable_irq
-                0x000000000000748c       0x1a secure_fw/spm/libtfm_spm.a(psa_api.o)
+                0x00000000000074b4       0x1a secure_fw/spm/libtfm_spm.a(psa_api.o)
  .text.__restore_irq
-                0x00000000000074a6       0x18 secure_fw/spm/libtfm_spm.a(psa_api.o)
+                0x00000000000074ce       0x18 secure_fw/spm/libtfm_spm.a(psa_api.o)
  .text.spm_handle_programmer_errors
-                0x00000000000074be       0x34 secure_fw/spm/libtfm_spm.a(psa_api.o)
-                0x00000000000074be                spm_handle_programmer_errors
+                0x00000000000074e6       0x34 secure_fw/spm/libtfm_spm.a(psa_api.o)
+                0x00000000000074e6                spm_handle_programmer_errors
  .text.tfm_spm_partition_psa_reply
-                0x00000000000074f2       0xfe secure_fw/spm/libtfm_spm.a(psa_api.o)
-                0x00000000000074f2                tfm_spm_partition_psa_reply
+                0x000000000000751a       0xfe secure_fw/spm/libtfm_spm.a(psa_api.o)
+                0x000000000000751a                tfm_spm_partition_psa_reply
  .text.tfm_spm_partition_psa_panic
-                0x00000000000075f0       0x10 secure_fw/spm/libtfm_spm.a(psa_api.o)
-                0x00000000000075f0                tfm_spm_partition_psa_panic
+                0x0000000000007618       0x10 secure_fw/spm/libtfm_spm.a(psa_api.o)
+                0x0000000000007618                tfm_spm_partition_psa_panic
  .text.tfm_spm_client_psa_call
-                0x0000000000007600       0x76 secure_fw/spm/libtfm_spm.a(psa_call_api.o)
-                0x0000000000007600                tfm_spm_client_psa_call
+                0x0000000000007628       0x76 secure_fw/spm/libtfm_spm.a(psa_call_api.o)
+                0x0000000000007628                tfm_spm_client_psa_call
  .text.tfm_spm_client_psa_framework_version
-                0x0000000000007676       0x10 secure_fw/spm/libtfm_spm.a(psa_version_api.o)
-                0x0000000000007676                tfm_spm_client_psa_framework_version
+                0x000000000000769e       0x10 secure_fw/spm/libtfm_spm.a(psa_version_api.o)
+                0x000000000000769e                tfm_spm_client_psa_framework_version
  .text.tfm_spm_client_psa_version
-                0x0000000000007686       0x46 secure_fw/spm/libtfm_spm.a(psa_version_api.o)
-                0x0000000000007686                tfm_spm_client_psa_version
+                0x00000000000076ae       0x46 secure_fw/spm/libtfm_spm.a(psa_version_api.o)
+                0x00000000000076ae                tfm_spm_client_psa_version
  .text.arch_update_process_sp
-                0x00000000000076cc       0x32 secure_fw/spm/libtfm_spm.a(backend_sfn.o)
+                0x00000000000076f4       0x32 secure_fw/spm/libtfm_spm.a(backend_sfn.o)
  .text.tfm_nspm_get_current_client_id
-                0x00000000000076fe       0x2a secure_fw/spm/libtfm_spm.a(tfm_spm_ns_ctx.o)
-                0x00000000000076fe                tfm_nspm_get_current_client_id
+                0x0000000000007726       0x2a secure_fw/spm/libtfm_spm.a(tfm_spm_ns_ctx.o)
+                0x0000000000007726                tfm_nspm_get_current_client_id
  .text.tfm_arch_get_psplim
-                0x0000000000007728       0x18 secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
+                0x0000000000007750       0x18 secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
  .text.tfm_arch_set_psplim
-                0x0000000000007740       0x1e secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
+                0x0000000000007768       0x1e secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
  .text.alloc_conn_from_stack_top
-                0x000000000000775e       0x20 secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
+                0x0000000000007786       0x20 secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
  .text.free_conn_from_stack_top
-                0x000000000000777e       0x1e secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
+                0x00000000000077a6       0x1e secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
  .text.connection_to_handle
-                0x000000000000779c       0x16 secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
-                0x000000000000779c                connection_to_handle
+                0x00000000000077c4       0x16 secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
+                0x00000000000077c4                connection_to_handle
  .text.handle_to_connection
-                0x00000000000077b2       0x28 secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
-                0x00000000000077b2                handle_to_connection
+                0x00000000000077da       0x28 secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
+                0x00000000000077da                handle_to_connection
  .text.spm_init_connection_space
-                0x00000000000077da        0xc secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
-                0x00000000000077da                spm_init_connection_space
+                0x0000000000007802        0xc secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
+                0x0000000000007802                spm_init_connection_space
  .text.spm_allocate_connection
-                0x00000000000077e6        0xe secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
-                0x00000000000077e6                spm_allocate_connection
+                0x000000000000780e        0xe secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
+                0x000000000000780e                spm_allocate_connection
  .text.spm_validate_connection
-                0x00000000000077f4       0x14 secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
-                0x00000000000077f4                spm_validate_connection
+                0x000000000000781c       0x14 secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
+                0x000000000000781c                spm_validate_connection
  .text.spm_free_connection
-                0x0000000000007808       0x14 secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
-                0x0000000000007808                spm_free_connection
+                0x0000000000007830       0x14 secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
+                0x0000000000007830                spm_free_connection
  .text.tfm_arch_config_extensions
-                0x000000000000781c        0xc secure_fw/spm/libtfm_spm.a(tfm_arch_v8m_main.o)
-                0x000000000000781c                tfm_arch_config_extensions
+                0x0000000000007844        0xc secure_fw/spm/libtfm_spm.a(tfm_arch_v8m_main.o)
+                0x0000000000007844                tfm_arch_config_extensions
  .text.tfm_hal_set_up_static_boundaries
-                0x0000000000007828       0x4c secure_fw/spm/libtfm_spm.a(tfm_hal_isolation.o)
-                0x0000000000007828                tfm_hal_set_up_static_boundaries
+                0x0000000000007850       0x4c secure_fw/spm/libtfm_spm.a(tfm_hal_isolation.o)
+                0x0000000000007850                tfm_hal_set_up_static_boundaries
  .text.accessible_to_region
-                0x0000000000007874      0x196 secure_fw/spm/libtfm_spm.a(tfm_hal_isolation.o)
+                0x000000000000789c      0x196 secure_fw/spm/libtfm_spm.a(tfm_hal_isolation.o)
  .text.tfm_hal_memory_check
-                0x0000000000007a0a      0x142 secure_fw/spm/libtfm_spm.a(tfm_hal_isolation.o)
-                0x0000000000007a0a                tfm_hal_memory_check
+                0x0000000000007a32      0x142 secure_fw/spm/libtfm_spm.a(tfm_hal_isolation.o)
+                0x0000000000007a32                tfm_hal_memory_check
  .text.tfm_hal_platform_common_init
-                0x0000000000007b4c       0x78 secure_fw/spm/libtfm_spm.a(tfm_hal_platform_common.o)
-                0x0000000000007b4c                tfm_hal_platform_common_init
+                0x0000000000007b74       0x78 secure_fw/spm/libtfm_spm.a(tfm_hal_platform_common.o)
+                0x0000000000007b74                tfm_hal_platform_common_init
  .text.SPU_IRQHandler
-                0x0000000000007bc4       0x1e secure_fw/spm/libtfm_spm.a(faults.o)
-                0x0000000000007bc4                SPU_IRQHandler
+                0x0000000000007bec       0x1e secure_fw/spm/libtfm_spm.a(faults.o)
+                0x0000000000007bec                SPU_IRQHandler
  .text.nrf_nvmc_icache_config_set
-                0x0000000000007be2       0x40 secure_fw/spm/libtfm_spm.a(target_cfg.o)
+                0x0000000000007c0a       0x40 secure_fw/spm/libtfm_spm.a(target_cfg.o)
  .text.init_debug
-                0x0000000000007c22        0xe secure_fw/spm/libtfm_spm.a(target_cfg.o)
-                0x0000000000007c22                init_debug
+                0x0000000000007c4a        0xe secure_fw/spm/libtfm_spm.a(target_cfg.o)
+                0x0000000000007c4a                init_debug
  .text.tfm_arch_free_msp_and_exc_ret
-                0x0000000000007c30        0xa secure_fw/spm/libtfm_spm.a(tfm_arch.o)
-                0x0000000000007c30                tfm_arch_free_msp_and_exc_ret
+                0x0000000000007c58        0xa secure_fw/spm/libtfm_spm.a(tfm_arch.o)
+                0x0000000000007c58                tfm_arch_free_msp_and_exc_ret
  .text.arch_clean_stack_and_launch
-                0x0000000000007c3a       0x1a secure_fw/spm/libtfm_spm.a(tfm_arch.o)
-                0x0000000000007c3a                arch_clean_stack_and_launch
+                0x0000000000007c62       0x1a secure_fw/spm/libtfm_spm.a(tfm_arch.o)
+                0x0000000000007c62                arch_clean_stack_and_launch
  .text.is_return_secure_stack
-                0x0000000000007c54       0x24 secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
+                0x0000000000007c7c       0x24 secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
  .text.is_default_stacking_rules_apply
-                0x0000000000007c78       0x24 secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
+                0x0000000000007ca0       0x24 secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
  *libplatform_s*:*(.rodata*)
- .rodata        0x0000000000007c9c       0x95 platform/libplatform_s.a(exception_info.o)
- *fill*         0x0000000000007d31        0x3 
- .rodata        0x0000000000007d34        0xa platform/libplatform_s.a(uart_stdout.o)
- *fill*         0x0000000000007d3e        0x2 
+ .rodata        0x0000000000007cc4       0x95 platform/libplatform_s.a(exception_info.o)
+ *fill*         0x0000000000007d59        0x3 
+ .rodata        0x0000000000007d5c        0xa platform/libplatform_s.a(uart_stdout.o)
+ *fill*         0x0000000000007d66        0x2 
  .rodata.__func__.1
-                0x0000000000007d40        0xb platform/libplatform_s.a(uart_stdout.o)
- *fill*         0x0000000000007d4b        0x1 
+                0x0000000000007d68        0xb platform/libplatform_s.a(uart_stdout.o)
+ *fill*         0x0000000000007d73        0x1 
  .rodata.DriverVersion
-                0x0000000000007d4c        0x4 platform/libplatform_s.a(Driver_USART.o)
+                0x0000000000007d74        0x4 platform/libplatform_s.a(Driver_USART.o)
  .rodata.UART1_pins
-                0x0000000000007d50       0x10 platform/libplatform_s.a(Driver_USART.o)
+                0x0000000000007d78       0x10 platform/libplatform_s.a(Driver_USART.o)
  .rodata.Driver_USART1
-                0x0000000000007d60       0x38 platform/libplatform_s.a(Driver_USART.o)
-                0x0000000000007d60                Driver_USART1
- .rodata        0x0000000000007d98        0xa platform/libplatform_s.a(nrfx_uarte.o)
- *fill*         0x0000000000007da2        0x2 
+                0x0000000000007d88       0x38 platform/libplatform_s.a(Driver_USART.o)
+                0x0000000000007d88                Driver_USART1
+ .rodata        0x0000000000007dc0        0xa platform/libplatform_s.a(nrfx_uarte.o)
+ *fill*         0x0000000000007dca        0x2 
  .rodata.__func__.14
-                0x0000000000007da4       0x19 platform/libplatform_s.a(nrfx_uarte.o)
- *fill*         0x0000000000007dbd        0x3 
+                0x0000000000007dcc       0x19 platform/libplatform_s.a(nrfx_uarte.o)
+ *fill*         0x0000000000007de5        0xb 
  .rodata.delay_machine_code.13
-                0x0000000000007dc0        0x6 platform/libplatform_s.a(nrfx_uarte.o)
- *fill*         0x0000000000007dc6        0x2 
+                0x0000000000007df0        0x6 platform/libplatform_s.a(nrfx_uarte.o)
+ *fill*         0x0000000000007df6        0x2 
  .rodata.__func__.12
-                0x0000000000007dc8       0x10 platform/libplatform_s.a(nrfx_uarte.o)
+                0x0000000000007df8       0x10 platform/libplatform_s.a(nrfx_uarte.o)
  .rodata.__func__.10
-                0x0000000000007dd8       0x12 platform/libplatform_s.a(nrfx_uarte.o)
- *fill*         0x0000000000007dea        0x2 
+                0x0000000000007e08       0x12 platform/libplatform_s.a(nrfx_uarte.o)
+ *fill*         0x0000000000007e1a        0x2 
  .rodata.__func__.9
-                0x0000000000007dec        0x9 platform/libplatform_s.a(nrfx_uarte.o)
- *fill*         0x0000000000007df5        0x3 
+                0x0000000000007e1c        0x9 platform/libplatform_s.a(nrfx_uarte.o)
+ *fill*         0x0000000000007e25        0x3 
  .rodata.__func__.8
-                0x0000000000007df8        0xe platform/libplatform_s.a(nrfx_uarte.o)
- *fill*         0x0000000000007e06        0x2 
+                0x0000000000007e28        0xe platform/libplatform_s.a(nrfx_uarte.o)
+ *fill*         0x0000000000007e36        0x2 
  .rodata.__func__.6
-                0x0000000000007e08       0x19 platform/libplatform_s.a(nrfx_uarte.o)
- *fill*         0x0000000000007e21        0x3 
+                0x0000000000007e38       0x19 platform/libplatform_s.a(nrfx_uarte.o)
+ *fill*         0x0000000000007e51        0x3 
  .rodata.__func__.5
-                0x0000000000007e24       0x14 platform/libplatform_s.a(nrfx_uarte.o)
+                0x0000000000007e54       0x14 platform/libplatform_s.a(nrfx_uarte.o)
  .rodata.__func__.4
-                0x0000000000007e38        0xe platform/libplatform_s.a(nrfx_uarte.o)
- *fill*         0x0000000000007e46        0x2 
+                0x0000000000007e68        0xe platform/libplatform_s.a(nrfx_uarte.o)
+ *fill*         0x0000000000007e76        0x2 
  .rodata.__func__.3
-                0x0000000000007e48       0x14 platform/libplatform_s.a(nrfx_uarte.o)
- .rodata        0x0000000000007e5c        0xa platform/libplatform_s.a(nrfx_glue.o)
- *fill*         0x0000000000007e66        0x2 
+                0x0000000000007e78       0x14 platform/libplatform_s.a(nrfx_uarte.o)
+ .rodata        0x0000000000007e8c        0xa platform/libplatform_s.a(nrfx_glue.o)
+ *fill*         0x0000000000007e96        0x2 
  .rodata.__func__.0
-                0x0000000000007e68       0x1b platform/libplatform_s.a(nrfx_glue.o)
- *fill*         0x0000000000007e83        0x1 
- .rodata        0x0000000000007e84        0xa platform/libplatform_s.a(spu.o)
- *fill*         0x0000000000007e8e        0x2 
- .rodata.__func__.6
-                0x0000000000007e90       0x18 platform/libplatform_s.a(spu.o)
- .rodata.__func__.5
-                0x0000000000007ea8       0x16 platform/libplatform_s.a(spu.o)
+                0x0000000000007e98       0x1b platform/libplatform_s.a(nrfx_glue.o)
+ *fill*         0x0000000000007eb3        0x1 
+ .rodata        0x0000000000007eb4        0xa platform/libplatform_s.a(spu.o)
  *fill*         0x0000000000007ebe        0x2 
+ .rodata.__func__.6
+                0x0000000000007ec0       0x18 platform/libplatform_s.a(spu.o)
+ .rodata.__func__.5
+                0x0000000000007ed8       0x16 platform/libplatform_s.a(spu.o)
+ *fill*         0x0000000000007eee        0x2 
  .rodata.__func__.4
-                0x0000000000007ec0       0x2d platform/libplatform_s.a(spu.o)
- *fill*         0x0000000000007eed        0x3 
+                0x0000000000007ef0       0x2d platform/libplatform_s.a(spu.o)
+ *fill*         0x0000000000007f1d        0x3 
  .rodata.__func__.3
-                0x0000000000007ef0       0x15 platform/libplatform_s.a(spu.o)
- *fill*         0x0000000000007f05        0x3 
+                0x0000000000007f20       0x15 platform/libplatform_s.a(spu.o)
+ *fill*         0x0000000000007f35        0x3 
  .rodata.__func__.2
-                0x0000000000007f08       0x1d platform/libplatform_s.a(spu.o)
- *fill*         0x0000000000007f25        0x3 
+                0x0000000000007f38       0x1d platform/libplatform_s.a(spu.o)
+ *fill*         0x0000000000007f55        0x3 
  .rodata.__func__.1
-                0x0000000000007f28       0x17 platform/libplatform_s.a(spu.o)
- *fill*         0x0000000000007f3f        0x1 
+                0x0000000000007f58       0x17 platform/libplatform_s.a(spu.o)
+ *fill*         0x0000000000007f6f        0x1 
  .rodata.__func__.0
-                0x0000000000007f40       0x21 platform/libplatform_s.a(spu.o)
- *fill*         0x0000000000007f61        0x3 
- .rodata        0x0000000000007f64       0x16 platform/libplatform_s.a(nrf_exception_info.o)
- *fill*         0x0000000000007f7a        0x2 
- .rodata        0x0000000000007f7c       0x2e platform/libplatform_s.a(tfm_hal_platform.o)
+                0x0000000000007f70       0x21 platform/libplatform_s.a(spu.o)
+ *fill*         0x0000000000007f91        0x3 
+ .rodata        0x0000000000007f94       0x16 platform/libplatform_s.a(nrf_exception_info.o)
  *fill*         0x0000000000007faa        0x2 
+ .rodata        0x0000000000007fac       0x2e platform/libplatform_s.a(tfm_hal_platform.o)
+ *fill*         0x0000000000007fda        0x2 
  .rodata.ranges
-                0x0000000000007fac       0x20 platform/libplatform_s.a(tfm_platform_hal_ioctl.o)
+                0x0000000000007fdc       0x20 platform/libplatform_s.a(tfm_platform_hal_ioctl.o)
  .rodata.tfm_write32_service_addresses
-                0x0000000000007fcc       0x10 platform/libplatform_s.a(tfm_platform_hal_ioctl.o)
+                0x0000000000007ffc       0x10 platform/libplatform_s.a(tfm_platform_hal_ioctl.o)
  *libtfm_spm*:*(.rodata*)
  .rodata.HEX_TABLE
-                0x0000000000007fdc       0x10 secure_fw/spm/libtfm_spm.a(spm_log.o)
- .rodata        0x0000000000007fec       0x5d secure_fw/spm/libtfm_spm.a(main.o)
- *fill*         0x0000000000008049        0x3 
- .rodata        0x000000000000804c        0xa secure_fw/spm/libtfm_spm.a(spm_ipc.o)
- *fill*         0x0000000000008056        0x2 
+                0x000000000000800c       0x10 secure_fw/spm/libtfm_spm.a(spm_log.o)
+ .rodata        0x000000000000801c       0x5d secure_fw/spm/libtfm_spm.a(main.o)
+ *fill*         0x0000000000008079        0x3 
+ .rodata        0x000000000000807c        0xa secure_fw/spm/libtfm_spm.a(spm_ipc.o)
+ *fill*         0x0000000000008086        0x2 
  .rodata.__func__.4
-                0x0000000000008058       0x1d secure_fw/spm/libtfm_spm.a(spm_ipc.o)
- *fill*         0x0000000000008075        0x3 
+                0x0000000000008088       0x1d secure_fw/spm/libtfm_spm.a(spm_ipc.o)
+ *fill*         0x00000000000080a5        0x3 
  .rodata.__func__.3
-                0x0000000000008078       0x1c secure_fw/spm/libtfm_spm.a(spm_ipc.o)
+                0x00000000000080a8       0x1c secure_fw/spm/libtfm_spm.a(spm_ipc.o)
  .rodata.__func__.2
-                0x0000000000008094       0x18 secure_fw/spm/libtfm_spm.a(spm_ipc.o)
+                0x00000000000080c4       0x18 secure_fw/spm/libtfm_spm.a(spm_ipc.o)
  .rodata.__func__.1
-                0x00000000000080ac       0x19 secure_fw/spm/libtfm_spm.a(spm_ipc.o)
- *fill*         0x00000000000080c5        0x3 
+                0x00000000000080dc       0x19 secure_fw/spm/libtfm_spm.a(spm_ipc.o)
+ *fill*         0x00000000000080f5        0x3 
  .rodata.__func__.0
-                0x00000000000080c8       0x19 secure_fw/spm/libtfm_spm.a(spm_ipc.o)
- *fill*         0x00000000000080e1        0x3 
- .rodata        0x00000000000080e4        0xa secure_fw/spm/libtfm_spm.a(backend_sfn.o)
- *fill*         0x00000000000080ee        0x2 
+                0x00000000000080f8       0x19 secure_fw/spm/libtfm_spm.a(spm_ipc.o)
+ *fill*         0x0000000000008111        0x3 
+ .rodata        0x0000000000008114        0xa secure_fw/spm/libtfm_spm.a(backend_sfn.o)
+ *fill*         0x000000000000811e        0x2 
  .rodata.__func__.1
-                0x00000000000080f0       0x13 secure_fw/spm/libtfm_spm.a(backend_sfn.o)
- *fill*         0x0000000000008103        0x1 
+                0x0000000000008120       0x13 secure_fw/spm/libtfm_spm.a(backend_sfn.o)
+ *fill*         0x0000000000008133        0x1 
  .rodata.__func__.0
-                0x0000000000008104       0x17 secure_fw/spm/libtfm_spm.a(backend_sfn.o)
- *fill*         0x000000000000811b        0x1 
+                0x0000000000008134       0x17 secure_fw/spm/libtfm_spm.a(backend_sfn.o)
+ *fill*         0x000000000000814b        0x1 
  .rodata.partition_named_mmio_list
-                0x000000000000811c        0x8 secure_fw/spm/libtfm_spm.a(tfm_hal_isolation.o)
-                0x000000000000811c                partition_named_mmio_list
- .rodata        0x0000000000008124        0xa secure_fw/spm/libtfm_spm.a(target_cfg.o)
- *fill*         0x000000000000812e        0x2 
+                0x000000000000814c        0x8 secure_fw/spm/libtfm_spm.a(tfm_hal_isolation.o)
+                0x000000000000814c                partition_named_mmio_list
+ .rodata        0x0000000000008154        0xa secure_fw/spm/libtfm_spm.a(target_cfg.o)
+ *fill*         0x000000000000815e        0x2 
  .rodata.memory_regions
-                0x0000000000008130       0x14 secure_fw/spm/libtfm_spm.a(target_cfg.o)
-                0x0000000000008130                memory_regions
+                0x0000000000008160       0x1c secure_fw/spm/libtfm_spm.a(target_cfg.o)
+                0x0000000000008160                memory_regions
  .rodata.__func__.3
-                0x0000000000008144       0x18 secure_fw/spm/libtfm_spm.a(target_cfg.o)
+                0x000000000000817c       0x18 secure_fw/spm/libtfm_spm.a(target_cfg.o)
  .rodata.target_peripherals.2
-                0x000000000000815c       0x74 secure_fw/spm/libtfm_spm.a(target_cfg.o)
+                0x0000000000008194       0x74 secure_fw/spm/libtfm_spm.a(target_cfg.o)
  .rodata.__func__.1
-                0x00000000000081d0       0x18 secure_fw/spm/libtfm_spm.a(target_cfg.o)
+                0x0000000000008208       0x18 secure_fw/spm/libtfm_spm.a(target_cfg.o)
  .rodata.__func__.0
-                0x00000000000081e8       0x16 secure_fw/spm/libtfm_spm.a(target_cfg.o)
- *fill*         0x00000000000081fe        0x2 
+                0x0000000000008220       0x16 secure_fw/spm/libtfm_spm.a(target_cfg.o)
+ *fill*         0x0000000000008236        0x2 
  .rodata.access_policy_table
-                0x0000000000008200        0x8 secure_fw/spm/libtfm_spm.a(tfm_boot_data.o)
- .rodata        0x0000000000008208       0x47 secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
- *fill*         0x000000000000824f        0x1 
+                0x0000000000008238        0x8 secure_fw/spm/libtfm_spm.a(tfm_boot_data.o)
+ .rodata        0x0000000000008240       0x47 secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
+ *fill*         0x0000000000008287        0x1 
  .rodata.__func__.0
-                0x0000000000008250       0x1b secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
+                0x0000000000008288       0x1b secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
 
-.glue_7         0x000000000000826c        0x0
- .glue_7        0x000000000000826c        0x0 linker stubs
+.glue_7         0x00000000000082a4        0x0
+ .glue_7        0x00000000000082a4        0x0 linker stubs
 
-.glue_7t        0x000000000000826c        0x0
- .glue_7t       0x000000000000826c        0x0 linker stubs
+.glue_7t        0x00000000000082a4        0x0
+ .glue_7t       0x00000000000082a4        0x0 linker stubs
 
-.vfp11_veneer   0x000000000000826c        0x0
- .vfp11_veneer  0x000000000000826c        0x0 linker stubs
+.vfp11_veneer   0x00000000000082a4        0x0
+ .vfp11_veneer  0x00000000000082a4        0x0 linker stubs
 
-.v4_bx          0x000000000000826c        0x0
- .v4_bx         0x000000000000826c        0x0 linker stubs
+.v4_bx          0x00000000000082a4        0x0
+ .v4_bx         0x00000000000082a4        0x0 linker stubs
 
-.iplt           0x000000000000826c        0x0
- .iplt          0x000000000000826c        0x0 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/crtbegin.o
+.iplt           0x00000000000082a4        0x0
+ .iplt          0x00000000000082a4        0x0 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/crtbegin.o
 
 .TFM_UNPRIV_CODE
-                0x0000000000008280     0x2fa0
+                0x00000000000082c0     0x2fa0
  *(SORT_BY_ALIGNMENT(.text*))
- .text          0x0000000000008280       0x88 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/crtbegin.o
- .text          0x0000000000008308       0x7c /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/crt0.o
-                0x0000000000008308                _stack_init
-                0x0000000000008310                _mainCRTStartup
-                0x0000000000008310                _start
+ .text          0x00000000000082c0       0x88 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/crtbegin.o
+ .text          0x0000000000008348       0x7c /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/crt0.o
+                0x0000000000008348                _stack_init
+                0x0000000000008350                _mainCRTStartup
+                0x0000000000008350                _start
  .text.tfm_psa_framework_version_veneer
-                0x0000000000008384       0x28 secure_fw/CMakeFiles/tfm_s.dir/partitions/ns_agent_tz/psa_api_veneers_v80m.o
-                0x0000000000008384                __acle_se_tfm_psa_framework_version_veneer
+                0x00000000000083c4       0x28 secure_fw/CMakeFiles/tfm_s.dir/partitions/ns_agent_tz/psa_api_veneers_v80m.o
+                0x00000000000083c4                __acle_se_tfm_psa_framework_version_veneer
  .text.tfm_psa_version_veneer
-                0x00000000000083ac       0x28 secure_fw/CMakeFiles/tfm_s.dir/partitions/ns_agent_tz/psa_api_veneers_v80m.o
-                0x00000000000083ac                __acle_se_tfm_psa_version_veneer
+                0x00000000000083ec       0x28 secure_fw/CMakeFiles/tfm_s.dir/partitions/ns_agent_tz/psa_api_veneers_v80m.o
+                0x00000000000083ec                __acle_se_tfm_psa_version_veneer
  .text.tfm_psa_call_veneer
-                0x00000000000083d4       0x30 secure_fw/CMakeFiles/tfm_s.dir/partitions/ns_agent_tz/psa_api_veneers_v80m.o
-                0x00000000000083d4                __acle_se_tfm_psa_call_veneer
+                0x0000000000008414       0x30 secure_fw/CMakeFiles/tfm_s.dir/partitions/ns_agent_tz/psa_api_veneers_v80m.o
+                0x0000000000008414                __acle_se_tfm_psa_call_veneer
  .text.tfm_psa_connect_veneer
-                0x0000000000008404       0x20 secure_fw/CMakeFiles/tfm_s.dir/partitions/ns_agent_tz/psa_api_veneers_v80m.o
-                0x0000000000008404                __acle_se_tfm_psa_connect_veneer
+                0x0000000000008444       0x20 secure_fw/CMakeFiles/tfm_s.dir/partitions/ns_agent_tz/psa_api_veneers_v80m.o
+                0x0000000000008444                __acle_se_tfm_psa_connect_veneer
  .text.tfm_psa_close_veneer
-                0x0000000000008424       0x14 secure_fw/CMakeFiles/tfm_s.dir/partitions/ns_agent_tz/psa_api_veneers_v80m.o
-                0x0000000000008424                __acle_se_tfm_psa_close_veneer
+                0x0000000000008464       0x14 secure_fw/CMakeFiles/tfm_s.dir/partitions/ns_agent_tz/psa_api_veneers_v80m.o
+                0x0000000000008464                __acle_se_tfm_psa_close_veneer
  .text.tfm_psa_call_pack
-                0x0000000000008438       0x70 secure_fw/partitions/lib/runtime/libtfm_sprt.a(psa_interface_sfn.o)
-                0x0000000000008438                tfm_psa_call_pack
+                0x0000000000008478       0x70 secure_fw/partitions/lib/runtime/libtfm_sprt.a(psa_interface_sfn.o)
+                0x0000000000008478                tfm_psa_call_pack
  .text.verify_header
-                0x00000000000084a8       0x44 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/libcrypto_service_mbedcrypto.a(memory_buffer_alloc.o)
+                0x00000000000084e8       0x44 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/libcrypto_service_mbedcrypto.a(memory_buffer_alloc.o)
  .text.verify_chain
-                0x00000000000084ec       0x68 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/libcrypto_service_mbedcrypto.a(memory_buffer_alloc.o)
+                0x000000000000852c       0x68 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/libcrypto_service_mbedcrypto.a(memory_buffer_alloc.o)
  .text.buffer_alloc_free
-                0x0000000000008554       0xe8 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/libcrypto_service_mbedcrypto.a(memory_buffer_alloc.o)
+                0x0000000000008594       0xe8 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/libcrypto_service_mbedcrypto.a(memory_buffer_alloc.o)
  .text.buffer_alloc_calloc
-                0x000000000000863c      0x10c secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/libcrypto_service_mbedcrypto.a(memory_buffer_alloc.o)
+                0x000000000000867c      0x10c secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/libcrypto_service_mbedcrypto.a(memory_buffer_alloc.o)
  .text.mbedtls_memory_buffer_alloc_init
-                0x0000000000008748       0x64 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/libcrypto_service_mbedcrypto.a(memory_buffer_alloc.o)
-                0x0000000000008748                mbedtls_memory_buffer_alloc_init
+                0x0000000000008788       0x64 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/libcrypto_service_mbedcrypto.a(memory_buffer_alloc.o)
+                0x0000000000008788                mbedtls_memory_buffer_alloc_init
  .text._tfm_dec_num_output
-                0x00000000000087ac       0xb8 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
- .text.vprintf  0x0000000000008864      0x254 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
-                0x0000000000008864                vprintf
+                0x00000000000087ec       0xb8 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
+ .text.vprintf  0x00000000000088a4      0x254 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
+                0x00000000000088a4                vprintf
  .text.platform_calloc_uninit
-                0x0000000000008ab8        0x4 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform.o)
+                0x0000000000008af8        0x4 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform.o)
  .text.platform_free_uninit
-                0x0000000000008abc        0x4 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform.o)
+                0x0000000000008afc        0x4 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform.o)
  .text.mbedtls_free
-                0x0000000000008ac0        0xc secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform.o)
-                0x0000000000008ac0                mbedtls_free
+                0x0000000000008b00        0xc secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform.o)
+                0x0000000000008b00                mbedtls_free
  .text.mbedtls_platform_set_calloc_free
-                0x0000000000008acc       0x1c secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform.o)
-                0x0000000000008acc                mbedtls_platform_set_calloc_free
+                0x0000000000008b0c       0x1c secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform.o)
+                0x0000000000008b0c                mbedtls_platform_set_calloc_free
  .text.mbedtls_platform_set_printf
-                0x0000000000008ae8       0x10 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform.o)
-                0x0000000000008ae8                mbedtls_platform_set_printf
+                0x0000000000008b28       0x10 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform.o)
+                0x0000000000008b28                mbedtls_platform_set_printf
  .text.mbedtls_platform_zeroize
-                0x0000000000008af8       0x18 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform_util.o)
-                0x0000000000008af8                mbedtls_platform_zeroize
+                0x0000000000008b38       0x18 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform_util.o)
+                0x0000000000008b38                mbedtls_platform_zeroize
  .text.mbedtls_zeroize_and_free
-                0x0000000000008b10       0x20 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform_util.o)
-                0x0000000000008b10                mbedtls_zeroize_and_free
+                0x0000000000008b50       0x20 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform_util.o)
+                0x0000000000008b50                mbedtls_zeroize_and_free
  .text.psa_wipe_key_slot
-                0x0000000000008b30       0x50 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto.o)
-                0x0000000000008b30                psa_wipe_key_slot
+                0x0000000000008b70       0x50 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto.o)
+                0x0000000000008b70                psa_wipe_key_slot
  .text.mbedcrypto__psa_generate_random
-                0x0000000000008b80       0x24 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto.o)
-                0x0000000000008b80                mbedcrypto__psa_generate_random
+                0x0000000000008bc0       0x24 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto.o)
+                0x0000000000008bc0                mbedcrypto__psa_generate_random
  .text.mbedtls_psa_crypto_free
-                0x0000000000008ba4       0x58 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto.o)
-                0x0000000000008ba4                mbedtls_psa_crypto_free
+                0x0000000000008be4       0x58 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto.o)
+                0x0000000000008be4                mbedtls_psa_crypto_free
  .text.mbedcrypto__psa_crypto_init
-                0x0000000000008bfc       0x84 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto.o)
-                0x0000000000008bfc                mbedcrypto__psa_crypto_init
+                0x0000000000008c3c       0x84 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto.o)
+                0x0000000000008c3c                mbedcrypto__psa_crypto_init
  .text.psa_initialize_key_slots
-                0x0000000000008c80       0x10 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_slot_management.o)
-                0x0000000000008c80                psa_initialize_key_slots
+                0x0000000000008cc0       0x10 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_slot_management.o)
+                0x0000000000008cc0                psa_initialize_key_slots
  .text.psa_wipe_all_key_slots
-                0x0000000000008c90       0x30 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_slot_management.o)
-                0x0000000000008c90                psa_wipe_all_key_slots
+                0x0000000000008cd0       0x30 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_slot_management.o)
+                0x0000000000008cd0                psa_wipe_all_key_slots
  .text.psa_driver_wrapper_init
-                0x0000000000008cc0        0x4 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_driver_wrappers.o)
-                0x0000000000008cc0                psa_driver_wrapper_init
+                0x0000000000008d00        0x4 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_driver_wrappers.o)
+                0x0000000000008d00                psa_driver_wrapper_init
  .text.psa_driver_wrapper_free
-                0x0000000000008cc4        0x4 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_driver_wrappers.o)
-                0x0000000000008cc4                psa_driver_wrapper_free
+                0x0000000000008d04        0x4 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_driver_wrappers.o)
+                0x0000000000008d04                psa_driver_wrapper_free
  .text.psa_driver_wrapper_init_random
-                0x0000000000008cc8        0x4 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_driver_wrappers.o)
-                0x0000000000008cc8                psa_driver_wrapper_init_random
+                0x0000000000008d08        0x4 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_driver_wrappers.o)
+                0x0000000000008d08                psa_driver_wrapper_init_random
  .text.psa_driver_wrapper_get_random
-                0x0000000000008ccc       0x24 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_driver_wrappers.o)
-                0x0000000000008ccc                psa_driver_wrapper_get_random
+                0x0000000000008d0c       0x24 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_driver_wrappers.o)
+                0x0000000000008d0c                psa_driver_wrapper_get_random
  .text.psa_driver_wrapper_free_random
-                0x0000000000008cf0        0x4 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_driver_wrappers.o)
-                0x0000000000008cf0                psa_driver_wrapper_free_random
+                0x0000000000008d30        0x4 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_driver_wrappers.o)
+                0x0000000000008d30                psa_driver_wrapper_free_random
  .text.nrf_cc3xx_platform_init_hmac_drbg
-                0x0000000000008cf4       0x44 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform.c.obj)
-                0x0000000000008cf4                nrf_cc3xx_platform_init_hmac_drbg
+                0x0000000000008d34       0x44 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform.c.obj)
+                0x0000000000008d34                nrf_cc3xx_platform_init_hmac_drbg
  .text.nrf_cc3xx_platform_hmac_drbg_init
-                0x0000000000008d38       0x60 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_hmac_drbg.c.obj)
-                0x0000000000008d38                nrf_cc3xx_platform_hmac_drbg_init
+                0x0000000000008d78       0x60 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_hmac_drbg.c.obj)
+                0x0000000000008d78                nrf_cc3xx_platform_hmac_drbg_init
  .text.nrf_cc3xx_platform_hmac_drbg_get
-                0x0000000000008d98       0x44 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_hmac_drbg.c.obj)
-                0x0000000000008d98                nrf_cc3xx_platform_hmac_drbg_get
+                0x0000000000008dd8       0x44 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_hmac_drbg.c.obj)
+                0x0000000000008dd8                nrf_cc3xx_platform_hmac_drbg_get
  .text.mbedtls_zeroize_internal
-                0x0000000000008ddc       0x14 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(mbedtls_common.c.obj)
-                0x0000000000008ddc                mbedtls_zeroize_internal
+                0x0000000000008e1c       0x14 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(mbedtls_common.c.obj)
+                0x0000000000008e1c                mbedtls_zeroize_internal
  .text.cc_mbedtls_platform_zeroize
-                0x0000000000008df0       0x14 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(mbedtls_common.c.obj)
-                0x0000000000008df0                cc_mbedtls_platform_zeroize
+                0x0000000000008e30       0x14 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(mbedtls_common.c.obj)
+                0x0000000000008e30                cc_mbedtls_platform_zeroize
  .text.entropy_update
-                0x0000000000008e04       0x7c /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(custom_entropy.c.obj)
+                0x0000000000008e44       0x7c /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(custom_entropy.c.obj)
  .text.entropy_gather_internal.part.0
-                0x0000000000008e80       0x88 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(custom_entropy.c.obj)
+                0x0000000000008ec0       0x88 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(custom_entropy.c.obj)
  .text.cc_mbedtls_entropy_init
-                0x0000000000008f08       0x84 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(custom_entropy.c.obj)
-                0x0000000000008f08                cc_mbedtls_entropy_init
+                0x0000000000008f48       0x84 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(custom_entropy.c.obj)
+                0x0000000000008f48                cc_mbedtls_entropy_init
  .text.cc_mbedtls_entropy_func
-                0x0000000000008f8c      0x110 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(custom_entropy.c.obj)
-                0x0000000000008f8c                cc_mbedtls_entropy_func
+                0x0000000000008fcc      0x110 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(custom_entropy.c.obj)
+                0x0000000000008fcc                cc_mbedtls_entropy_func
  .text.cc_hmac_sha256_starts.constprop.0
-                0x000000000000909c      0x108 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hmac_drbg_alt.c.obj)
+                0x00000000000090dc      0x108 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hmac_drbg_alt.c.obj)
  .text.cc_mbedtls_hmac_drbg_init
-                0x00000000000091a4       0x28 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hmac_drbg_alt.c.obj)
-                0x00000000000091a4                cc_mbedtls_hmac_drbg_init
+                0x00000000000091e4       0x28 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hmac_drbg_alt.c.obj)
+                0x00000000000091e4                cc_mbedtls_hmac_drbg_init
  .text.cc_mbedtls_hmac_drbg_update
-                0x00000000000091cc      0x170 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hmac_drbg_alt.c.obj)
-                0x00000000000091cc                cc_mbedtls_hmac_drbg_update
+                0x000000000000920c      0x170 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hmac_drbg_alt.c.obj)
+                0x000000000000920c                cc_mbedtls_hmac_drbg_update
  .text.cc_hmac_drbg_reseed_core
-                0x000000000000933c       0xac /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hmac_drbg_alt.c.obj)
+                0x000000000000937c       0xac /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hmac_drbg_alt.c.obj)
  .text.cc_mbedtls_hmac_drbg_seed
-                0x00000000000093e8       0x54 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hmac_drbg_alt.c.obj)
-                0x00000000000093e8                cc_mbedtls_hmac_drbg_seed
+                0x0000000000009428       0x54 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hmac_drbg_alt.c.obj)
+                0x0000000000009428                cc_mbedtls_hmac_drbg_seed
  .text.cc_mbedtls_hmac_drbg_random_with_add
-                0x000000000000943c      0x144 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hmac_drbg_alt.c.obj)
-                0x000000000000943c                cc_mbedtls_hmac_drbg_random_with_add
+                0x000000000000947c      0x144 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hmac_drbg_alt.c.obj)
+                0x000000000000947c                cc_mbedtls_hmac_drbg_random_with_add
  .text.RndStartupTest.constprop.0
-                0x0000000000009580       0x98 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_lib.c.obj)
+                0x00000000000095c0       0x98 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_lib.c.obj)
  .text.CC_LibInit_HMAC_DRBG
-                0x0000000000009618       0xc0 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_lib.c.obj)
-                0x0000000000009618                CC_LibInit_HMAC_DRBG
+                0x0000000000009658       0xc0 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_lib.c.obj)
+                0x0000000000009658                CC_LibInit_HMAC_DRBG
  .text.CC_HalInit
-                0x00000000000096d8        0x4 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_hal.c.obj)
-                0x00000000000096d8                CC_HalInit
+                0x0000000000009718        0x4 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_hal.c.obj)
+                0x0000000000009718                CC_HalInit
  .text.CC_HalTerminate
-                0x00000000000096dc        0x4 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_hal.c.obj)
-                0x00000000000096dc                CC_HalTerminate
+                0x000000000000971c        0x4 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_hal.c.obj)
+                0x000000000000971c                CC_HalTerminate
  .text.CC_HalClearInterruptBit
-                0x00000000000096e0       0x1c /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_hal.c.obj)
-                0x00000000000096e0                CC_HalClearInterruptBit
+                0x0000000000009720       0x1c /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_hal.c.obj)
+                0x0000000000009720                CC_HalClearInterruptBit
  .text.CC_HalMaskInterrupt
-                0x00000000000096fc        0xc /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_hal.c.obj)
-                0x00000000000096fc                CC_HalMaskInterrupt
+                0x000000000000973c        0xc /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_hal.c.obj)
+                0x000000000000973c                CC_HalMaskInterrupt
  .text.CC_HalWaitInterrupt
-                0x0000000000009708        0xc /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_hal.c.obj)
-                0x0000000000009708                CC_HalWaitInterrupt
+                0x0000000000009748        0xc /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_hal.c.obj)
+                0x0000000000009748                CC_HalWaitInterrupt
  .text.CC_HalWaitInterruptRND
-                0x0000000000009714        0xc /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_hal.c.obj)
-                0x0000000000009714                CC_HalWaitInterruptRND
+                0x0000000000009754        0xc /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_hal.c.obj)
+                0x0000000000009754                CC_HalWaitInterruptRND
  .text.CC_PalInit
-                0x0000000000009720       0x5c /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal.c.obj)
-                0x0000000000009720                CC_PalInit
+                0x0000000000009760       0x5c /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal.c.obj)
+                0x0000000000009760                CC_PalInit
  .text.CC_PalTerminate
-                0x000000000000977c       0x34 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal.c.obj)
-                0x000000000000977c                CC_PalTerminate
+                0x00000000000097bc       0x34 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal.c.obj)
+                0x00000000000097bc                CC_PalTerminate
  .text.CC_PalDmaInit
-                0x00000000000097b0        0x4 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_dma.c.obj)
-                0x00000000000097b0                CC_PalDmaInit
+                0x00000000000097f0        0x4 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_dma.c.obj)
+                0x00000000000097f0                CC_PalDmaInit
  .text.CC_PalDmaTerminate
-                0x00000000000097b4        0x4 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_dma.c.obj)
-                0x00000000000097b4                CC_PalDmaTerminate
+                0x00000000000097f4        0x4 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_dma.c.obj)
+                0x00000000000097f4                CC_PalDmaTerminate
  .text.CC_PalWaitInterruptRND
-                0x00000000000097b8       0x2c /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_interrupt_ctrl.c.obj)
-                0x00000000000097b8                CC_PalWaitInterruptRND
+                0x00000000000097f8       0x2c /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_interrupt_ctrl.c.obj)
+                0x00000000000097f8                CC_PalWaitInterruptRND
  .text.CC_PalWaitInterrupt
-                0x00000000000097e4       0x18 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_interrupt_ctrl.c.obj)
-                0x00000000000097e4                CC_PalWaitInterrupt
+                0x0000000000009824       0x18 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_interrupt_ctrl.c.obj)
+                0x0000000000009824                CC_PalWaitInterrupt
  .text.CC_PalMemCopyPlat
-                0x00000000000097fc        0x4 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_mem.c.obj)
-                0x00000000000097fc                CC_PalMemCopyPlat
+                0x000000000000983c        0x4 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_mem.c.obj)
+                0x000000000000983c                CC_PalMemCopyPlat
  .text.CC_PalMemSetZeroPlat
-                0x0000000000009800        0x8 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_mem.c.obj)
-                0x0000000000009800                CC_PalMemSetZeroPlat
+                0x0000000000009840        0x8 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_mem.c.obj)
+                0x0000000000009840                CC_PalMemSetZeroPlat
  .text.CC_PalMutexCreate
-                0x0000000000009808       0x14 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_mutex.c.obj)
-                0x0000000000009808                CC_PalMutexCreate
+                0x0000000000009848       0x14 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_mutex.c.obj)
+                0x0000000000009848                CC_PalMutexCreate
  .text.CC_PalMutexDestroy
-                0x000000000000981c       0x14 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_mutex.c.obj)
-                0x000000000000981c                CC_PalMutexDestroy
+                0x000000000000985c       0x14 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_mutex.c.obj)
+                0x000000000000985c                CC_PalMutexDestroy
  .text.CC_PalMutexLock
-                0x0000000000009830       0x10 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_mutex.c.obj)
-                0x0000000000009830                CC_PalMutexLock
+                0x0000000000009870       0x10 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_mutex.c.obj)
+                0x0000000000009870                CC_PalMutexLock
  .text.CC_PalMutexUnlock
-                0x0000000000009840       0x14 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_mutex.c.obj)
-                0x0000000000009840                CC_PalMutexUnlock
+                0x0000000000009880       0x14 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_mutex.c.obj)
+                0x0000000000009880                CC_PalMutexUnlock
  .text.CC_PalPowerSaveModeInit
-                0x0000000000009854       0x3c /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_pm.c.obj)
-                0x0000000000009854                CC_PalPowerSaveModeInit
+                0x0000000000009894       0x3c /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_pm.c.obj)
+                0x0000000000009894                CC_PalPowerSaveModeInit
  .text.CC_PalPowerSaveModeSelect
-                0x0000000000009890       0x84 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_pm.c.obj)
-                0x0000000000009890                CC_PalPowerSaveModeSelect
+                0x00000000000098d0       0x84 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_pm.c.obj)
+                0x00000000000098d0                CC_PalPowerSaveModeSelect
  .text.mutex_init
-                0x0000000000009914        0xc /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(threading_alt.c.obj)
-                0x0000000000009914                mutex_init
+                0x0000000000009954        0xc /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(threading_alt.c.obj)
+                0x0000000000009954                mutex_init
  .text.mutex_lock
-                0x0000000000009920        0xc /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(threading_alt.c.obj)
-                0x0000000000009920                mutex_lock
+                0x0000000000009960        0xc /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(threading_alt.c.obj)
+                0x0000000000009960                mutex_lock
  .text.mutex_unlock
-                0x000000000000992c        0xc /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(threading_alt.c.obj)
-                0x000000000000992c                mutex_unlock
+                0x000000000000996c        0xc /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(threading_alt.c.obj)
+                0x000000000000996c                mutex_unlock
  .text.nrf_cc3xx_platform_abort
-                0x0000000000009938       0x24 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_abort.c.obj)
+                0x0000000000009978       0x24 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_abort.c.obj)
  .text.CC_PalAbort
-                0x000000000000995c       0x34 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_abort.c.obj)
-                0x000000000000995c                CC_PalAbort
+                0x000000000000999c       0x34 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_abort.c.obj)
+                0x000000000000999c                CC_PalAbort
  .text.mutex_free
-                0x0000000000009990       0x34 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_mutex.c.obj)
+                0x00000000000099d0       0x34 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_mutex.c.obj)
  .text.mutex_lock
-                0x00000000000099c4       0x48 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_mutex.c.obj)
+                0x0000000000009a04       0x48 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_mutex.c.obj)
  .text.mutex_unlock
-                0x0000000000009a0c       0x38 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_mutex.c.obj)
+                0x0000000000009a4c       0x38 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_mutex.c.obj)
  .text.mutex_init
-                0x0000000000009a44       0x20 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_mutex.c.obj)
+                0x0000000000009a84       0x20 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_mutex.c.obj)
  .text.startTrngHW
-                0x0000000000009a64      0x140 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd_trng90b.c.obj)
+                0x0000000000009aa4      0x140 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd_trng90b.c.obj)
  .text.LLF_RND_RepetitionCounterTest
-                0x0000000000009ba4       0x64 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd_trng90b.c.obj)
-                0x0000000000009ba4                LLF_RND_RepetitionCounterTest
+                0x0000000000009be4       0x64 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd_trng90b.c.obj)
+                0x0000000000009be4                LLF_RND_RepetitionCounterTest
  .text.LLF_RND_AdaptiveProportionTest
-                0x0000000000009c08       0x80 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd_trng90b.c.obj)
-                0x0000000000009c08                LLF_RND_AdaptiveProportionTest
+                0x0000000000009c48       0x80 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd_trng90b.c.obj)
+                0x0000000000009c48                LLF_RND_AdaptiveProportionTest
  .text.getTrngSource
-                0x0000000000009c88      0x2b4 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd_trng90b.c.obj)
+                0x0000000000009cc8      0x2b4 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd_trng90b.c.obj)
  .text.LLF_RND_GetTrngSource
-                0x0000000000009f3c       0x18 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd_trng90b.c.obj)
-                0x0000000000009f3c                LLF_RND_GetTrngSource
+                0x0000000000009f7c       0x18 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd_trng90b.c.obj)
+                0x0000000000009f7c                LLF_RND_GetTrngSource
  .text.LLF_RND_RunTrngStartupTest
-                0x0000000000009f54       0x1c /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd_trng90b.c.obj)
-                0x0000000000009f54                LLF_RND_RunTrngStartupTest
+                0x0000000000009f94       0x1c /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd_trng90b.c.obj)
+                0x0000000000009f94                LLF_RND_RunTrngStartupTest
  .text.mbedtls_hardware_poll
-                0x0000000000009f70       0xfc /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(trng_api.c.obj)
-                0x0000000000009f70                mbedtls_hardware_poll
+                0x0000000000009fb0       0xfc /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(trng_api.c.obj)
+                0x0000000000009fb0                mbedtls_hardware_poll
  .text.cc_mbedtls_sha256_init
-                0x000000000000a06c       0x28 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(sha256_alt.c.obj)
-                0x000000000000a06c                cc_mbedtls_sha256_init
+                0x000000000000a0ac       0x28 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(sha256_alt.c.obj)
+                0x000000000000a0ac                cc_mbedtls_sha256_init
  .text.cc_mbedtls_sha256_free
-                0x000000000000a094        0xc /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(sha256_alt.c.obj)
-                0x000000000000a094                cc_mbedtls_sha256_free
+                0x000000000000a0d4        0xc /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(sha256_alt.c.obj)
+                0x000000000000a0d4                cc_mbedtls_sha256_free
  .text.cc_mbedtls_sha256_starts
-                0x000000000000a0a0       0x28 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(sha256_alt.c.obj)
-                0x000000000000a0a0                cc_mbedtls_sha256_starts
+                0x000000000000a0e0       0x28 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(sha256_alt.c.obj)
+                0x000000000000a0e0                cc_mbedtls_sha256_starts
  .text.cc_mbedtls_sha256_update
-                0x000000000000a0c8       0x54 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(sha256_alt.c.obj)
-                0x000000000000a0c8                cc_mbedtls_sha256_update
+                0x000000000000a108       0x54 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(sha256_alt.c.obj)
+                0x000000000000a108                cc_mbedtls_sha256_update
  .text.cc_mbedtls_sha256_finish
-                0x000000000000a11c       0x48 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(sha256_alt.c.obj)
-                0x000000000000a11c                cc_mbedtls_sha256_finish
+                0x000000000000a15c       0x48 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(sha256_alt.c.obj)
+                0x000000000000a15c                cc_mbedtls_sha256_finish
  .text.mbedtls_sha_starts_internal
-                0x000000000000a164       0x28 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(mbedtls_hash_common.c.obj)
-                0x000000000000a164                mbedtls_sha_starts_internal
+                0x000000000000a1a4       0x28 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(mbedtls_hash_common.c.obj)
+                0x000000000000a1a4                mbedtls_sha_starts_internal
  .text.mbedtls_sha_finish_internal
-                0x000000000000a18c       0x5c /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(mbedtls_hash_common.c.obj)
-                0x000000000000a18c                mbedtls_sha_finish_internal
+                0x000000000000a1cc       0x5c /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(mbedtls_hash_common.c.obj)
+                0x000000000000a1cc                mbedtls_sha_finish_internal
  .text.mbedtls_sha_update_internal
-                0x000000000000a1e8      0x1ec /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(mbedtls_hash_common.c.obj)
-                0x000000000000a1e8                mbedtls_sha_update_internal
+                0x000000000000a228      0x1ec /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(mbedtls_hash_common.c.obj)
+                0x000000000000a228                mbedtls_sha_update_internal
  .text.cc_mbedtls_sha256
-                0x000000000000a3d4       0x50 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(sha256.c.obj)
-                0x000000000000a3d4                cc_mbedtls_sha256
+                0x000000000000a414       0x50 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(sha256.c.obj)
+                0x000000000000a414                cc_mbedtls_sha256
  .text.RNG_PLAT_SetUserRngParameters
-                0x000000000000a424       0x74 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_rng_plat.c.obj)
-                0x000000000000a424                RNG_PLAT_SetUserRngParameters
+                0x000000000000a464       0x74 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_rng_plat.c.obj)
+                0x000000000000a464                RNG_PLAT_SetUserRngParameters
  .text.CC_PalTrngParamGet
-                0x000000000000a498      0x114 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_trng.c.obj)
-                0x000000000000a498                CC_PalTrngParamGet
+                0x000000000000a4d8      0x114 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_trng.c.obj)
+                0x000000000000a4d8                CC_PalTrngParamGet
  .text.LLF_RND_WaitRngInterrupt
-                0x000000000000a5ac       0x20 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd.c.obj)
-                0x000000000000a5ac                LLF_RND_WaitRngInterrupt
+                0x000000000000a5ec       0x20 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd.c.obj)
+                0x000000000000a5ec                LLF_RND_WaitRngInterrupt
  .text.LLF_RND_GetRoscSampleCnt
-                0x000000000000a5cc       0x34 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd.c.obj)
-                0x000000000000a5cc                LLF_RND_GetRoscSampleCnt
+                0x000000000000a60c       0x34 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd.c.obj)
+                0x000000000000a60c                LLF_RND_GetRoscSampleCnt
  .text.LLF_RND_GetFastestRosc
-                0x000000000000a600       0x20 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd.c.obj)
-                0x000000000000a600                LLF_RND_GetFastestRosc
+                0x000000000000a640       0x20 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd.c.obj)
+                0x000000000000a640                LLF_RND_GetFastestRosc
  .text.LLF_RND_TurnOffTrng
-                0x000000000000a620       0x18 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd.c.obj)
-                0x000000000000a620                LLF_RND_TurnOffTrng
+                0x000000000000a660       0x18 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(llf_rnd.c.obj)
+                0x000000000000a660                LLF_RND_TurnOffTrng
  .text.SetDataBuffersInfo
-                0x000000000000a638       0x68 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(driver_common.c.obj)
-                0x000000000000a638                SetDataBuffersInfo
+                0x000000000000a678       0x68 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(driver_common.c.obj)
+                0x000000000000a678                SetDataBuffersInfo
  .text.InitHashDrv
-                0x000000000000a6a0       0x50 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hash_driver.c.obj)
-                0x000000000000a6a0                InitHashDrv
+                0x000000000000a6e0       0x50 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hash_driver.c.obj)
+                0x000000000000a6e0                InitHashDrv
  .text.ProcessHashDrv
-                0x000000000000a6f0      0x22c /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hash_driver.c.obj)
-                0x000000000000a6f0                ProcessHashDrv
+                0x000000000000a730      0x22c /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hash_driver.c.obj)
+                0x000000000000a730                ProcessHashDrv
  .text.FinishHashDrv
-                0x000000000000a91c       0x74 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hash_driver.c.obj)
-                0x000000000000a91c                FinishHashDrv
+                0x000000000000a95c       0x74 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hash_driver.c.obj)
+                0x000000000000a95c                FinishHashDrv
  .text.CC_PalDataBufferAttrGet
-                0x000000000000a990        0x8 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_buff_attr.c.obj)
-                0x000000000000a990                CC_PalDataBufferAttrGet
- .text          0x000000000000a998       0xc8 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(cmse.o)
-                0x000000000000a998                cmse_check_address_range
- .text.exit     0x000000000000aa60       0x28 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libg_nano.a(lib_a-exit.o)
-                0x000000000000aa60                exit
+                0x000000000000a9d0        0x8 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_buff_attr.c.obj)
+                0x000000000000a9d0                CC_PalDataBufferAttrGet
+ .text          0x000000000000a9d8       0xc8 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(cmse.o)
+                0x000000000000a9d8                cmse_check_address_range
+ .text.exit     0x000000000000aaa0       0x28 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libg_nano.a(lib_a-exit.o)
+                0x000000000000aaa0                exit
  .text.__libc_init_array
-                0x000000000000aa88       0x48 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libg_nano.a(lib_a-init.o)
-                0x000000000000aa88                __libc_init_array
- .text._exit    0x000000000000aad0        0x4 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libnosys.a(_exit.o)
-                0x000000000000aad0                _exit
+                0x000000000000aac8       0x48 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libg_nano.a(lib_a-init.o)
+                0x000000000000aac8                __libc_init_array
+ .text._exit    0x000000000000ab10        0x4 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libnosys.a(_exit.o)
+                0x000000000000ab10                _exit
  .text.clear_caller_context
-                0x000000000000aad4        0xa secure_fw/CMakeFiles/tfm_s.dir/partitions/ns_agent_tz/psa_api_veneers_v80m.o
+                0x000000000000ab14        0xa secure_fw/CMakeFiles/tfm_s.dir/partitions/ns_agent_tz/psa_api_veneers_v80m.o
  .text.C_HardFault_Handler
-                0x000000000000aade        0xc secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
-                0x000000000000aade                C_HardFault_Handler
+                0x000000000000ab1e        0xc secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
+                0x000000000000ab1e                C_HardFault_Handler
  .text.HardFault_Handler
-                0x000000000000aaea       0x1e secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
-                0x000000000000aaea                HardFault_Handler
+                0x000000000000ab2a       0x1e secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
+                0x000000000000ab2a                HardFault_Handler
  .text.C_MemManage_Handler
-                0x000000000000ab08        0xc secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
-                0x000000000000ab08                C_MemManage_Handler
+                0x000000000000ab48        0xc secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
+                0x000000000000ab48                C_MemManage_Handler
  .text.MemManage_Handler
-                0x000000000000ab14       0x1e secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
-                0x000000000000ab14                MemManage_Handler
+                0x000000000000ab54       0x1e secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
+                0x000000000000ab54                MemManage_Handler
  .text.C_BusFault_Handler
-                0x000000000000ab32        0xc secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
-                0x000000000000ab32                C_BusFault_Handler
+                0x000000000000ab72        0xc secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
+                0x000000000000ab72                C_BusFault_Handler
  .text.BusFault_Handler
-                0x000000000000ab3e       0x1e secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
-                0x000000000000ab3e                BusFault_Handler
+                0x000000000000ab7e       0x1e secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
+                0x000000000000ab7e                BusFault_Handler
  .text.C_SecureFault_Handler
-                0x000000000000ab5c        0xc secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
-                0x000000000000ab5c                C_SecureFault_Handler
+                0x000000000000ab9c        0xc secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
+                0x000000000000ab9c                C_SecureFault_Handler
  .text.SecureFault_Handler
-                0x000000000000ab68       0x1e secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
-                0x000000000000ab68                SecureFault_Handler
+                0x000000000000aba8       0x1e secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
+                0x000000000000aba8                SecureFault_Handler
  .text.C_UsageFault_Handler
-                0x000000000000ab86        0xc secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
-                0x000000000000ab86                C_UsageFault_Handler
+                0x000000000000abc6        0xc secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
+                0x000000000000abc6                C_UsageFault_Handler
  .text.UsageFault_Handler
-                0x000000000000ab92       0x1e secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
-                0x000000000000ab92                UsageFault_Handler
+                0x000000000000abd2       0x1e secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/common/faults.o
+                0x000000000000abd2                UsageFault_Handler
  .text.memcpy_r
-                0x000000000000abb0       0xa0 secure_fw/partitions/lib/runtime/libtfm_sprt.a(crt_memmove.o)
- .text.memmove  0x000000000000ac50       0x36 secure_fw/partitions/lib/runtime/libtfm_sprt.a(crt_memmove.o)
-                0x000000000000ac50                memmove
- .text.memcpy   0x000000000000ac86       0x8c secure_fw/partitions/lib/runtime/libtfm_sprt.a(crt_memcpy.o)
-                0x000000000000ac86                memcpy
- .text.memset   0x000000000000ad12       0x86 secure_fw/partitions/lib/runtime/libtfm_sprt.a(crt_memset.o)
-                0x000000000000ad12                memset
+                0x000000000000abf0       0xa0 secure_fw/partitions/lib/runtime/libtfm_sprt.a(crt_memmove.o)
+ .text.memmove  0x000000000000ac90       0x36 secure_fw/partitions/lib/runtime/libtfm_sprt.a(crt_memmove.o)
+                0x000000000000ac90                memmove
+ .text.memcpy   0x000000000000acc6       0x8c secure_fw/partitions/lib/runtime/libtfm_sprt.a(crt_memcpy.o)
+                0x000000000000acc6                memcpy
+ .text.memset   0x000000000000ad52       0x86 secure_fw/partitions/lib/runtime/libtfm_sprt.a(crt_memset.o)
+                0x000000000000ad52                memset
  .text.psa_framework_version
-                0x000000000000ad98       0x2e secure_fw/partitions/lib/runtime/libtfm_sprt.a(psa_interface_sfn.o)
-                0x000000000000ad98                psa_framework_version
+                0x000000000000add8       0x2e secure_fw/partitions/lib/runtime/libtfm_sprt.a(psa_interface_sfn.o)
+                0x000000000000add8                psa_framework_version
  .text.psa_version
-                0x000000000000adc6       0x32 secure_fw/partitions/lib/runtime/libtfm_sprt.a(psa_interface_sfn.o)
-                0x000000000000adc6                psa_version
+                0x000000000000ae06       0x32 secure_fw/partitions/lib/runtime/libtfm_sprt.a(psa_interface_sfn.o)
+                0x000000000000ae06                psa_version
  .text.psa_read
-                0x000000000000adf8       0x3e secure_fw/partitions/lib/runtime/libtfm_sprt.a(psa_interface_sfn.o)
-                0x000000000000adf8                psa_read
+                0x000000000000ae38       0x3e secure_fw/partitions/lib/runtime/libtfm_sprt.a(psa_interface_sfn.o)
+                0x000000000000ae38                psa_read
  .text.psa_write
-                0x000000000000ae36       0x3c secure_fw/partitions/lib/runtime/libtfm_sprt.a(psa_interface_sfn.o)
-                0x000000000000ae36                psa_write
+                0x000000000000ae76       0x3c secure_fw/partitions/lib/runtime/libtfm_sprt.a(psa_interface_sfn.o)
+                0x000000000000ae76                psa_write
  .text.psa_panic
-                0x000000000000ae72       0x2c secure_fw/partitions/lib/runtime/libtfm_sprt.a(psa_interface_sfn.o)
-                0x000000000000ae72                psa_panic
+                0x000000000000aeb2       0x2c secure_fw/partitions/lib/runtime/libtfm_sprt.a(psa_interface_sfn.o)
+                0x000000000000aeb2                psa_panic
  .text._tfm_flush_formatted_buffer
-                0x000000000000ae9e       0x40 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
+                0x000000000000aede       0x40 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
  .text._tfm_string_output
-                0x000000000000aede       0x38 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
+                0x000000000000af1e       0x38 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
  .text._tfm_hex_num_output
-                0x000000000000af16       0x78 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
- .text.printf   0x000000000000af8e       0x2c secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
-                0x000000000000af8e                printf
+                0x000000000000af56       0x78 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
+ .text.printf   0x000000000000afce       0x2c secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
+                0x000000000000afce                printf
  .text.tfm_output_unpriv_string
-                0x000000000000afba        0x8 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_hal_sp_logdev_periph.o)
+                0x000000000000affa        0x8 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_hal_sp_logdev_periph.o)
  .text.tfm_hal_output_sp_log
-                0x000000000000afc2       0x1c secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_hal_sp_logdev_periph.o)
-                0x000000000000afc2                tfm_hal_output_sp_log
- .text          0x000000000000afde       0x38 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(cmse_nonsecure_call.o)
-                0x000000000000afde                __gnu_cmse_nonsecure_call
+                0x000000000000b002       0x1c secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_hal_sp_logdev_periph.o)
+                0x000000000000b002                tfm_hal_output_sp_log
+ .text          0x000000000000b01e       0x38 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(cmse_nonsecure_call.o)
+                0x000000000000b01e                __gnu_cmse_nonsecure_call
  *(.init)
- *fill*         0x000000000000b016        0x2 
- .init          0x000000000000b018        0x4 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/crti.o
-                0x000000000000b018                _init
- .init          0x000000000000b01c        0x8 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/crtn.o
+ *fill*         0x000000000000b056        0x2 
+ .init          0x000000000000b058        0x4 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/crti.o
+                0x000000000000b058                _init
+ .init          0x000000000000b05c        0x8 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/crtn.o
  *(.fini)
- .fini          0x000000000000b024        0x4 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/crti.o
-                0x000000000000b024                _fini
- .fini          0x000000000000b028        0x8 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/crtn.o
+ .fini          0x000000000000b064        0x4 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/crti.o
+                0x000000000000b064                _fini
+ .fini          0x000000000000b068        0x8 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -5503,59 +5503,59 @@ LOAD /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin
  *(.dtors)
  *(SORT_BY_ALIGNMENT(.rodata*))
  .rodata.ret_err
-                0x000000000000b030        0x4 secure_fw/CMakeFiles/tfm_s.dir/partitions/ns_agent_tz/psa_api_veneers_v80m.o
-                0x000000000000b030                ret_err
- .rodata        0x000000000000b034        0xb secure_fw/CMakeFiles/tfm_s.dir/__/generated/secure_fw/partitions/crypto/auto_generated/load_info_tfm_crypto.o
- *fill*         0x000000000000b03f        0x1 
- .rodata        0x000000000000b040       0x15 secure_fw/CMakeFiles/tfm_s.dir/__/generated/secure_fw/partitions/platform/auto_generated/load_info_tfm_platform.o
- *fill*         0x000000000000b055        0x3 
+                0x000000000000b070        0x4 secure_fw/CMakeFiles/tfm_s.dir/partitions/ns_agent_tz/psa_api_veneers_v80m.o
+                0x000000000000b070                ret_err
+ .rodata        0x000000000000b074        0xb secure_fw/CMakeFiles/tfm_s.dir/__/generated/secure_fw/partitions/crypto/auto_generated/load_info_tfm_crypto.o
+ *fill*         0x000000000000b07f        0x1 
+ .rodata        0x000000000000b080       0x15 secure_fw/CMakeFiles/tfm_s.dir/__/generated/secure_fw/partitions/platform/auto_generated/load_info_tfm_platform.o
+ *fill*         0x000000000000b095        0x3 
  .rodata.hex_digits_lo
-                0x000000000000b058       0x10 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
+                0x000000000000b098       0x10 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
  .rodata.hex_digits_up
-                0x000000000000b068       0x10 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
- .rodata        0x000000000000b078       0x16 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
- *fill*         0x000000000000b08e        0x2 
+                0x000000000000b0a8       0x10 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
+ .rodata        0x000000000000b0b8       0x16 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
+ *fill*         0x000000000000b0ce        0x2 
  .rodata.CSWTCH.10
-                0x000000000000b090       0x1c /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform.c.obj)
+                0x000000000000b0d0       0x1c /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform.c.obj)
  .rodata.RndStartupTest.constprop.0.str1.4
-                0x000000000000b0ac       0x6f /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_lib.c.obj)
- *fill*         0x000000000000b11b        0x1 
+                0x000000000000b0ec       0x6f /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_lib.c.obj)
+ *fill*         0x000000000000b15b        0x1 
  .rodata.CC_PalPowerSaveModeInit.str1.4
-                0x000000000000b11c       0x20 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_pm.c.obj)
+                0x000000000000b15c       0x20 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_pm.c.obj)
  .rodata.mutex_free.str1.4
-                0x000000000000b13c       0x26 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_mutex.c.obj)
- *fill*         0x000000000000b162        0x2 
+                0x000000000000b17c       0x26 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_mutex.c.obj)
+ *fill*         0x000000000000b1a2        0x2 
  .rodata.mutex_init.str1.4
-                0x000000000000b164       0x23 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_mutex.c.obj)
- *fill*         0x000000000000b187        0x1 
+                0x000000000000b1a4       0x23 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(nrf_cc3xx_platform_mutex.c.obj)
+ *fill*         0x000000000000b1c7        0x1 
  .rodata.mbedtls_hardware_poll.str1.4
-                0x000000000000b188       0x16 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(trng_api.c.obj)
+                0x000000000000b1c8       0x16 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(trng_api.c.obj)
                                          0x6e (size before relaxing)
- *fill*         0x000000000000b19e        0x2 
+ *fill*         0x000000000000b1de        0x2 
  .rodata.cc_mbedtls_sha256_init.str1.4
-                0x000000000000b1a0        0xe /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(sha256_alt.c.obj)
+                0x000000000000b1e0        0xe /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(sha256_alt.c.obj)
  .rodata.ProcessHashDrv.str1.4
-                0x000000000000b1ae       0x6f /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hash_driver.c.obj)
- *fill*         0x000000000000b1ae        0x2 
+                0x000000000000b1ee       0x6f /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hash_driver.c.obj)
+ *fill*         0x000000000000b1ee        0x2 
  .rodata.HASH_LARVAL_SHA256
-                0x000000000000b1b0       0x20 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hash_driver.c.obj)
+                0x000000000000b1f0       0x20 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hash_driver.c.obj)
  .rodata.HASH_LARVAL_SHA224
-                0x000000000000b1d0       0x20 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hash_driver.c.obj)
+                0x000000000000b210       0x20 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hash_driver.c.obj)
  .rodata.HASH_LARVAL_SHA1
-                0x000000000000b1f0       0x14 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hash_driver.c.obj)
+                0x000000000000b230       0x14 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hash_driver.c.obj)
  .rodata._global_impure_ptr
-                0x000000000000b204        0x4 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libg_nano.a(lib_a-impure.o)
-                0x000000000000b204                _global_impure_ptr
+                0x000000000000b244        0x4 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libg_nano.a(lib_a-impure.o)
+                0x000000000000b244                _global_impure_ptr
  *(.eh_frame*)
- .eh_frame      0x000000000000b208        0x0 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/crtbegin.o
- .eh_frame      0x000000000000b208        0x4 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/crtend.o
-                0x000000000000b220                . = ALIGN (0x20)
- *fill*         0x000000000000b20c       0x14 
-                0x0000000000008280                Image$$TFM_UNPRIV_CODE_START$$RO$$Base = ADDR (.TFM_UNPRIV_CODE)
-                0x000000000000b220                Image$$TFM_UNPRIV_CODE_END$$RO$$Limit = (ADDR (.TFM_UNPRIV_CODE) + SIZEOF (.TFM_UNPRIV_CODE))
+ .eh_frame      0x000000000000b248        0x0 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/crtbegin.o
+ .eh_frame      0x000000000000b248        0x4 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/crtend.o
+                0x000000000000b260                . = ALIGN (0x20)
+ *fill*         0x000000000000b24c       0x14 
+                0x00000000000082c0                Image$$TFM_UNPRIV_CODE_START$$RO$$Base = ADDR (.TFM_UNPRIV_CODE)
+                0x000000000000b260                Image$$TFM_UNPRIV_CODE_END$$RO$$Limit = (ADDR (.TFM_UNPRIV_CODE) + SIZEOF (.TFM_UNPRIV_CODE))
 
-.rel.dyn        0x000000000000b220        0x0
- .rel.iplt      0x000000000000b220        0x0 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/crtbegin.o
+.rel.dyn        0x000000000000b260        0x0
+ .rel.iplt      0x000000000000b260        0x0 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/crtbegin.o
 
 .gnu.sgstubs    0x000000000000fc00       0x40
  *(.gnu.sgstubs*)
@@ -6179,7 +6179,7 @@ LOAD linker stubs
  .comment       0x0000000000000040       0x21 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(hash_driver.c.obj)
  .comment       0x0000000000000040       0x21 /home/abdullah/ncs/v2.9.0/nrfxlib/crypto/nrf_cc310_platform/lib/cortex-m33/soft-float/no-interrupts/libnrf_cc310_platform_0.9.19.a(cc_pal_buff_attr.c.obj)
 
-.debug_info     0x0000000000000000    0x3179c
+.debug_info     0x0000000000000000    0x317ea
  .debug_info    0x0000000000000000      0x266 secure_fw/CMakeFiles/tfm_s.dir/partitions/ns_agent_tz/psa_api_veneers_v80m.o
  .debug_info    0x0000000000000266      0x74b secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/target/nordic_nrf/common/core/startup.o
  .debug_info    0x00000000000009b1      0x135 secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/target/nordic_nrf/common/core/startup_nrf91.o
@@ -6209,44 +6209,44 @@ LOAD linker stubs
  .debug_info    0x000000000000e27b      0x5b1 secure_fw/spm/libtfm_spm.a(spm_local_connection.o)
  .debug_info    0x000000000000e82c      0x729 secure_fw/spm/libtfm_spm.a(tfm_arch_v8m_main.o)
  .debug_info    0x000000000000ef55       0xac secure_fw/spm/libtfm_spm.a(ns_agent_tz_v80m.o)
- .debug_info    0x000000000000f001     0x1241 secure_fw/spm/libtfm_spm.a(tfm_hal_isolation.o)
- .debug_info    0x0000000000010242      0x23f secure_fw/spm/libtfm_spm.a(tfm_hal_platform_common.o)
- .debug_info    0x0000000000010481      0xc0e secure_fw/spm/libtfm_spm.a(faults.o)
- .debug_info    0x000000000001108f     0x5863 secure_fw/spm/libtfm_spm.a(target_cfg.o)
- .debug_info    0x00000000000168f2      0x663 secure_fw/spm/libtfm_spm.a(tfm_boot_data.o)
- .debug_info    0x0000000000016f55      0x4ba secure_fw/spm/libtfm_spm.a(tfm_arch.o)
- .debug_info    0x000000000001740f      0x70a secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
- .debug_info    0x0000000000017b19      0xe84 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_init.o)
- .debug_info    0x000000000001899d      0x81f secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_alloc.o)
- .debug_info    0x00000000000191bc      0x1be secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_cipher.o)
- .debug_info    0x000000000001937a      0x15d secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_hash.o)
- .debug_info    0x00000000000194d7      0x1be secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_mac.o)
- .debug_info    0x0000000000019695      0x1c2 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_aead.o)
- .debug_info    0x0000000000019857      0x209 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_asymmetric.o)
- .debug_info    0x0000000000019a60      0x1be secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_key_derivation.o)
- .debug_info    0x0000000000019c1e      0x1be secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_key_management.o)
- .debug_info    0x0000000000019ddc      0x1ce secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_rng.o)
- .debug_info    0x0000000000019faa      0x453 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_library.o)
- .debug_info    0x000000000001a3fd      0x1be secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_pake.o)
- .debug_info    0x000000000001a5bb      0x631 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/libcrypto_service_mbedcrypto.a(memory_buffer_alloc.o)
- .debug_info    0x000000000001abec      0x3f9 secure_fw/partitions/platform/libtfm_psa_rot_partition_platform.a(platform_sp.o)
- .debug_info    0x000000000001afe5      0x404 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
- .debug_info    0x000000000001b3e9      0x107 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_hal_sp_logdev_periph.o)
- .debug_info    0x000000000001b4f0      0x2fa secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform.o)
- .debug_info    0x000000000001b7ea      0x24e secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform_util.o)
- .debug_info    0x000000000001ba38     0xa41e secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto.o)
- .debug_info    0x0000000000025e56      0xd85 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_slot_management.o)
- .debug_info    0x0000000000026bdb     0x2c0e secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_driver_wrappers.o)
- .debug_info    0x00000000000297e9      0x528 platform/libplatform_s.a(mpu_armv8m_drv.o)
- .debug_info    0x0000000000029d11      0xfa5 platform/libplatform_s.a(spu.o)
- .debug_info    0x000000000002acb6      0x773 platform/libplatform_s.a(nrf_exception_info.o)
- .debug_info    0x000000000002b429      0x52d platform/libplatform_s.a(tfm_hal_platform.o)
- .debug_info    0x000000000002b956      0x1ec platform/libplatform_s.a(dummy_otp.o)
- .debug_info    0x000000000002bb42      0x4a0 platform/libplatform_s.a(tfm_hal_reset_halt.o)
- .debug_info    0x000000000002bfe2       0xef platform/libplatform_s.a(dummy_provisioning.o)
- .debug_info    0x000000000002c0d1      0x610 platform/libplatform_s.a(ns_fault_service.o)
- .debug_info    0x000000000002c6e1      0x991 platform/libplatform_s.a(tfm_platform_system.o)
- .debug_info    0x000000000002d072     0x472a platform/libplatform_s.a(tfm_platform_hal_ioctl.o)
+ .debug_info    0x000000000000f001     0x125b secure_fw/spm/libtfm_spm.a(tfm_hal_isolation.o)
+ .debug_info    0x000000000001025c      0x259 secure_fw/spm/libtfm_spm.a(tfm_hal_platform_common.o)
+ .debug_info    0x00000000000104b5      0xc0e secure_fw/spm/libtfm_spm.a(faults.o)
+ .debug_info    0x00000000000110c3     0x587d secure_fw/spm/libtfm_spm.a(target_cfg.o)
+ .debug_info    0x0000000000016940      0x663 secure_fw/spm/libtfm_spm.a(tfm_boot_data.o)
+ .debug_info    0x0000000000016fa3      0x4ba secure_fw/spm/libtfm_spm.a(tfm_arch.o)
+ .debug_info    0x000000000001745d      0x70a secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
+ .debug_info    0x0000000000017b67      0xe84 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_init.o)
+ .debug_info    0x00000000000189eb      0x81f secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_alloc.o)
+ .debug_info    0x000000000001920a      0x1be secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_cipher.o)
+ .debug_info    0x00000000000193c8      0x15d secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_hash.o)
+ .debug_info    0x0000000000019525      0x1be secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_mac.o)
+ .debug_info    0x00000000000196e3      0x1c2 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_aead.o)
+ .debug_info    0x00000000000198a5      0x209 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_asymmetric.o)
+ .debug_info    0x0000000000019aae      0x1be secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_key_derivation.o)
+ .debug_info    0x0000000000019c6c      0x1be secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_key_management.o)
+ .debug_info    0x0000000000019e2a      0x1ce secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_rng.o)
+ .debug_info    0x0000000000019ff8      0x453 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_library.o)
+ .debug_info    0x000000000001a44b      0x1be secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_pake.o)
+ .debug_info    0x000000000001a609      0x631 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/libcrypto_service_mbedcrypto.a(memory_buffer_alloc.o)
+ .debug_info    0x000000000001ac3a      0x3f9 secure_fw/partitions/platform/libtfm_psa_rot_partition_platform.a(platform_sp.o)
+ .debug_info    0x000000000001b033      0x404 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
+ .debug_info    0x000000000001b437      0x107 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_hal_sp_logdev_periph.o)
+ .debug_info    0x000000000001b53e      0x2fa secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform.o)
+ .debug_info    0x000000000001b838      0x24e secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform_util.o)
+ .debug_info    0x000000000001ba86     0xa41e secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto.o)
+ .debug_info    0x0000000000025ea4      0xd85 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_slot_management.o)
+ .debug_info    0x0000000000026c29     0x2c0e secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_driver_wrappers.o)
+ .debug_info    0x0000000000029837      0x528 platform/libplatform_s.a(mpu_armv8m_drv.o)
+ .debug_info    0x0000000000029d5f      0xfa5 platform/libplatform_s.a(spu.o)
+ .debug_info    0x000000000002ad04      0x773 platform/libplatform_s.a(nrf_exception_info.o)
+ .debug_info    0x000000000002b477      0x52d platform/libplatform_s.a(tfm_hal_platform.o)
+ .debug_info    0x000000000002b9a4      0x1ec platform/libplatform_s.a(dummy_otp.o)
+ .debug_info    0x000000000002bb90      0x4a0 platform/libplatform_s.a(tfm_hal_reset_halt.o)
+ .debug_info    0x000000000002c030       0xef platform/libplatform_s.a(dummy_provisioning.o)
+ .debug_info    0x000000000002c11f      0x610 platform/libplatform_s.a(ns_fault_service.o)
+ .debug_info    0x000000000002c72f      0x991 platform/libplatform_s.a(tfm_platform_system.o)
+ .debug_info    0x000000000002d0c0     0x472a platform/libplatform_s.a(tfm_platform_hal_ioctl.o)
 
 .debug_abbrev   0x0000000000000000     0x7bf5
  .debug_abbrev  0x0000000000000000      0x16b secure_fw/CMakeFiles/tfm_s.dir/partitions/ns_agent_tz/psa_api_veneers_v80m.o
@@ -6519,7 +6519,7 @@ LOAD linker stubs
  .debug_ranges  0x0000000000003d60       0x28 platform/libplatform_s.a(tfm_platform_system.o)
  .debug_ranges  0x0000000000003d88     0x12d8 platform/libplatform_s.a(tfm_platform_hal_ioctl.o)
 
-.debug_line     0x0000000000000000    0x23e52
+.debug_line     0x0000000000000000    0x23e62
  .debug_line    0x0000000000000000      0x2f7 secure_fw/CMakeFiles/tfm_s.dir/partitions/ns_agent_tz/psa_api_veneers_v80m.o
  .debug_line    0x00000000000002f7      0x415 secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/target/nordic_nrf/common/core/startup.o
  .debug_line    0x000000000000070c      0x1fd secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/target/nordic_nrf/common/core/startup_nrf91.o
@@ -6552,43 +6552,43 @@ LOAD linker stubs
  .debug_line    0x000000000000a3bc      0x9c5 secure_fw/spm/libtfm_spm.a(tfm_hal_isolation.o)
  .debug_line    0x000000000000ad81      0x3a0 secure_fw/spm/libtfm_spm.a(tfm_hal_platform_common.o)
  .debug_line    0x000000000000b121      0x39f secure_fw/spm/libtfm_spm.a(faults.o)
- .debug_line    0x000000000000b4c0     0x5134 secure_fw/spm/libtfm_spm.a(target_cfg.o)
- .debug_line    0x00000000000105f4      0x530 secure_fw/spm/libtfm_spm.a(tfm_boot_data.o)
- .debug_line    0x0000000000010b24      0x4e3 secure_fw/spm/libtfm_spm.a(tfm_arch.o)
- .debug_line    0x0000000000011007      0x606 secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
- .debug_line    0x000000000001160d      0x8e5 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_init.o)
- .debug_line    0x0000000000011ef2      0x5c2 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_alloc.o)
- .debug_line    0x00000000000124b4      0x2ce secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_cipher.o)
- .debug_line    0x0000000000012782      0x2b7 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_hash.o)
- .debug_line    0x0000000000012a39      0x2cb secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_mac.o)
- .debug_line    0x0000000000012d04      0x2cc secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_aead.o)
- .debug_line    0x0000000000012fd0      0x2e4 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_asymmetric.o)
- .debug_line    0x00000000000132b4      0x2d6 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_key_derivation.o)
- .debug_line    0x000000000001358a      0x2d6 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_key_management.o)
- .debug_line    0x0000000000013860      0x2c0 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_rng.o)
- .debug_line    0x0000000000013b20      0x456 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_library.o)
- .debug_line    0x0000000000013f76      0x2cc secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_pake.o)
- .debug_line    0x0000000000014242      0x776 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/libcrypto_service_mbedcrypto.a(memory_buffer_alloc.o)
- .debug_line    0x00000000000149b8      0x464 secure_fw/partitions/platform/libtfm_psa_rot_partition_platform.a(platform_sp.o)
- .debug_line    0x0000000000014e1c      0x50a secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
- .debug_line    0x0000000000015326      0x22b secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_hal_sp_logdev_periph.o)
- .debug_line    0x0000000000015551      0x29a secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform.o)
- .debug_line    0x00000000000157eb      0x23b secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform_util.o)
- .debug_line    0x0000000000015a26     0x52c3 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto.o)
- .debug_line    0x000000000001ace9      0xb41 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_slot_management.o)
- .debug_line    0x000000000001b82a      0xcae secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_driver_wrappers.o)
- .debug_line    0x000000000001c4d8      0x43e platform/libplatform_s.a(mpu_armv8m_drv.o)
- .debug_line    0x000000000001c916      0x8c1 platform/libplatform_s.a(spu.o)
- .debug_line    0x000000000001d1d7      0x414 platform/libplatform_s.a(nrf_exception_info.o)
- .debug_line    0x000000000001d5eb      0x454 platform/libplatform_s.a(tfm_hal_platform.o)
- .debug_line    0x000000000001da3f      0x30a platform/libplatform_s.a(dummy_otp.o)
- .debug_line    0x000000000001dd49      0x35c platform/libplatform_s.a(tfm_hal_reset_halt.o)
- .debug_line    0x000000000001e0a5      0x147 platform/libplatform_s.a(dummy_provisioning.o)
- .debug_line    0x000000000001e1ec      0x600 platform/libplatform_s.a(ns_fault_service.o)
- .debug_line    0x000000000001e7ec      0x689 platform/libplatform_s.a(tfm_platform_system.o)
- .debug_line    0x000000000001ee75     0x4fdd platform/libplatform_s.a(tfm_platform_hal_ioctl.o)
+ .debug_line    0x000000000000b4c0     0x5144 secure_fw/spm/libtfm_spm.a(target_cfg.o)
+ .debug_line    0x0000000000010604      0x530 secure_fw/spm/libtfm_spm.a(tfm_boot_data.o)
+ .debug_line    0x0000000000010b34      0x4e3 secure_fw/spm/libtfm_spm.a(tfm_arch.o)
+ .debug_line    0x0000000000011017      0x606 secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
+ .debug_line    0x000000000001161d      0x8e5 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_init.o)
+ .debug_line    0x0000000000011f02      0x5c2 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_alloc.o)
+ .debug_line    0x00000000000124c4      0x2ce secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_cipher.o)
+ .debug_line    0x0000000000012792      0x2b7 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_hash.o)
+ .debug_line    0x0000000000012a49      0x2cb secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_mac.o)
+ .debug_line    0x0000000000012d14      0x2cc secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_aead.o)
+ .debug_line    0x0000000000012fe0      0x2e4 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_asymmetric.o)
+ .debug_line    0x00000000000132c4      0x2d6 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_key_derivation.o)
+ .debug_line    0x000000000001359a      0x2d6 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_key_management.o)
+ .debug_line    0x0000000000013870      0x2c0 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_rng.o)
+ .debug_line    0x0000000000013b30      0x456 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_library.o)
+ .debug_line    0x0000000000013f86      0x2cc secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_pake.o)
+ .debug_line    0x0000000000014252      0x776 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/libcrypto_service_mbedcrypto.a(memory_buffer_alloc.o)
+ .debug_line    0x00000000000149c8      0x464 secure_fw/partitions/platform/libtfm_psa_rot_partition_platform.a(platform_sp.o)
+ .debug_line    0x0000000000014e2c      0x50a secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
+ .debug_line    0x0000000000015336      0x22b secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_hal_sp_logdev_periph.o)
+ .debug_line    0x0000000000015561      0x29a secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform.o)
+ .debug_line    0x00000000000157fb      0x23b secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform_util.o)
+ .debug_line    0x0000000000015a36     0x52c3 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto.o)
+ .debug_line    0x000000000001acf9      0xb41 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_slot_management.o)
+ .debug_line    0x000000000001b83a      0xcae secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_driver_wrappers.o)
+ .debug_line    0x000000000001c4e8      0x43e platform/libplatform_s.a(mpu_armv8m_drv.o)
+ .debug_line    0x000000000001c926      0x8c1 platform/libplatform_s.a(spu.o)
+ .debug_line    0x000000000001d1e7      0x414 platform/libplatform_s.a(nrf_exception_info.o)
+ .debug_line    0x000000000001d5fb      0x454 platform/libplatform_s.a(tfm_hal_platform.o)
+ .debug_line    0x000000000001da4f      0x30a platform/libplatform_s.a(dummy_otp.o)
+ .debug_line    0x000000000001dd59      0x35c platform/libplatform_s.a(tfm_hal_reset_halt.o)
+ .debug_line    0x000000000001e0b5      0x147 platform/libplatform_s.a(dummy_provisioning.o)
+ .debug_line    0x000000000001e1fc      0x600 platform/libplatform_s.a(ns_fault_service.o)
+ .debug_line    0x000000000001e7fc      0x689 platform/libplatform_s.a(tfm_platform_system.o)
+ .debug_line    0x000000000001ee85     0x4fdd platform/libplatform_s.a(tfm_platform_hal_ioctl.o)
 
-.debug_str      0x0000000000000000     0xda26
+.debug_str      0x0000000000000000     0xda6b
  .debug_str     0x0000000000000000      0x2fa secure_fw/CMakeFiles/tfm_s.dir/partitions/ns_agent_tz/psa_api_veneers_v80m.o
                                         0x35f (size before relaxing)
  .debug_str     0x00000000000002fa      0x37c secure_fw/CMakeFiles/tfm_s.dir/__/platform/ext/target/nordic_nrf/common/core/startup.o
@@ -6647,81 +6647,81 @@ LOAD linker stubs
                                         0x6cb (size before relaxing)
  .debug_str     0x00000000000052c2       0x7a secure_fw/spm/libtfm_spm.a(ns_agent_tz_v80m.o)
                                         0x269 (size before relaxing)
- .debug_str     0x000000000000533c      0x8d0 secure_fw/spm/libtfm_spm.a(tfm_hal_isolation.o)
-                                        0xfef (size before relaxing)
- .debug_str     0x0000000000005c0c      0x108 secure_fw/spm/libtfm_spm.a(tfm_hal_platform_common.o)
-                                        0x558 (size before relaxing)
- .debug_str     0x0000000000005d14       0xc7 secure_fw/spm/libtfm_spm.a(faults.o)
+ .debug_str     0x000000000000533c      0x915 secure_fw/spm/libtfm_spm.a(tfm_hal_isolation.o)
+                                       0x1034 (size before relaxing)
+ .debug_str     0x0000000000005c51      0x108 secure_fw/spm/libtfm_spm.a(tfm_hal_platform_common.o)
+                                        0x59d (size before relaxing)
+ .debug_str     0x0000000000005d59       0xc7 secure_fw/spm/libtfm_spm.a(faults.o)
                                         0x894 (size before relaxing)
- .debug_str     0x0000000000005ddb     0x28b5 secure_fw/spm/libtfm_spm.a(target_cfg.o)
-                                       0x3998 (size before relaxing)
- .debug_str     0x0000000000008690      0x131 secure_fw/spm/libtfm_spm.a(tfm_boot_data.o)
+ .debug_str     0x0000000000005e20     0x28b5 secure_fw/spm/libtfm_spm.a(target_cfg.o)
+                                       0x39dd (size before relaxing)
+ .debug_str     0x00000000000086d5      0x131 secure_fw/spm/libtfm_spm.a(tfm_boot_data.o)
                                         0x6e0 (size before relaxing)
- .debug_str     0x00000000000087c1      0x174 secure_fw/spm/libtfm_spm.a(tfm_arch.o)
+ .debug_str     0x0000000000008806      0x174 secure_fw/spm/libtfm_spm.a(tfm_arch.o)
                                         0x486 (size before relaxing)
- .debug_str     0x0000000000008935       0xf5 secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
+ .debug_str     0x000000000000897a       0xf5 secure_fw/spm/libtfm_spm.a(tfm_svcalls.o)
                                         0x708 (size before relaxing)
- .debug_str     0x0000000000008a2a      0x653 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_init.o)
+ .debug_str     0x0000000000008a6f      0x653 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_init.o)
                                         0x8ce (size before relaxing)
- .debug_str     0x000000000000907d      0x5a8 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_alloc.o)
+ .debug_str     0x00000000000090c2      0x5a8 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_alloc.o)
                                         0x998 (size before relaxing)
- .debug_str     0x0000000000009625       0x6a secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_cipher.o)
+ .debug_str     0x000000000000966a       0x6a secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_cipher.o)
                                         0x2f1 (size before relaxing)
- .debug_str     0x000000000000968f       0x68 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_hash.o)
+ .debug_str     0x00000000000096d4       0x68 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_hash.o)
                                         0x29f (size before relaxing)
- .debug_str     0x00000000000096f7       0x67 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_mac.o)
+ .debug_str     0x000000000000973c       0x67 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_mac.o)
                                         0x2eb (size before relaxing)
- .debug_str     0x000000000000975e       0x68 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_aead.o)
+ .debug_str     0x00000000000097a3       0x68 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_aead.o)
                                         0x2ed (size before relaxing)
- .debug_str     0x00000000000097c6       0x6e secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_asymmetric.o)
+ .debug_str     0x000000000000980b       0x6e secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_asymmetric.o)
                                         0x326 (size before relaxing)
- .debug_str     0x0000000000009834       0x72 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_key_derivation.o)
+ .debug_str     0x0000000000009879       0x72 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_key_derivation.o)
                                         0x301 (size before relaxing)
- .debug_str     0x00000000000098a6       0x72 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_key_management.o)
+ .debug_str     0x00000000000098eb       0x72 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_key_management.o)
                                         0x301 (size before relaxing)
- .debug_str     0x0000000000009918       0x93 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_rng.o)
+ .debug_str     0x000000000000995d       0x93 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_rng.o)
                                         0x2e5 (size before relaxing)
- .debug_str     0x00000000000099ab      0x275 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_library.o)
+ .debug_str     0x00000000000099f0      0x275 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_library.o)
                                         0x53f (size before relaxing)
- .debug_str     0x0000000000009c20       0x68 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_pake.o)
+ .debug_str     0x0000000000009c65       0x68 secure_fw/partitions/crypto/libtfm_psa_rot_partition_crypto.a(crypto_pake.o)
                                         0x2ed (size before relaxing)
- .debug_str     0x0000000000009c88      0x182 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/libcrypto_service_mbedcrypto.a(memory_buffer_alloc.o)
+ .debug_str     0x0000000000009ccd      0x182 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/libcrypto_service_mbedcrypto.a(memory_buffer_alloc.o)
                                         0x3c0 (size before relaxing)
- .debug_str     0x0000000000009e0a      0x1d4 secure_fw/partitions/platform/libtfm_psa_rot_partition_platform.a(platform_sp.o)
+ .debug_str     0x0000000000009e4f      0x1d4 secure_fw/partitions/platform/libtfm_psa_rot_partition_platform.a(platform_sp.o)
                                         0x4b9 (size before relaxing)
- .debug_str     0x0000000000009fde      0x150 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
+ .debug_str     0x000000000000a023      0x150 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_sp_log_raw.o)
                                         0x44d (size before relaxing)
- .debug_str     0x000000000000a12e       0x86 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_hal_sp_logdev_periph.o)
+ .debug_str     0x000000000000a173       0x86 secure_fw/partitions/lib/runtime/libtfm_sp_log.a(tfm_hal_sp_logdev_periph.o)
                                         0x27a (size before relaxing)
- .debug_str     0x000000000000a1b4      0x127 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform.o)
+ .debug_str     0x000000000000a1f9      0x127 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform.o)
                                         0x361 (size before relaxing)
- .debug_str     0x000000000000a2db       0x78 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform_util.o)
+ .debug_str     0x000000000000a320       0x78 secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(platform_util.o)
                                         0x27a (size before relaxing)
- .debug_str     0x000000000000a353     0x22bf secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto.o)
+ .debug_str     0x000000000000a398     0x22bf secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto.o)
                                        0x2ac8 (size before relaxing)
- .debug_str     0x000000000000c612      0x29f secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_slot_management.o)
+ .debug_str     0x000000000000c657      0x29f secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_slot_management.o)
                                         0x8bf (size before relaxing)
- .debug_str     0x000000000000c8b1      0x2de secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_driver_wrappers.o)
+ .debug_str     0x000000000000c8f6      0x2de secure_fw/partitions/crypto/mbedcrypto/nrf_security_src/core/nrf_oberon/liboberon_psa_core.a(psa_crypto_driver_wrappers.o)
                                        0x152b (size before relaxing)
- .debug_str     0x000000000000cb8f      0x151 platform/libplatform_s.a(mpu_armv8m_drv.o)
+ .debug_str     0x000000000000cbd4      0x151 platform/libplatform_s.a(mpu_armv8m_drv.o)
                                         0x579 (size before relaxing)
- .debug_str     0x000000000000cce0      0x399 platform/libplatform_s.a(spu.o)
+ .debug_str     0x000000000000cd25      0x399 platform/libplatform_s.a(spu.o)
                                         0xb57 (size before relaxing)
- .debug_str     0x000000000000d079       0xd4 platform/libplatform_s.a(nrf_exception_info.o)
+ .debug_str     0x000000000000d0be       0xd4 platform/libplatform_s.a(nrf_exception_info.o)
                                         0x5b8 (size before relaxing)
- .debug_str     0x000000000000d14d       0xca platform/libplatform_s.a(tfm_hal_platform.o)
+ .debug_str     0x000000000000d192       0xca platform/libplatform_s.a(tfm_hal_platform.o)
                                         0x521 (size before relaxing)
- .debug_str     0x000000000000d217       0xc7 platform/libplatform_s.a(dummy_otp.o)
+ .debug_str     0x000000000000d25c       0xc7 platform/libplatform_s.a(dummy_otp.o)
                                         0x389 (size before relaxing)
- .debug_str     0x000000000000d2de       0x93 platform/libplatform_s.a(tfm_hal_reset_halt.o)
+ .debug_str     0x000000000000d323       0x93 platform/libplatform_s.a(tfm_hal_reset_halt.o)
                                         0x3fc (size before relaxing)
- .debug_str     0x000000000000d371       0x60 platform/libplatform_s.a(dummy_provisioning.o)
+ .debug_str     0x000000000000d3b6       0x60 platform/libplatform_s.a(dummy_provisioning.o)
                                         0x34e (size before relaxing)
- .debug_str     0x000000000000d3d1      0x26b platform/libplatform_s.a(ns_fault_service.o)
+ .debug_str     0x000000000000d416      0x26b platform/libplatform_s.a(ns_fault_service.o)
                                         0x641 (size before relaxing)
- .debug_str     0x000000000000d63c      0x166 platform/libplatform_s.a(tfm_platform_system.o)
+ .debug_str     0x000000000000d681      0x166 platform/libplatform_s.a(tfm_platform_system.o)
                                         0x90b (size before relaxing)
- .debug_str     0x000000000000d7a2      0x284 platform/libplatform_s.a(tfm_platform_hal_ioctl.o)
+ .debug_str     0x000000000000d7e7      0x284 platform/libplatform_s.a(tfm_platform_hal_ioctl.o)
                                        0x3031 (size before relaxing)
 
 .debug_frame    0x0000000000000000     0xeec0

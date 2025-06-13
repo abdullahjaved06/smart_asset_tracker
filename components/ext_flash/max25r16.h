@@ -4,6 +4,20 @@
 #define LOG_LEN 128
 
 #include <stdarg.h>
+#include "zephyr/types.h"
+#include <stdio.h>
+
+#include <zephyr/kernel.h>
+#include <zephyr/device.h>
+#include <zephyr/fs/fs.h>
+#include <zephyr/fs/littlefs.h>
+#include <zephyr/storage/flash_map.h>
+#include <zephyr/settings/settings.h>
+#include <zephyr/logging/log.h>
+#include <zephyr/device.h>
+#include <zephyr/devicetree.h>
+#include <zephyr/pm/device.h>
+#include <zephyr/pm/device_runtime.h>
 
 void initFS(void);
 int initFsLog(bool eraseLog);

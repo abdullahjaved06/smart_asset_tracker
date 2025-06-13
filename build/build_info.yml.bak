@@ -2,6 +2,7 @@ west:
   command: /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/west build --build-dir
     /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build
     /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code
-    --pristine --board nrf9151dk/nrf9151/ns -- -DNCS_TOOLCHAIN_VERSION=NONE -DBOARD_ROOT=/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code
+    --pristine --board nrf9151dk/nrf9151/ns --sysbuild -- -DNCS_TOOLCHAIN_VERSION=NONE
+    -DBOARD_ROOT=/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code
   topdir: /home/abdullah/ncs/v2.9.0
   version: 1.2.0
