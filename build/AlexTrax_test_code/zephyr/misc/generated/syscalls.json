@@ -33,6 +33,14 @@
     ],
     [
         [
+            "int __posix_clock_get_base",
+            "clockid_t clock_id, struct timespec *ts"
+        ],
+        "posix_clock.h",
+        true
+    ],
+    [
+        [
             "int z_sys_mutex_kernel_lock",
             "struct sys_mutex *mutex,\n\t\t\t\t      k_timeout_t timeout"
         ],
@@ -117,6 +125,326 @@
             "int16_t source_id, uint32_t level"
         ],
         "log_ctrl.h",
+        true
+    ],
+    [
+        [
+            "void sys_rand_get",
+            "void *dst, size_t len"
+        ],
+        "random.h",
+        true
+    ],
+    [
+        [
+            "int sys_csrand_get",
+            "void *dst, size_t len"
+        ],
+        "random.h",
+        true
+    ],
+    [
+        [
+            "const struct device *net_eth_get_ptp_clock_by_index",
+            "int index"
+        ],
+        "ethernet.h",
+        true
+    ],
+    [
+        [
+            "int net_if_ipv6_addr_lookup_by_index",
+            "const struct in6_addr *addr"
+        ],
+        "net_if.h",
+        true
+    ],
+    [
+        [
+            "bool net_if_ipv6_addr_add_by_index",
+            "int index,\n\t\t\t\t\t     struct in6_addr *addr,\n\t\t\t\t\t     enum net_addr_type addr_type,\n\t\t\t\t\t     uint32_t vlifetime"
+        ],
+        "net_if.h",
+        true
+    ],
+    [
+        [
+            "bool net_if_ipv6_addr_rm_by_index",
+            "int index,\n\t\t\t\t\t    const struct in6_addr *addr"
+        ],
+        "net_if.h",
+        true
+    ],
+    [
+        [
+            "int net_if_ipv4_addr_lookup_by_index",
+            "const struct in_addr *addr"
+        ],
+        "net_if.h",
+        true
+    ],
+    [
+        [
+            "bool net_if_ipv4_addr_add_by_index",
+            "int index,\n\t\t\t\t\t     struct in_addr *addr,\n\t\t\t\t\t     enum net_addr_type addr_type,\n\t\t\t\t\t     uint32_t vlifetime"
+        ],
+        "net_if.h",
+        true
+    ],
+    [
+        [
+            "bool net_if_ipv4_addr_rm_by_index",
+            "int index,\n\t\t\t\t\t    const struct in_addr *addr"
+        ],
+        "net_if.h",
+        true
+    ],
+    [
+        [
+            "bool net_if_ipv4_set_netmask_by_index",
+            "int index,\n\t\t\t\t\t\t\t     const struct in_addr *netmask"
+        ],
+        "net_if.h",
+        true
+    ],
+    [
+        [
+            "bool net_if_ipv4_set_netmask_by_addr_by_index",
+            "int index,\n\t\t\t\t\t\t\tconst struct in_addr *addr,\n\t\t\t\t\t\t\tconst struct in_addr *netmask"
+        ],
+        "net_if.h",
+        true
+    ],
+    [
+        [
+            "bool net_if_ipv4_set_gw_by_index",
+            "int index, const struct in_addr *gw"
+        ],
+        "net_if.h",
+        true
+    ],
+    [
+        [
+            "struct net_if *net_if_get_by_index",
+            "int index"
+        ],
+        "net_if.h",
+        true
+    ],
+    [
+        [
+            "int net_addr_pton",
+            "sa_family_t family, const char *src, void *dst"
+        ],
+        "net_ip.h",
+        true
+    ],
+    [
+        [
+            "char *net_addr_ntop",
+            "sa_family_t family, const void *src,\n\t\t\t      char *dst, size_t size"
+        ],
+        "net_ip.h",
+        true
+    ],
+    [
+        [
+            "void *zsock_get_context_object",
+            "int sock"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int zsock_socket",
+            "int family, int type, int proto"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int zsock_socketpair",
+            "int family, int type, int proto, int *sv"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int zsock_close",
+            "int sock"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int zsock_shutdown",
+            "int sock, int how"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int zsock_bind",
+            "int sock, const struct sockaddr *addr,\n\t\t\t socklen_t addrlen"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int zsock_connect",
+            "int sock, const struct sockaddr *addr,\n\t\t\t    socklen_t addrlen"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int zsock_listen",
+            "int sock, int backlog"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int zsock_accept",
+            "int sock, struct sockaddr *addr, socklen_t *addrlen"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "ssize_t zsock_sendto",
+            "int sock, const void *buf, size_t len,\n\t\t\t       int flags, const struct sockaddr *dest_addr,\n\t\t\t       socklen_t addrlen"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "ssize_t zsock_sendmsg",
+            "int sock, const struct msghdr *msg,\n\t\t\t\tint flags"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "ssize_t zsock_recvfrom",
+            "int sock, void *buf, size_t max_len,\n\t\t\t\t int flags, struct sockaddr *src_addr,\n\t\t\t\t socklen_t *addrlen"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "ssize_t zsock_recvmsg",
+            "int sock, struct msghdr *msg, int flags"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int zsock_fcntl_impl",
+            "int sock, int cmd, int flags"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int zsock_ioctl_impl",
+            "int sock, unsigned long request, va_list ap"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int zsock_poll",
+            "struct zsock_pollfd *fds, int nfds, int timeout"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int zsock_getsockopt",
+            "int sock, int level, int optname,\n\t\t\t       void *optval, socklen_t *optlen"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int zsock_setsockopt",
+            "int sock, int level, int optname,\n\t\t\t       const void *optval, socklen_t optlen"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int zsock_getpeername",
+            "int sock, struct sockaddr *addr,\n\t\t\t\tsocklen_t *addrlen"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int zsock_getsockname",
+            "int sock, struct sockaddr *addr,\n\t\t\t\tsocklen_t *addrlen"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int zsock_gethostname",
+            "char *buf, size_t len"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int zsock_inet_pton",
+            "sa_family_t family, const char *src, void *dst"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int z_zsock_getaddrinfo_internal",
+            "const char *host,\n\t\t\t\t\t   const char *service,\n\t\t\t\t\t   const struct zsock_addrinfo *hints,\n\t\t\t\t\t   struct zsock_addrinfo *res"
+        ],
+        "socket.h",
+        true
+    ],
+    [
+        [
+            "int zsock_select",
+            "int nfds, zsock_fd_set *readfds,\n\t\t\t   zsock_fd_set *writefds,\n\t\t\t   zsock_fd_set *exceptfds,\n\t\t\t   struct zsock_timeval *timeout"
+        ],
+        "socket_select.h",
+        true
+    ],
+    [
+        [
+            "int entropy_get_entropy",
+            "const struct device *dev,\n\t\t\t\t  uint8_t *buffer,\n\t\t\t\t  uint16_t length"
+        ],
+        "entropy.h",
         true
     ],
     [
@@ -1409,6 +1737,14 @@
     ],
     [
         [
+            "int *z_errno",
+            "void"
+        ],
+        "errno_private.h",
+        true
+    ],
+    [
+        [
             "int sys_cache_data_flush_range",
             "void *addr, size_t size"
         ],
@@ -2229,14 +2565,6 @@
             "const struct emul *target, bool *cutoff"
         ],
         "emul_fuel_gauge.h",
-        false
-    ],
-    [
-        [
-            "int entropy_get_entropy",
-            "const struct device *dev,\n\t\t\t\t  uint8_t *buffer,\n\t\t\t\t  uint16_t length"
-        ],
-        "entropy.h",
         false
     ],
     [
@@ -4049,322 +4377,10 @@
     ],
     [
         [
-            "const struct device *net_eth_get_ptp_clock_by_index",
-            "int index"
-        ],
-        "ethernet.h",
-        false
-    ],
-    [
-        [
-            "int net_if_ipv6_addr_lookup_by_index",
-            "const struct in6_addr *addr"
-        ],
-        "net_if.h",
-        false
-    ],
-    [
-        [
-            "bool net_if_ipv6_addr_add_by_index",
-            "int index,\n\t\t\t\t\t     struct in6_addr *addr,\n\t\t\t\t\t     enum net_addr_type addr_type,\n\t\t\t\t\t     uint32_t vlifetime"
-        ],
-        "net_if.h",
-        false
-    ],
-    [
-        [
-            "bool net_if_ipv6_addr_rm_by_index",
-            "int index,\n\t\t\t\t\t    const struct in6_addr *addr"
-        ],
-        "net_if.h",
-        false
-    ],
-    [
-        [
-            "int net_if_ipv4_addr_lookup_by_index",
-            "const struct in_addr *addr"
-        ],
-        "net_if.h",
-        false
-    ],
-    [
-        [
-            "bool net_if_ipv4_addr_add_by_index",
-            "int index,\n\t\t\t\t\t     struct in_addr *addr,\n\t\t\t\t\t     enum net_addr_type addr_type,\n\t\t\t\t\t     uint32_t vlifetime"
-        ],
-        "net_if.h",
-        false
-    ],
-    [
-        [
-            "bool net_if_ipv4_addr_rm_by_index",
-            "int index,\n\t\t\t\t\t    const struct in_addr *addr"
-        ],
-        "net_if.h",
-        false
-    ],
-    [
-        [
-            "bool net_if_ipv4_set_netmask_by_index",
-            "int index,\n\t\t\t\t\t\t\t     const struct in_addr *netmask"
-        ],
-        "net_if.h",
-        false
-    ],
-    [
-        [
-            "bool net_if_ipv4_set_netmask_by_addr_by_index",
-            "int index,\n\t\t\t\t\t\t\tconst struct in_addr *addr,\n\t\t\t\t\t\t\tconst struct in_addr *netmask"
-        ],
-        "net_if.h",
-        false
-    ],
-    [
-        [
-            "bool net_if_ipv4_set_gw_by_index",
-            "int index, const struct in_addr *gw"
-        ],
-        "net_if.h",
-        false
-    ],
-    [
-        [
-            "struct net_if *net_if_get_by_index",
-            "int index"
-        ],
-        "net_if.h",
-        false
-    ],
-    [
-        [
-            "int net_addr_pton",
-            "sa_family_t family, const char *src, void *dst"
-        ],
-        "net_ip.h",
-        false
-    ],
-    [
-        [
-            "char *net_addr_ntop",
-            "sa_family_t family, const void *src,\n\t\t\t      char *dst, size_t size"
-        ],
-        "net_ip.h",
-        false
-    ],
-    [
-        [
-            "void *zsock_get_context_object",
-            "int sock"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int zsock_socket",
-            "int family, int type, int proto"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int zsock_socketpair",
-            "int family, int type, int proto, int *sv"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int zsock_close",
-            "int sock"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int zsock_shutdown",
-            "int sock, int how"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int zsock_bind",
-            "int sock, const struct sockaddr *addr,\n\t\t\t socklen_t addrlen"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int zsock_connect",
-            "int sock, const struct sockaddr *addr,\n\t\t\t    socklen_t addrlen"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int zsock_listen",
-            "int sock, int backlog"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int zsock_accept",
-            "int sock, struct sockaddr *addr, socklen_t *addrlen"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "ssize_t zsock_sendto",
-            "int sock, const void *buf, size_t len,\n\t\t\t       int flags, const struct sockaddr *dest_addr,\n\t\t\t       socklen_t addrlen"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "ssize_t zsock_sendmsg",
-            "int sock, const struct msghdr *msg,\n\t\t\t\tint flags"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "ssize_t zsock_recvfrom",
-            "int sock, void *buf, size_t max_len,\n\t\t\t\t int flags, struct sockaddr *src_addr,\n\t\t\t\t socklen_t *addrlen"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "ssize_t zsock_recvmsg",
-            "int sock, struct msghdr *msg, int flags"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int zsock_fcntl_impl",
-            "int sock, int cmd, int flags"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int zsock_ioctl_impl",
-            "int sock, unsigned long request, va_list ap"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int zsock_poll",
-            "struct zsock_pollfd *fds, int nfds, int timeout"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int zsock_getsockopt",
-            "int sock, int level, int optname,\n\t\t\t       void *optval, socklen_t *optlen"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int zsock_setsockopt",
-            "int sock, int level, int optname,\n\t\t\t       const void *optval, socklen_t optlen"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int zsock_getpeername",
-            "int sock, struct sockaddr *addr,\n\t\t\t\tsocklen_t *addrlen"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int zsock_getsockname",
-            "int sock, struct sockaddr *addr,\n\t\t\t\tsocklen_t *addrlen"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int zsock_gethostname",
-            "char *buf, size_t len"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int zsock_inet_pton",
-            "sa_family_t family, const char *src, void *dst"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int z_zsock_getaddrinfo_internal",
-            "const char *host,\n\t\t\t\t\t   const char *service,\n\t\t\t\t\t   const struct zsock_addrinfo *hints,\n\t\t\t\t\t   struct zsock_addrinfo *res"
-        ],
-        "socket.h",
-        false
-    ],
-    [
-        [
-            "int zsock_select",
-            "int nfds, zsock_fd_set *readfds,\n\t\t\t   zsock_fd_set *writefds,\n\t\t\t   zsock_fd_set *exceptfds,\n\t\t\t   struct zsock_timeval *timeout"
-        ],
-        "socket_select.h",
-        false
-    ],
-    [
-        [
             "int net_socket_service_register",
             "const struct net_socket_service_desc *service,\n\t\t\t\t\t  struct zsock_pollfd *fds, int len, void *user_data"
         ],
         "socket_service.h",
-        false
-    ],
-    [
-        [
-            "void sys_rand_get",
-            "void *dst, size_t len"
-        ],
-        "random.h",
-        false
-    ],
-    [
-        [
-            "int sys_csrand_get",
-            "void *dst, size_t len"
-        ],
-        "random.h",
         false
     ],
     [
@@ -4493,14 +4509,6 @@
             "atomic_t *target, atomic_val_t value"
         ],
         "atomic_c.h",
-        false
-    ],
-    [
-        [
-            "int *z_errno",
-            "void"
-        ],
-        "errno_private.h",
         false
     ]
 ]

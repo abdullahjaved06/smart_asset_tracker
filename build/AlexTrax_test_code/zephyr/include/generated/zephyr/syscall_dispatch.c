@@ -23,6 +23,10 @@ uintptr_t z_mrsh_zephyr_fwrite(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
          uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
 
 __weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh___posix_clock_get_base(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
 uintptr_t z_mrsh_z_sys_mutex_kernel_lock(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
          uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
 
@@ -64,6 +68,166 @@ uintptr_t z_mrsh_log_filter_set(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
 
 __weak ALIAS_OF(handler_no_syscall)
 uintptr_t z_mrsh_log_frontend_filter_set(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_sys_rand_get(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_sys_csrand_get(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_net_eth_get_ptp_clock_by_index(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_net_if_ipv6_addr_lookup_by_index(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_net_if_ipv6_addr_add_by_index(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_net_if_ipv6_addr_rm_by_index(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_net_if_ipv4_addr_lookup_by_index(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_net_if_ipv4_addr_add_by_index(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_net_if_ipv4_addr_rm_by_index(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_net_if_ipv4_set_netmask_by_index(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_net_if_ipv4_set_netmask_by_addr_by_index(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_net_if_ipv4_set_gw_by_index(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_net_if_get_by_index(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_net_addr_pton(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_net_addr_ntop(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_get_context_object(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_socket(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_socketpair(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_close(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_shutdown(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_bind(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_connect(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_listen(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_accept(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_sendto(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_sendmsg(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_recvfrom(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_recvmsg(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_fcntl_impl(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_ioctl_impl(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_poll(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_getsockopt(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_setsockopt(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_getpeername(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_getsockname(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_gethostname(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_inet_pton(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_z_zsock_getaddrinfo_internal(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_zsock_select(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_entropy_get_entropy(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
          uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
 
 __weak ALIAS_OF(handler_no_syscall)
@@ -697,6 +861,10 @@ uintptr_t z_mrsh_k_object_alloc_size(uintptr_t arg1, uintptr_t arg2, uintptr_t a
 __weak ALIAS_OF(handler_no_syscall)
 uintptr_t z_mrsh_sys_clock_hw_cycles_per_sec_runtime_get(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
          uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_z_errno(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
 extern uintptr_t z_mrsh_k_object_release(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
 extern uintptr_t z_mrsh_k_object_access_grant(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
 extern uintptr_t z_mrsh_k_object_alloc(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
@@ -706,6 +874,7 @@ const _k_syscall_handler_t _k_syscall_table[K_SYSCALL_LIMIT] = {
 	[K_SYSCALL_ZEPHYR_WRITE_STDOUT] = z_mrsh_zephyr_write_stdout,
 	[K_SYSCALL_ZEPHYR_FPUTC] = z_mrsh_zephyr_fputc,
 	[K_SYSCALL_ZEPHYR_FWRITE] = z_mrsh_zephyr_fwrite,
+	[K_SYSCALL___POSIX_CLOCK_GET_BASE] = z_mrsh___posix_clock_get_base,
 	[K_SYSCALL_Z_SYS_MUTEX_KERNEL_LOCK] = z_mrsh_z_sys_mutex_kernel_lock,
 	[K_SYSCALL_Z_SYS_MUTEX_KERNEL_UNLOCK] = z_mrsh_z_sys_mutex_kernel_unlock,
 	[K_SYSCALL_Z_LOG_MSG_SIMPLE_CREATE_0] = z_mrsh_z_log_msg_simple_create_0,
@@ -717,6 +886,46 @@ const _k_syscall_handler_t _k_syscall_table[K_SYSCALL_LIMIT] = {
 	[K_SYSCALL_LOG_BUFFERED_CNT] = z_mrsh_log_buffered_cnt,
 	[K_SYSCALL_LOG_FILTER_SET] = z_mrsh_log_filter_set,
 	[K_SYSCALL_LOG_FRONTEND_FILTER_SET] = z_mrsh_log_frontend_filter_set,
+	[K_SYSCALL_SYS_RAND_GET] = z_mrsh_sys_rand_get,
+	[K_SYSCALL_SYS_CSRAND_GET] = z_mrsh_sys_csrand_get,
+	[K_SYSCALL_NET_ETH_GET_PTP_CLOCK_BY_INDEX] = z_mrsh_net_eth_get_ptp_clock_by_index,
+	[K_SYSCALL_NET_IF_IPV6_ADDR_LOOKUP_BY_INDEX] = z_mrsh_net_if_ipv6_addr_lookup_by_index,
+	[K_SYSCALL_NET_IF_IPV6_ADDR_ADD_BY_INDEX] = z_mrsh_net_if_ipv6_addr_add_by_index,
+	[K_SYSCALL_NET_IF_IPV6_ADDR_RM_BY_INDEX] = z_mrsh_net_if_ipv6_addr_rm_by_index,
+	[K_SYSCALL_NET_IF_IPV4_ADDR_LOOKUP_BY_INDEX] = z_mrsh_net_if_ipv4_addr_lookup_by_index,
+	[K_SYSCALL_NET_IF_IPV4_ADDR_ADD_BY_INDEX] = z_mrsh_net_if_ipv4_addr_add_by_index,
+	[K_SYSCALL_NET_IF_IPV4_ADDR_RM_BY_INDEX] = z_mrsh_net_if_ipv4_addr_rm_by_index,
+	[K_SYSCALL_NET_IF_IPV4_SET_NETMASK_BY_INDEX] = z_mrsh_net_if_ipv4_set_netmask_by_index,
+	[K_SYSCALL_NET_IF_IPV4_SET_NETMASK_BY_ADDR_BY_INDEX] = z_mrsh_net_if_ipv4_set_netmask_by_addr_by_index,
+	[K_SYSCALL_NET_IF_IPV4_SET_GW_BY_INDEX] = z_mrsh_net_if_ipv4_set_gw_by_index,
+	[K_SYSCALL_NET_IF_GET_BY_INDEX] = z_mrsh_net_if_get_by_index,
+	[K_SYSCALL_NET_ADDR_PTON] = z_mrsh_net_addr_pton,
+	[K_SYSCALL_NET_ADDR_NTOP] = z_mrsh_net_addr_ntop,
+	[K_SYSCALL_ZSOCK_GET_CONTEXT_OBJECT] = z_mrsh_zsock_get_context_object,
+	[K_SYSCALL_ZSOCK_SOCKET] = z_mrsh_zsock_socket,
+	[K_SYSCALL_ZSOCK_SOCKETPAIR] = z_mrsh_zsock_socketpair,
+	[K_SYSCALL_ZSOCK_CLOSE] = z_mrsh_zsock_close,
+	[K_SYSCALL_ZSOCK_SHUTDOWN] = z_mrsh_zsock_shutdown,
+	[K_SYSCALL_ZSOCK_BIND] = z_mrsh_zsock_bind,
+	[K_SYSCALL_ZSOCK_CONNECT] = z_mrsh_zsock_connect,
+	[K_SYSCALL_ZSOCK_LISTEN] = z_mrsh_zsock_listen,
+	[K_SYSCALL_ZSOCK_ACCEPT] = z_mrsh_zsock_accept,
+	[K_SYSCALL_ZSOCK_SENDTO] = z_mrsh_zsock_sendto,
+	[K_SYSCALL_ZSOCK_SENDMSG] = z_mrsh_zsock_sendmsg,
+	[K_SYSCALL_ZSOCK_RECVFROM] = z_mrsh_zsock_recvfrom,
+	[K_SYSCALL_ZSOCK_RECVMSG] = z_mrsh_zsock_recvmsg,
+	[K_SYSCALL_ZSOCK_FCNTL_IMPL] = z_mrsh_zsock_fcntl_impl,
+	[K_SYSCALL_ZSOCK_IOCTL_IMPL] = z_mrsh_zsock_ioctl_impl,
+	[K_SYSCALL_ZSOCK_POLL] = z_mrsh_zsock_poll,
+	[K_SYSCALL_ZSOCK_GETSOCKOPT] = z_mrsh_zsock_getsockopt,
+	[K_SYSCALL_ZSOCK_SETSOCKOPT] = z_mrsh_zsock_setsockopt,
+	[K_SYSCALL_ZSOCK_GETPEERNAME] = z_mrsh_zsock_getpeername,
+	[K_SYSCALL_ZSOCK_GETSOCKNAME] = z_mrsh_zsock_getsockname,
+	[K_SYSCALL_ZSOCK_GETHOSTNAME] = z_mrsh_zsock_gethostname,
+	[K_SYSCALL_ZSOCK_INET_PTON] = z_mrsh_zsock_inet_pton,
+	[K_SYSCALL_Z_ZSOCK_GETADDRINFO_INTERNAL] = z_mrsh_z_zsock_getaddrinfo_internal,
+	[K_SYSCALL_ZSOCK_SELECT] = z_mrsh_zsock_select,
+	[K_SYSCALL_ENTROPY_GET_ENTROPY] = z_mrsh_entropy_get_entropy,
 	[K_SYSCALL_FLASH_READ] = z_mrsh_flash_read,
 	[K_SYSCALL_FLASH_WRITE] = z_mrsh_flash_write,
 	[K_SYSCALL_FLASH_ERASE] = z_mrsh_flash_erase,
@@ -878,5 +1087,6 @@ const _k_syscall_handler_t _k_syscall_table[K_SYSCALL_LIMIT] = {
 	[K_SYSCALL_K_OBJECT_ALLOC] = z_mrsh_k_object_alloc,
 	[K_SYSCALL_K_OBJECT_ALLOC_SIZE] = z_mrsh_k_object_alloc_size,
 	[K_SYSCALL_SYS_CLOCK_HW_CYCLES_PER_SEC_RUNTIME_GET] = z_mrsh_sys_clock_hw_cycles_per_sec_runtime_get,
+	[K_SYSCALL_Z_ERRNO] = z_mrsh_z_errno,
 	[K_SYSCALL_BAD] = handler_bad_syscall
 };

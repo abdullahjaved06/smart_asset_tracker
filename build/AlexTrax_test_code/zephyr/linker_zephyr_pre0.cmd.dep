@@ -78,6 +78,8 @@ linker_zephyr_pre0.cmd: \
  /home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/linker/kobject-data.ld \
  /home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/linker/cplusplus-ram.ld \
  /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/include/generated/snippets-data-sections.ld \
+ /home/abdullah/ncs/v2.9.0/zephyr/include/../subsys/net/conn_mgr/conn_mgr.ld \
+ /home/abdullah/ncs/v2.9.0/zephyr/include/../subsys/net/l2/wifi/wifi_nm.ld \
  /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/include/generated/snippets-noinit.ld \
  /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/include/generated/snippets-sections.ld \
  /home/abdullah/ncs/v2.9.0/zephyr/include/../soc/nordic/common/arm_platform_init.ld \
