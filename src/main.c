@@ -6,6 +6,8 @@
 #include "../components/lis2dh/lis2dh.h"
 #include "../components/sht4x/sht4x.h"
 #include "../components/ext_flash/max25r16.h"
+#include "../components/WiFi/wifi.h"
+
 
     const struct device *sensor = DEVICE_DT_GET(DT_NODELABEL(lis2dh12));
 

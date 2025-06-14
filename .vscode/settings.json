@@ -8,6 +8,7 @@
         "lis2dh.h": "c",
         "sht4x.h": "c",
         "stdio.h": "c",
-        "sensor.h": "c"
+        "sensor.h": "c",
+        "max25r16.h": "c"
     }
 }

@@ -45,3 +45,11 @@ target_include_directories(app
     PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/components/voltage_monitor
 )
+
+# Add the component 
+target_sources(app PRIVATE
+    components/WiFi/wifi.c)
+target_include_directories(app
+    PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/components/WiFi
+)

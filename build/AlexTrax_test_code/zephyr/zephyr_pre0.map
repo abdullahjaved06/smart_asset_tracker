@@ -9,6 +9,7 @@ app/libapp.a(sht4x.c.obj)     (--whole-archive)
 app/libapp.a(max25r16.c.obj)  (--whole-archive)
 app/libapp.a(voltage_monitor.c.obj)
                               (--whole-archive)
+app/libapp.a(wifi.c.obj)      (--whole-archive)
 zephyr/libzephyr.a(crc32c_sw.c.obj)
                               (--whole-archive)
 zephyr/libzephyr.a(crc32_sw.c.obj)
@@ -1130,6 +1131,12 @@ Discarded input sections
  .debug_line    0x0000000000000000        0x0 app/libapp.a(voltage_monitor.c.obj)
  .debug_str     0x0000000000000000      0x28e app/libapp.a(voltage_monitor.c.obj)
  .comment       0x0000000000000000       0x21 app/libapp.a(voltage_monitor.c.obj)
+ .text          0x0000000000000000        0x0 app/libapp.a(wifi.c.obj)
+ .data          0x0000000000000000        0x0 app/libapp.a(wifi.c.obj)
+ .bss           0x0000000000000000        0x0 app/libapp.a(wifi.c.obj)
+ .debug_line    0x0000000000000000        0x0 app/libapp.a(wifi.c.obj)
+ .debug_str     0x0000000000000000      0x278 app/libapp.a(wifi.c.obj)
+ .comment       0x0000000000000000       0x21 app/libapp.a(wifi.c.obj)
  .text          0x0000000000000000        0x0 zephyr/libzephyr.a(crc32c_sw.c.obj)
  .data          0x0000000000000000        0x0 zephyr/libzephyr.a(crc32c_sw.c.obj)
  .bss           0x0000000000000000        0x0 zephyr/libzephyr.a(crc32c_sw.c.obj)
@@ -19090,947 +19097,949 @@ noinit          0x0000000020019c98     0x3590
  .ARM.attributes
                 0x00000000000001b0       0x36 app/libapp.a(voltage_monitor.c.obj)
  .ARM.attributes
-                0x00000000000001e6       0x36 zephyr/libzephyr.a(crc32c_sw.c.obj)
+                0x00000000000001e6       0x36 app/libapp.a(wifi.c.obj)
  .ARM.attributes
-                0x000000000000021c       0x36 zephyr/libzephyr.a(crc32_sw.c.obj)
+                0x000000000000021c       0x36 zephyr/libzephyr.a(crc32c_sw.c.obj)
  .ARM.attributes
-                0x0000000000000252       0x36 zephyr/libzephyr.a(crc24_sw.c.obj)
+                0x0000000000000252       0x36 zephyr/libzephyr.a(crc32_sw.c.obj)
  .ARM.attributes
-                0x0000000000000288       0x36 zephyr/libzephyr.a(crc16_sw.c.obj)
+                0x0000000000000288       0x36 zephyr/libzephyr.a(crc24_sw.c.obj)
  .ARM.attributes
-                0x00000000000002be       0x36 zephyr/libzephyr.a(crc8_sw.c.obj)
+                0x00000000000002be       0x36 zephyr/libzephyr.a(crc16_sw.c.obj)
  .ARM.attributes
-                0x00000000000002f4       0x36 zephyr/libzephyr.a(crc7_sw.c.obj)
+                0x00000000000002f4       0x36 zephyr/libzephyr.a(crc8_sw.c.obj)
  .ARM.attributes
-                0x000000000000032a       0x36 zephyr/libzephyr.a(crc4_sw.c.obj)
+                0x000000000000032a       0x36 zephyr/libzephyr.a(crc7_sw.c.obj)
  .ARM.attributes
-                0x0000000000000360       0x36 zephyr/libzephyr.a(heap.c.obj)
+                0x0000000000000360       0x36 zephyr/libzephyr.a(crc4_sw.c.obj)
  .ARM.attributes
-                0x0000000000000396       0x36 zephyr/libzephyr.a(heap_info.c.obj)
+                0x0000000000000396       0x36 zephyr/libzephyr.a(heap.c.obj)
  .ARM.attributes
-                0x00000000000003cc       0x36 zephyr/libzephyr.a(cbprintf_packaged.c.obj)
+                0x00000000000003cc       0x36 zephyr/libzephyr.a(heap_info.c.obj)
  .ARM.attributes
-                0x0000000000000402       0x36 zephyr/libzephyr.a(printk.c.obj)
+                0x0000000000000402       0x36 zephyr/libzephyr.a(cbprintf_packaged.c.obj)
  .ARM.attributes
-                0x0000000000000438       0x36 zephyr/libzephyr.a(sem.c.obj)
+                0x0000000000000438       0x36 zephyr/libzephyr.a(printk.c.obj)
  .ARM.attributes
-                0x000000000000046e       0x36 zephyr/libzephyr.a(thread_entry.c.obj)
+                0x000000000000046e       0x36 zephyr/libzephyr.a(sem.c.obj)
  .ARM.attributes
-                0x00000000000004a4       0x36 zephyr/libzephyr.a(cbprintf_complete.c.obj)
+                0x00000000000004a4       0x36 zephyr/libzephyr.a(thread_entry.c.obj)
  .ARM.attributes
-                0x00000000000004da       0x36 zephyr/libzephyr.a(assert.c.obj)
+                0x00000000000004da       0x36 zephyr/libzephyr.a(cbprintf_complete.c.obj)
  .ARM.attributes
-                0x0000000000000510       0x36 zephyr/libzephyr.a(mpsc_pbuf.c.obj)
+                0x0000000000000510       0x36 zephyr/libzephyr.a(assert.c.obj)
  .ARM.attributes
-                0x0000000000000546       0x36 zephyr/libzephyr.a(dec.c.obj)
+                0x0000000000000546       0x36 zephyr/libzephyr.a(mpsc_pbuf.c.obj)
  .ARM.attributes
-                0x000000000000057c       0x36 zephyr/libzephyr.a(hex.c.obj)
+                0x000000000000057c       0x36 zephyr/libzephyr.a(dec.c.obj)
  .ARM.attributes
-                0x00000000000005b2       0x36 zephyr/libzephyr.a(rb.c.obj)
+                0x00000000000005b2       0x36 zephyr/libzephyr.a(hex.c.obj)
  .ARM.attributes
-                0x00000000000005e8       0x36 zephyr/libzephyr.a(timeutil.c.obj)
+                0x00000000000005e8       0x36 zephyr/libzephyr.a(rb.c.obj)
  .ARM.attributes
-                0x000000000000061e       0x36 zephyr/libzephyr.a(bitarray.c.obj)
+                0x000000000000061e       0x36 zephyr/libzephyr.a(timeutil.c.obj)
  .ARM.attributes
-                0x0000000000000654       0x36 zephyr/libzephyr.a(onoff.c.obj)
+                0x0000000000000654       0x36 zephyr/libzephyr.a(bitarray.c.obj)
  .ARM.attributes
-                0x000000000000068a       0x36 zephyr/libzephyr.a(notify.c.obj)
+                0x000000000000068a       0x36 zephyr/libzephyr.a(onoff.c.obj)
  .ARM.attributes
-                0x00000000000006c0       0x36 zephyr/libzephyr.a(ring_buffer.c.obj)
+                0x00000000000006c0       0x36 zephyr/libzephyr.a(notify.c.obj)
  .ARM.attributes
-                0x00000000000006f6       0x36 zephyr/libzephyr.a(configs.c.obj)
+                0x00000000000006f6       0x36 zephyr/libzephyr.a(ring_buffer.c.obj)
  .ARM.attributes
-                0x000000000000072c       0x36 zephyr/libzephyr.a(log_core.c.obj)
+                0x000000000000072c       0x36 zephyr/libzephyr.a(configs.c.obj)
  .ARM.attributes
-                0x0000000000000762       0x36 zephyr/libzephyr.a(log_mgmt.c.obj)
+                0x0000000000000762       0x36 zephyr/libzephyr.a(log_core.c.obj)
  .ARM.attributes
-                0x0000000000000798       0x36 zephyr/libzephyr.a(log_cache.c.obj)
+                0x0000000000000798       0x36 zephyr/libzephyr.a(log_mgmt.c.obj)
  .ARM.attributes
-                0x00000000000007ce       0x36 zephyr/libzephyr.a(log_msg.c.obj)
+                0x00000000000007ce       0x36 zephyr/libzephyr.a(log_cache.c.obj)
  .ARM.attributes
-                0x0000000000000804       0x36 zephyr/libzephyr.a(log_output.c.obj)
+                0x0000000000000804       0x36 zephyr/libzephyr.a(log_msg.c.obj)
  .ARM.attributes
-                0x000000000000083a       0x36 zephyr/libzephyr.a(log_backend_rtt.c.obj)
+                0x000000000000083a       0x36 zephyr/libzephyr.a(log_output.c.obj)
  .ARM.attributes
-                0x0000000000000870       0x36 zephyr/libzephyr.a(mem_attr.c.obj)
+                0x0000000000000870       0x36 zephyr/libzephyr.a(log_backend_rtt.c.obj)
  .ARM.attributes
-                0x00000000000008a6       0x36 zephyr/libzephyr.a(flash_map.c.obj)
+                0x00000000000008a6       0x36 zephyr/libzephyr.a(mem_attr.c.obj)
  .ARM.attributes
-                0x00000000000008dc       0x36 zephyr/libzephyr.a(flash_map_layout.c.obj)
+                0x00000000000008dc       0x36 zephyr/libzephyr.a(flash_map.c.obj)
  .ARM.attributes
-                0x0000000000000912       0x36 zephyr/libzephyr.a(tracing_none.c.obj)
+                0x0000000000000912       0x36 zephyr/libzephyr.a(flash_map_layout.c.obj)
  .ARM.attributes
-                0x0000000000000948       0x36 zephyr/libzephyr.a(settings_store.c.obj)
+                0x0000000000000948       0x36 zephyr/libzephyr.a(tracing_none.c.obj)
  .ARM.attributes
-                0x000000000000097e       0x36 zephyr/libzephyr.a(settings.c.obj)
+                0x000000000000097e       0x36 zephyr/libzephyr.a(settings_store.c.obj)
  .ARM.attributes
-                0x00000000000009b4       0x36 zephyr/libzephyr.a(settings_init.c.obj)
+                0x00000000000009b4       0x36 zephyr/libzephyr.a(settings.c.obj)
  .ARM.attributes
-                0x00000000000009ea       0x36 zephyr/libzephyr.a(settings_line.c.obj)
+                0x00000000000009ea       0x36 zephyr/libzephyr.a(settings_init.c.obj)
  .ARM.attributes
-                0x0000000000000a20       0x36 zephyr/libzephyr.a(settings_file.c.obj)
+                0x0000000000000a20       0x36 zephyr/libzephyr.a(settings_line.c.obj)
  .ARM.attributes
-                0x0000000000000a56       0x36 zephyr/libzephyr.a(kernel_shell.c.obj)
+                0x0000000000000a56       0x36 zephyr/libzephyr.a(settings_file.c.obj)
  .ARM.attributes
-                0x0000000000000a8c       0x36 zephyr/libzephyr.a(cycles.c.obj)
+                0x0000000000000a8c       0x36 zephyr/libzephyr.a(kernel_shell.c.obj)
  .ARM.attributes
-                0x0000000000000ac2       0x36 zephyr/libzephyr.a(sleep.c.obj)
+                0x0000000000000ac2       0x36 zephyr/libzephyr.a(cycles.c.obj)
  .ARM.attributes
-                0x0000000000000af8       0x36 zephyr/libzephyr.a(uptime.c.obj)
+                0x0000000000000af8       0x36 zephyr/libzephyr.a(sleep.c.obj)
  .ARM.attributes
-                0x0000000000000b2e       0x36 zephyr/libzephyr.a(version.c.obj)
+                0x0000000000000b2e       0x36 zephyr/libzephyr.a(uptime.c.obj)
  .ARM.attributes
-                0x0000000000000b64       0x36 zephyr/libzephyr.a(log-level.c.obj)
+                0x0000000000000b64       0x36 zephyr/libzephyr.a(version.c.obj)
  .ARM.attributes
-                0x0000000000000b9a       0x36 zephyr/libzephyr.a(thread.c.obj)
+                0x0000000000000b9a       0x36 zephyr/libzephyr.a(log-level.c.obj)
  .ARM.attributes
-                0x0000000000000bd0       0x36 zephyr/libzephyr.a(list.c.obj)
+                0x0000000000000bd0       0x36 zephyr/libzephyr.a(thread.c.obj)
  .ARM.attributes
-                0x0000000000000c06       0x36 zephyr/libzephyr.a(stacks.c.obj)
+                0x0000000000000c06       0x36 zephyr/libzephyr.a(list.c.obj)
  .ARM.attributes
-                0x0000000000000c3c       0x36 zephyr/libzephyr.a(device_service.c.obj)
+                0x0000000000000c3c       0x36 zephyr/libzephyr.a(stacks.c.obj)
  .ARM.attributes
-                0x0000000000000c72       0x36 zephyr/libzephyr.a(devmem_service.c.obj)
+                0x0000000000000c72       0x36 zephyr/libzephyr.a(device_service.c.obj)
  .ARM.attributes
-                0x0000000000000ca8       0x36 zephyr/libzephyr.a(shell.c.obj)
+                0x0000000000000ca8       0x36 zephyr/libzephyr.a(devmem_service.c.obj)
  .ARM.attributes
-                0x0000000000000cde       0x36 zephyr/libzephyr.a(shell_fprintf.c.obj)
+                0x0000000000000cde       0x36 zephyr/libzephyr.a(shell.c.obj)
  .ARM.attributes
-                0x0000000000000d14       0x36 zephyr/libzephyr.a(shell_utils.c.obj)
+                0x0000000000000d14       0x36 zephyr/libzephyr.a(shell_fprintf.c.obj)
  .ARM.attributes
-                0x0000000000000d4a       0x36 zephyr/libzephyr.a(shell_ops.c.obj)
+                0x0000000000000d4a       0x36 zephyr/libzephyr.a(shell_utils.c.obj)
  .ARM.attributes
-                0x0000000000000d80       0x36 zephyr/libzephyr.a(shell_log_backend.c.obj)
+                0x0000000000000d80       0x36 zephyr/libzephyr.a(shell_ops.c.obj)
  .ARM.attributes
-                0x0000000000000db6       0x36 zephyr/libzephyr.a(shell_help.c.obj)
+                0x0000000000000db6       0x36 zephyr/libzephyr.a(shell_log_backend.c.obj)
  .ARM.attributes
-                0x0000000000000dec       0x36 zephyr/libzephyr.a(shell_cmds.c.obj)
+                0x0000000000000dec       0x36 zephyr/libzephyr.a(shell_help.c.obj)
  .ARM.attributes
-                0x0000000000000e22       0x36 zephyr/libzephyr.a(shell_history.c.obj)
+                0x0000000000000e22       0x36 zephyr/libzephyr.a(shell_cmds.c.obj)
  .ARM.attributes
-                0x0000000000000e58       0x36 zephyr/libzephyr.a(shell_wildcard.c.obj)
+                0x0000000000000e58       0x36 zephyr/libzephyr.a(shell_history.c.obj)
  .ARM.attributes
-                0x0000000000000e8e       0x36 zephyr/libzephyr.a(flash_util.c.obj)
+                0x0000000000000e8e       0x36 zephyr/libzephyr.a(shell_wildcard.c.obj)
  .ARM.attributes
-                0x0000000000000ec4       0x36 zephyr/libzephyr.a(mipi_dbi_spi.c.obj)
+                0x0000000000000ec4       0x36 zephyr/libzephyr.a(flash_util.c.obj)
  .ARM.attributes
-                0x0000000000000efa       0x36 zephyr/libzephyr.a(banner.c.obj)
+                0x0000000000000efa       0x36 zephyr/libzephyr.a(mipi_dbi_spi.c.obj)
  .ARM.attributes
-                0x0000000000000f30       0x36 zephyr/libzephyr.a(flash_map_partition_manager.c.obj)
+                0x0000000000000f30       0x36 zephyr/libzephyr.a(banner.c.obj)
  .ARM.attributes
-                0x0000000000000f66       0x36 zephyr/arch/common/libarch__common.a(sw_isr_common.c.obj)
+                0x0000000000000f66       0x36 zephyr/libzephyr.a(flash_map_partition_manager.c.obj)
  .ARM.attributes
-                0x0000000000000f9c       0x36 zephyr/arch/arch/arm/core/libarch__arm__core.a(fatal.c.obj)
+                0x0000000000000f9c       0x36 zephyr/arch/common/libarch__common.a(sw_isr_common.c.obj)
  .ARM.attributes
-                0x0000000000000fd2       0x36 zephyr/arch/arch/arm/core/libarch__arm__core.a(nmi.c.obj)
+                0x0000000000000fd2       0x36 zephyr/arch/arch/arm/core/libarch__arm__core.a(fatal.c.obj)
  .ARM.attributes
-                0x0000000000001008       0x22 zephyr/arch/arch/arm/core/libarch__arm__core.a(nmi_on_reset.S.obj)
+                0x0000000000001008       0x36 zephyr/arch/arch/arm/core/libarch__arm__core.a(nmi.c.obj)
  .ARM.attributes
-                0x000000000000102a       0x36 zephyr/arch/arch/arm/core/libarch__arm__core.a(tls.c.obj)
+                0x000000000000103e       0x22 zephyr/arch/arch/arm/core/libarch__arm__core.a(nmi_on_reset.S.obj)
  .ARM.attributes
-                0x0000000000001060       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(exc_exit.c.obj)
+                0x0000000000001060       0x36 zephyr/arch/arch/arm/core/libarch__arm__core.a(tls.c.obj)
  .ARM.attributes
-                0x0000000000001096       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(fault.c.obj)
+                0x0000000000001096       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(exc_exit.c.obj)
  .ARM.attributes
-                0x00000000000010cc       0x22 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(fault_s.S.obj)
+                0x00000000000010cc       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(fault.c.obj)
  .ARM.attributes
-                0x00000000000010ee       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(fpu.c.obj)
+                0x0000000000001102       0x22 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(fault_s.S.obj)
  .ARM.attributes
-                0x0000000000001124       0x22 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(reset.S.obj)
+                0x0000000000001124       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(fpu.c.obj)
  .ARM.attributes
-                0x0000000000001146       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(scb.c.obj)
+                0x000000000000115a       0x22 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(reset.S.obj)
  .ARM.attributes
-                0x000000000000117c       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(thread_abort.c.obj)
+                0x000000000000117c       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(scb.c.obj)
  .ARM.attributes
-                0x00000000000011b2       0x24 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(vector_table.S.obj)
+                0x00000000000011b2       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(thread_abort.c.obj)
  .ARM.attributes
-                0x00000000000011d6       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(swap.c.obj)
+                0x00000000000011e8       0x24 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(vector_table.S.obj)
  .ARM.attributes
-                0x000000000000120c       0x22 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(swap_helper.S.obj)
+                0x000000000000120c       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(swap.c.obj)
  .ARM.attributes
-                0x000000000000122e       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(irq_manage.c.obj)
+                0x0000000000001242       0x22 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(swap_helper.S.obj)
  .ARM.attributes
-                0x0000000000001264       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(prep_c.c.obj)
+                0x0000000000001264       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(irq_manage.c.obj)
  .ARM.attributes
-                0x000000000000129a       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(thread.c.obj)
+                0x000000000000129a       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(prep_c.c.obj)
  .ARM.attributes
-                0x00000000000012d0       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(cpu_idle.c.obj)
+                0x00000000000012d0       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(thread.c.obj)
  .ARM.attributes
-                0x0000000000001306       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(irq_init.c.obj)
+                0x0000000000001306       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(cpu_idle.c.obj)
  .ARM.attributes
-                0x000000000000133c       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(isr_wrapper.c.obj)
+                0x000000000000133c       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(irq_init.c.obj)
  .ARM.attributes
-                0x0000000000001372       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(coredump.c.obj)
+                0x0000000000001372       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(isr_wrapper.c.obj)
  .ARM.attributes
-                0x00000000000013a8       0x22 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(__aeabi_read_tp.S.obj)
+                0x00000000000013a8       0x36 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(coredump.c.obj)
  .ARM.attributes
-                0x00000000000013ca       0x36 zephyr/arch/arch/arm/core/cortex_m/cmse/libarch__arm__core__cortex_m__cmse.a(arm_core_cmse.c.obj)
+                0x00000000000013de       0x22 zephyr/arch/arch/arm/core/cortex_m/libarch__arm__core__cortex_m.a(__aeabi_read_tp.S.obj)
  .ARM.attributes
-                0x0000000000001400       0x36 zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_core_mpu.c.obj)
+                0x0000000000001400       0x36 zephyr/arch/arch/arm/core/cortex_m/cmse/libarch__arm__core__cortex_m__cmse.a(arm_core_cmse.c.obj)
  .ARM.attributes
-                0x0000000000001436       0x36 zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_mpu.c.obj)
+                0x0000000000001436       0x36 zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_core_mpu.c.obj)
  .ARM.attributes
-                0x000000000000146c       0x36 zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_mpu_regions.c.obj)
+                0x000000000000146c       0x36 zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_mpu.c.obj)
  .ARM.attributes
-                0x00000000000014a2       0x36 zephyr/lib/libc/picolibc/liblib__libc__picolibc.a(libc-hooks.c.obj)
+                0x00000000000014a2       0x36 zephyr/arch/arch/arm/core/mpu/libarch__arm__core__mpu.a(arm_mpu_regions.c.obj)
  .ARM.attributes
-                0x00000000000014d8       0x36 zephyr/lib/libc/common/liblib__libc__common.a(abort.c.obj)
+                0x00000000000014d8       0x36 zephyr/lib/libc/picolibc/liblib__libc__picolibc.a(libc-hooks.c.obj)
  .ARM.attributes
-                0x000000000000150e       0x36 zephyr/lib/libc/common/liblib__libc__common.a(malloc.c.obj)
+                0x000000000000150e       0x36 zephyr/lib/libc/common/liblib__libc__common.a(abort.c.obj)
  .ARM.attributes
-                0x0000000000001544       0x36 zephyr/lib/libc/common/liblib__libc__common.a(remove.c.obj)
+                0x0000000000001544       0x36 zephyr/lib/libc/common/liblib__libc__common.a(malloc.c.obj)
  .ARM.attributes
-                0x000000000000157a       0x36 zephyr/lib/posix/options/liblib__posix__options.a(fnmatch.c.obj)
+                0x000000000000157a       0x36 zephyr/lib/libc/common/liblib__libc__common.a(remove.c.obj)
  .ARM.attributes
-                0x00000000000015b0       0x36 zephyr/lib/posix/options/liblib__posix__options.a(getentropy.c.obj)
+                0x00000000000015b0       0x36 zephyr/lib/posix/options/liblib__posix__options.a(fnmatch.c.obj)
  .ARM.attributes
-                0x00000000000015e6       0x36 zephyr/lib/posix/options/liblib__posix__options.a(getopt.c.obj)
+                0x00000000000015e6       0x36 zephyr/lib/posix/options/liblib__posix__options.a(getentropy.c.obj)
  .ARM.attributes
-                0x000000000000161c       0x36 zephyr/lib/posix/options/liblib__posix__options.a(getopt_common.c.obj)
+                0x000000000000161c       0x36 zephyr/lib/posix/options/liblib__posix__options.a(getopt.c.obj)
  .ARM.attributes
-                0x0000000000001652       0x36 zephyr/soc/soc/nrf9151/libsoc__nordic.a(validate_base_addresses.c.obj)
+                0x0000000000001652       0x36 zephyr/lib/posix/options/liblib__posix__options.a(getopt_common.c.obj)
  .ARM.attributes
-                0x0000000000001688       0x36 zephyr/soc/soc/nrf9151/libsoc__nordic.a(validate_binding_headers.c.obj)
+                0x0000000000001688       0x36 zephyr/soc/soc/nrf9151/libsoc__nordic.a(validate_base_addresses.c.obj)
  .ARM.attributes
-                0x00000000000016be       0x36 zephyr/soc/soc/nrf9151/libsoc__nordic.a(validate_enabled_instances.c.obj)
+                0x00000000000016be       0x36 zephyr/soc/soc/nrf9151/libsoc__nordic.a(validate_binding_headers.c.obj)
  .ARM.attributes
-                0x00000000000016f4       0x36 zephyr/soc/soc/nrf9151/libsoc__nordic.a(soc.c.obj)
+                0x00000000000016f4       0x36 zephyr/soc/soc/nrf9151/libsoc__nordic.a(validate_enabled_instances.c.obj)
  .ARM.attributes
-                0x000000000000172a       0x36 zephyr/soc/soc/nrf9151/libsoc__nordic.a(soc_secure.c.obj)
+                0x000000000000172a       0x36 zephyr/soc/soc/nrf9151/libsoc__nordic.a(soc.c.obj)
  .ARM.attributes
-                0x0000000000001760       0x36 zephyr/subsys/debug/coredump/libsubsys__debug__coredump.a(coredump_core.c.obj)
+                0x0000000000001760       0x36 zephyr/soc/soc/nrf9151/libsoc__nordic.a(soc_secure.c.obj)
  .ARM.attributes
-                0x0000000000001796       0x36 zephyr/subsys/debug/coredump/libsubsys__debug__coredump.a(coredump_memory_regions.c.obj)
+                0x0000000000001796       0x36 zephyr/subsys/debug/coredump/libsubsys__debug__coredump.a(coredump_core.c.obj)
  .ARM.attributes
-                0x00000000000017cc       0x36 zephyr/subsys/debug/coredump/libsubsys__debug__coredump.a(coredump_backend_logging.c.obj)
+                0x00000000000017cc       0x36 zephyr/subsys/debug/coredump/libsubsys__debug__coredump.a(coredump_memory_regions.c.obj)
  .ARM.attributes
-                0x0000000000001802       0x36 zephyr/subsys/fs/libsubsys__fs.a(fs.c.obj)
+                0x0000000000001802       0x36 zephyr/subsys/debug/coredump/libsubsys__debug__coredump.a(coredump_backend_logging.c.obj)
  .ARM.attributes
-                0x0000000000001838       0x36 zephyr/subsys/fs/libsubsys__fs.a(fs_impl.c.obj)
+                0x0000000000001838       0x36 zephyr/subsys/fs/libsubsys__fs.a(fs.c.obj)
  .ARM.attributes
-                0x000000000000186e       0x36 zephyr/subsys/fs/libsubsys__fs.a(littlefs_fs.c.obj)
+                0x000000000000186e       0x36 zephyr/subsys/fs/libsubsys__fs.a(fs_impl.c.obj)
  .ARM.attributes
-                0x00000000000018a4       0x36 zephyr/drivers/clock_control/libdrivers__clock_control.a(clock_control_nrf.c.obj)
+                0x00000000000018a4       0x36 zephyr/subsys/fs/libsubsys__fs.a(littlefs_fs.c.obj)
  .ARM.attributes
-                0x00000000000018da       0x36 zephyr/drivers/console/libdrivers__console.a(rtt_console.c.obj)
+                0x00000000000018da       0x36 zephyr/drivers/clock_control/libdrivers__clock_control.a(clock_control_nrf.c.obj)
  .ARM.attributes
-                0x0000000000001910       0x36 zephyr/drivers/display/libdrivers__display.a(display_ili9xxx.c.obj)
+                0x0000000000001910       0x36 zephyr/drivers/console/libdrivers__console.a(rtt_console.c.obj)
  .ARM.attributes
-                0x0000000000001946       0x36 zephyr/drivers/display/libdrivers__display.a(display_ili9341.c.obj)
+                0x0000000000001946       0x36 zephyr/drivers/display/libdrivers__display.a(display_ili9xxx.c.obj)
  .ARM.attributes
-                0x000000000000197c       0x36 zephyr/drivers/flash/libdrivers__flash.a(spi_nor.c.obj)
+                0x000000000000197c       0x36 zephyr/drivers/display/libdrivers__display.a(display_ili9341.c.obj)
  .ARM.attributes
-                0x00000000000019b2       0x36 zephyr/drivers/flash/libdrivers__flash.a(soc_flash_nrf.c.obj)
+                0x00000000000019b2       0x36 zephyr/drivers/flash/libdrivers__flash.a(spi_nor.c.obj)
  .ARM.attributes
-                0x00000000000019e8       0x36 zephyr/drivers/flash/libdrivers__flash.a(flash_page_layout.c.obj)
+                0x00000000000019e8       0x36 zephyr/drivers/flash/libdrivers__flash.a(soc_flash_nrf.c.obj)
  .ARM.attributes
-                0x0000000000001a1e       0x36 zephyr/drivers/flash/libdrivers__flash.a(jesd216.c.obj)
+                0x0000000000001a1e       0x36 zephyr/drivers/flash/libdrivers__flash.a(flash_page_layout.c.obj)
  .ARM.attributes
-                0x0000000000001a54       0x36 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_nrfx.c.obj)
+                0x0000000000001a54       0x36 zephyr/drivers/flash/libdrivers__flash.a(jesd216.c.obj)
  .ARM.attributes
-                0x0000000000001a8a       0x36 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_common.c.obj)
+                0x0000000000001a8a       0x36 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_nrfx.c.obj)
  .ARM.attributes
-                0x0000000000001ac0       0x36 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twim.c.obj)
+                0x0000000000001ac0       0x36 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_common.c.obj)
  .ARM.attributes
-                0x0000000000001af6       0x36 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twim_common.c.obj)
+                0x0000000000001af6       0x36 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twim.c.obj)
  .ARM.attributes
-                0x0000000000001b2c       0x36 zephyr/drivers/pinctrl/libdrivers__pinctrl.a(common.c.obj)
+                0x0000000000001b2c       0x36 zephyr/drivers/i2c/libdrivers__i2c.a(i2c_nrfx_twim_common.c.obj)
  .ARM.attributes
-                0x0000000000001b62       0x36 zephyr/drivers/pinctrl/libdrivers__pinctrl.a(pinctrl_nrf.c.obj)
+                0x0000000000001b62       0x36 zephyr/drivers/pinctrl/libdrivers__pinctrl.a(common.c.obj)
  .ARM.attributes
-                0x0000000000001b98       0x36 zephyr/drivers/sensor/sensirion/sht4x/libdrivers__sensor__sensirion__sht4x.a(sht4x.c.obj)
+                0x0000000000001b98       0x36 zephyr/drivers/pinctrl/libdrivers__pinctrl.a(pinctrl_nrf.c.obj)
  .ARM.attributes
-                0x0000000000001bce       0x36 zephyr/drivers/sensor/st/lis2dh/libdrivers__sensor__st__lis2dh.a(lis2dh.c.obj)
+                0x0000000000001bce       0x36 zephyr/drivers/sensor/sensirion/sht4x/libdrivers__sensor__sensirion__sht4x.a(sht4x.c.obj)
  .ARM.attributes
-                0x0000000000001c04       0x36 zephyr/drivers/sensor/st/lis2dh/libdrivers__sensor__st__lis2dh.a(lis2dh_i2c.c.obj)
+                0x0000000000001c04       0x36 zephyr/drivers/sensor/st/lis2dh/libdrivers__sensor__st__lis2dh.a(lis2dh.c.obj)
  .ARM.attributes
-                0x0000000000001c3a       0x36 zephyr/drivers/sensor/st/lis2dh/libdrivers__sensor__st__lis2dh.a(lis2dh_spi.c.obj)
+                0x0000000000001c3a       0x36 zephyr/drivers/sensor/st/lis2dh/libdrivers__sensor__st__lis2dh.a(lis2dh_i2c.c.obj)
  .ARM.attributes
-                0x0000000000001c70       0x36 zephyr/drivers/spi/libdrivers__spi.a(spi_nrfx_spim.c.obj)
+                0x0000000000001c70       0x36 zephyr/drivers/sensor/st/lis2dh/libdrivers__sensor__st__lis2dh.a(lis2dh_spi.c.obj)
  .ARM.attributes
-                0x0000000000001ca6       0x36 zephyr/drivers/spi/libdrivers__spi.a(spi_nrfx_common.c.obj)
+                0x0000000000001ca6       0x36 zephyr/drivers/spi/libdrivers__spi.a(spi_nrfx_spim.c.obj)
  .ARM.attributes
-                0x0000000000001cdc       0x36 zephyr/drivers/timer/libdrivers__timer.a(sys_clock_init.c.obj)
+                0x0000000000001cdc       0x36 zephyr/drivers/spi/libdrivers__spi.a(spi_nrfx_common.c.obj)
  .ARM.attributes
-                0x0000000000001d12       0x36 zephyr/drivers/timer/libdrivers__timer.a(nrf_rtc_timer.c.obj)
+                0x0000000000001d12       0x36 zephyr/drivers/timer/libdrivers__timer.a(sys_clock_init.c.obj)
  .ARM.attributes
-                0x0000000000001d48       0x36 modules/nrf/lib/nrf_modem_lib/lib..__nrf__lib__nrf_modem_lib.a(nrf_modem_lib.c.obj)
+                0x0000000000001d48       0x36 zephyr/drivers/timer/libdrivers__timer.a(nrf_rtc_timer.c.obj)
  .ARM.attributes
-                0x0000000000001d7e       0x36 modules/nrf/lib/nrf_modem_lib/lib..__nrf__lib__nrf_modem_lib.a(nrf_modem_os.c.obj)
+                0x0000000000001d7e       0x36 modules/nrf/lib/nrf_modem_lib/lib..__nrf__lib__nrf_modem_lib.a(nrf_modem_lib.c.obj)
  .ARM.attributes
-                0x0000000000001db4       0x36 modules/nrf/lib/nrf_modem_lib/lib..__nrf__lib__nrf_modem_lib.a(cfun_hooks.c.obj)
+                0x0000000000001db4       0x36 modules/nrf/lib/nrf_modem_lib/lib..__nrf__lib__nrf_modem_lib.a(nrf_modem_os.c.obj)
  .ARM.attributes
-                0x0000000000001dea       0x36 modules/nrf/lib/nrf_modem_lib/lib..__nrf__lib__nrf_modem_lib.a(fault.c.obj)
+                0x0000000000001dea       0x36 modules/nrf/lib/nrf_modem_lib/lib..__nrf__lib__nrf_modem_lib.a(cfun_hooks.c.obj)
  .ARM.attributes
-                0x0000000000001e20       0x36 modules/nrf/lib/nrf_modem_lib/lib..__nrf__lib__nrf_modem_lib.a(sanity.c.obj)
+                0x0000000000001e20       0x36 modules/nrf/lib/nrf_modem_lib/lib..__nrf__lib__nrf_modem_lib.a(fault.c.obj)
  .ARM.attributes
-                0x0000000000001e56       0x36 modules/nrf/lib/modem_antenna/lib..__nrf__lib__modem_antenna.a(modem_antenna.c.obj)
+                0x0000000000001e56       0x36 modules/nrf/lib/nrf_modem_lib/lib..__nrf__lib__nrf_modem_lib.a(sanity.c.obj)
  .ARM.attributes
-                0x0000000000001e8c       0x36 modules/nrf/subsys/nrf_security/src/zephyr/libmbedtls_zephyr.a(platform.c.obj)
+                0x0000000000001e8c       0x36 modules/nrf/lib/modem_antenna/lib..__nrf__lib__modem_antenna.a(modem_antenna.c.obj)
  .ARM.attributes
-                0x0000000000001ec2       0x36 modules/nrf/modules/trusted-firmware-m/lib..__nrf__modules__trusted-firmware-m.a(fault.c.obj)
+                0x0000000000001ec2       0x36 modules/nrf/subsys/nrf_security/src/zephyr/libmbedtls_zephyr.a(platform.c.obj)
  .ARM.attributes
-                0x0000000000001ef8       0x36 modules/nrf/modules/trusted-firmware-m/libtfm_api_nrf.a(tfm_ioctl_ns_api.c.obj)
+                0x0000000000001ef8       0x36 modules/nrf/modules/trusted-firmware-m/lib..__nrf__modules__trusted-firmware-m.a(fault.c.obj)
  .ARM.attributes
-                0x0000000000001f2e       0x36 modules/trusted-firmware-m/libtfm_api.a(zephyr_tfm_log.c.obj)
+                0x0000000000001f2e       0x36 modules/nrf/modules/trusted-firmware-m/libtfm_api_nrf.a(tfm_ioctl_ns_api.c.obj)
  .ARM.attributes
-                0x0000000000001f64       0x36 modules/trusted-firmware-m/libtfm_api.a(interface.c.obj)
+                0x0000000000001f64       0x36 modules/trusted-firmware-m/libtfm_api.a(zephyr_tfm_log.c.obj)
  .ARM.attributes
-                0x0000000000001f9a       0x36 modules/trusted-firmware-m/libtfm_api.a(tfm_platform_api.c.obj)
+                0x0000000000001f9a       0x36 modules/trusted-firmware-m/libtfm_api.a(interface.c.obj)
  .ARM.attributes
-                0x0000000000001fd0       0x36 modules/trusted-firmware-m/libtfm_api.a(tfm_crypto_api.c.obj)
+                0x0000000000001fd0       0x36 modules/trusted-firmware-m/libtfm_api.a(tfm_platform_api.c.obj)
  .ARM.attributes
-                0x0000000000002006       0x36 modules/trusted-firmware-m/libtfm_api.a(tfm_tz_psa_ns_api.c.obj)
+                0x0000000000002006       0x36 modules/trusted-firmware-m/libtfm_api.a(tfm_crypto_api.c.obj)
  .ARM.attributes
-                0x000000000000203c       0x36 modules/trusted-firmware-m/libtfm_api.a(tfm_ioctl_core_ns_api.c.obj)
+                0x000000000000203c       0x36 modules/trusted-firmware-m/libtfm_api.a(tfm_tz_psa_ns_api.c.obj)
  .ARM.attributes
-                0x0000000000002072       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(system_nrf91.c.obj)
+                0x0000000000002072       0x36 modules/trusted-firmware-m/libtfm_api.a(tfm_ioctl_core_ns_api.c.obj)
  .ARM.attributes
-                0x00000000000020a8       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_glue.c.obj)
+                0x00000000000020a8       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(system_nrf91.c.obj)
  .ARM.attributes
-                0x00000000000020de       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_flag32_allocator.c.obj)
+                0x00000000000020de       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_glue.c.obj)
  .ARM.attributes
-                0x0000000000002114       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_clock.c.obj)
+                0x0000000000002114       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_flag32_allocator.c.obj)
  .ARM.attributes
-                0x000000000000214a       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_gpiote.c.obj)
+                0x000000000000214a       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_clock.c.obj)
  .ARM.attributes
-                0x0000000000002180       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_ipc.c.obj)
+                0x0000000000002180       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_gpiote.c.obj)
  .ARM.attributes
-                0x00000000000021b6       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_nvmc.c.obj)
+                0x00000000000021b6       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_ipc.c.obj)
  .ARM.attributes
-                0x00000000000021ec       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_spim.c.obj)
+                0x00000000000021ec       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_nvmc.c.obj)
  .ARM.attributes
-                0x0000000000002222       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_twim.c.obj)
+                0x0000000000002222       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_spim.c.obj)
  .ARM.attributes
-                0x0000000000002258       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_twi_twim.c.obj)
+                0x0000000000002258       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_twim.c.obj)
  .ARM.attributes
-                0x000000000000228e       0x36 modules/littlefs/libmodules__littlefs.a(lfs.c.obj)
+                0x000000000000228e       0x36 modules/hal_nordic/nrfx/libmodules__hal_nordic__nrfx.a(nrfx_twi_twim.c.obj)
  .ARM.attributes
-                0x00000000000022c4       0x36 modules/littlefs/libmodules__littlefs.a(lfs_util.c.obj)
+                0x00000000000022c4       0x36 modules/littlefs/libmodules__littlefs.a(lfs.c.obj)
  .ARM.attributes
-                0x00000000000022fa       0x36 modules/littlefs/libmodules__littlefs.a(zephyr_lfs_crc.c.obj)
+                0x00000000000022fa       0x36 modules/littlefs/libmodules__littlefs.a(lfs_util.c.obj)
  .ARM.attributes
-                0x0000000000002330       0x36 modules/lvgl/libmodules__lvgl.a(lv_disp.c.obj)
+                0x0000000000002330       0x36 modules/littlefs/libmodules__littlefs.a(zephyr_lfs_crc.c.obj)
  .ARM.attributes
-                0x0000000000002366       0x36 modules/lvgl/libmodules__lvgl.a(lv_event.c.obj)
+                0x0000000000002366       0x36 modules/lvgl/libmodules__lvgl.a(lv_disp.c.obj)
  .ARM.attributes
-                0x000000000000239c       0x36 modules/lvgl/libmodules__lvgl.a(lv_group.c.obj)
+                0x000000000000239c       0x36 modules/lvgl/libmodules__lvgl.a(lv_event.c.obj)
  .ARM.attributes
-                0x00000000000023d2       0x36 modules/lvgl/libmodules__lvgl.a(lv_indev.c.obj)
+                0x00000000000023d2       0x36 modules/lvgl/libmodules__lvgl.a(lv_group.c.obj)
  .ARM.attributes
-                0x0000000000002408       0x36 modules/lvgl/libmodules__lvgl.a(lv_indev_scroll.c.obj)
+                0x0000000000002408       0x36 modules/lvgl/libmodules__lvgl.a(lv_indev.c.obj)
  .ARM.attributes
-                0x000000000000243e       0x36 modules/lvgl/libmodules__lvgl.a(lv_obj.c.obj)
+                0x000000000000243e       0x36 modules/lvgl/libmodules__lvgl.a(lv_indev_scroll.c.obj)
  .ARM.attributes
-                0x0000000000002474       0x36 modules/lvgl/libmodules__lvgl.a(lv_obj_class.c.obj)
+                0x0000000000002474       0x36 modules/lvgl/libmodules__lvgl.a(lv_obj.c.obj)
  .ARM.attributes
-                0x00000000000024aa       0x36 modules/lvgl/libmodules__lvgl.a(lv_obj_draw.c.obj)
+                0x00000000000024aa       0x36 modules/lvgl/libmodules__lvgl.a(lv_obj_class.c.obj)
  .ARM.attributes
-                0x00000000000024e0       0x36 modules/lvgl/libmodules__lvgl.a(lv_obj_pos.c.obj)
+                0x00000000000024e0       0x36 modules/lvgl/libmodules__lvgl.a(lv_obj_draw.c.obj)
  .ARM.attributes
-                0x0000000000002516       0x36 modules/lvgl/libmodules__lvgl.a(lv_obj_scroll.c.obj)
+                0x0000000000002516       0x36 modules/lvgl/libmodules__lvgl.a(lv_obj_pos.c.obj)
  .ARM.attributes
-                0x000000000000254c       0x36 modules/lvgl/libmodules__lvgl.a(lv_obj_style.c.obj)
+                0x000000000000254c       0x36 modules/lvgl/libmodules__lvgl.a(lv_obj_scroll.c.obj)
  .ARM.attributes
-                0x0000000000002582       0x36 modules/lvgl/libmodules__lvgl.a(lv_obj_style_gen.c.obj)
+                0x0000000000002582       0x36 modules/lvgl/libmodules__lvgl.a(lv_obj_style.c.obj)
  .ARM.attributes
-                0x00000000000025b8       0x36 modules/lvgl/libmodules__lvgl.a(lv_obj_tree.c.obj)
+                0x00000000000025b8       0x36 modules/lvgl/libmodules__lvgl.a(lv_obj_style_gen.c.obj)
  .ARM.attributes
-                0x00000000000025ee       0x36 modules/lvgl/libmodules__lvgl.a(lv_refr.c.obj)
+                0x00000000000025ee       0x36 modules/lvgl/libmodules__lvgl.a(lv_obj_tree.c.obj)
  .ARM.attributes
-                0x0000000000002624       0x36 modules/lvgl/libmodules__lvgl.a(lv_theme.c.obj)
+                0x0000000000002624       0x36 modules/lvgl/libmodules__lvgl.a(lv_refr.c.obj)
  .ARM.attributes
-                0x000000000000265a       0x36 modules/lvgl/libmodules__lvgl.a(lv_gpu_arm2d.c.obj)
+                0x000000000000265a       0x36 modules/lvgl/libmodules__lvgl.a(lv_theme.c.obj)
  .ARM.attributes
-                0x0000000000002690       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_arc.c.obj)
+                0x0000000000002690       0x36 modules/lvgl/libmodules__lvgl.a(lv_gpu_arm2d.c.obj)
  .ARM.attributes
-                0x00000000000026c6       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw.c.obj)
+                0x00000000000026c6       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_arc.c.obj)
  .ARM.attributes
-                0x00000000000026fc       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_img.c.obj)
+                0x00000000000026fc       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw.c.obj)
  .ARM.attributes
-                0x0000000000002732       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_label.c.obj)
+                0x0000000000002732       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_img.c.obj)
  .ARM.attributes
-                0x0000000000002768       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_layer.c.obj)
+                0x0000000000002768       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_label.c.obj)
  .ARM.attributes
-                0x000000000000279e       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_line.c.obj)
+                0x000000000000279e       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_layer.c.obj)
  .ARM.attributes
-                0x00000000000027d4       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_mask.c.obj)
+                0x00000000000027d4       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_line.c.obj)
  .ARM.attributes
-                0x000000000000280a       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_rect.c.obj)
+                0x000000000000280a       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_mask.c.obj)
  .ARM.attributes
-                0x0000000000002840       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_transform.c.obj)
+                0x0000000000002840       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_rect.c.obj)
  .ARM.attributes
-                0x0000000000002876       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_triangle.c.obj)
+                0x0000000000002876       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_transform.c.obj)
  .ARM.attributes
-                0x00000000000028ac       0x36 modules/lvgl/libmodules__lvgl.a(lv_img_buf.c.obj)
+                0x00000000000028ac       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_triangle.c.obj)
  .ARM.attributes
-                0x00000000000028e2       0x36 modules/lvgl/libmodules__lvgl.a(lv_img_cache.c.obj)
+                0x00000000000028e2       0x36 modules/lvgl/libmodules__lvgl.a(lv_img_buf.c.obj)
  .ARM.attributes
-                0x0000000000002918       0x36 modules/lvgl/libmodules__lvgl.a(lv_img_decoder.c.obj)
+                0x0000000000002918       0x36 modules/lvgl/libmodules__lvgl.a(lv_img_cache.c.obj)
  .ARM.attributes
-                0x000000000000294e       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_pxp_blend.c.obj)
+                0x000000000000294e       0x36 modules/lvgl/libmodules__lvgl.a(lv_img_decoder.c.obj)
  .ARM.attributes
-                0x0000000000002984       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_pxp.c.obj)
+                0x0000000000002984       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_pxp_blend.c.obj)
  .ARM.attributes
-                0x00000000000029ba       0x36 modules/lvgl/libmodules__lvgl.a(lv_gpu_nxp_pxp.c.obj)
+                0x00000000000029ba       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_pxp.c.obj)
  .ARM.attributes
-                0x00000000000029f0       0x36 modules/lvgl/libmodules__lvgl.a(lv_gpu_nxp_pxp_osa.c.obj)
+                0x00000000000029f0       0x36 modules/lvgl/libmodules__lvgl.a(lv_gpu_nxp_pxp.c.obj)
  .ARM.attributes
-                0x0000000000002a26       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_vglite_arc.c.obj)
+                0x0000000000002a26       0x36 modules/lvgl/libmodules__lvgl.a(lv_gpu_nxp_pxp_osa.c.obj)
  .ARM.attributes
-                0x0000000000002a5c       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_vglite_blend.c.obj)
+                0x0000000000002a5c       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_vglite_arc.c.obj)
  .ARM.attributes
-                0x0000000000002a92       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_vglite.c.obj)
+                0x0000000000002a92       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_vglite_blend.c.obj)
  .ARM.attributes
-                0x0000000000002ac8       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_vglite_line.c.obj)
+                0x0000000000002ac8       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_vglite.c.obj)
  .ARM.attributes
-                0x0000000000002afe       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_vglite_rect.c.obj)
+                0x0000000000002afe       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_vglite_line.c.obj)
  .ARM.attributes
-                0x0000000000002b34       0x36 modules/lvgl/libmodules__lvgl.a(lv_vglite_buf.c.obj)
+                0x0000000000002b34       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_vglite_rect.c.obj)
  .ARM.attributes
-                0x0000000000002b6a       0x36 modules/lvgl/libmodules__lvgl.a(lv_vglite_utils.c.obj)
+                0x0000000000002b6a       0x36 modules/lvgl/libmodules__lvgl.a(lv_vglite_buf.c.obj)
  .ARM.attributes
-                0x0000000000002ba0       0x36 modules/lvgl/libmodules__lvgl.a(lv_gpu_d2_draw_label.c.obj)
+                0x0000000000002ba0       0x36 modules/lvgl/libmodules__lvgl.a(lv_vglite_utils.c.obj)
  .ARM.attributes
-                0x0000000000002bd6       0x36 modules/lvgl/libmodules__lvgl.a(lv_gpu_d2_ra6m3.c.obj)
+                0x0000000000002bd6       0x36 modules/lvgl/libmodules__lvgl.a(lv_gpu_d2_draw_label.c.obj)
  .ARM.attributes
-                0x0000000000002c0c       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_arc.c.obj)
+                0x0000000000002c0c       0x36 modules/lvgl/libmodules__lvgl.a(lv_gpu_d2_ra6m3.c.obj)
  .ARM.attributes
-                0x0000000000002c42       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_bg.c.obj)
+                0x0000000000002c42       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_arc.c.obj)
  .ARM.attributes
-                0x0000000000002c78       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl.c.obj)
+                0x0000000000002c78       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_bg.c.obj)
  .ARM.attributes
-                0x0000000000002cae       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_composite.c.obj)
+                0x0000000000002cae       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl.c.obj)
  .ARM.attributes
-                0x0000000000002ce4       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_img.c.obj)
+                0x0000000000002ce4       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_composite.c.obj)
  .ARM.attributes
-                0x0000000000002d1a       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_label.c.obj)
+                0x0000000000002d1a       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_img.c.obj)
  .ARM.attributes
-                0x0000000000002d50       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_layer.c.obj)
+                0x0000000000002d50       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_label.c.obj)
  .ARM.attributes
-                0x0000000000002d86       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_line.c.obj)
+                0x0000000000002d86       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_layer.c.obj)
  .ARM.attributes
-                0x0000000000002dbc       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_mask.c.obj)
+                0x0000000000002dbc       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_line.c.obj)
  .ARM.attributes
-                0x0000000000002df2       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_polygon.c.obj)
+                0x0000000000002df2       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_mask.c.obj)
  .ARM.attributes
-                0x0000000000002e28       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_rect.c.obj)
+                0x0000000000002e28       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_polygon.c.obj)
  .ARM.attributes
-                0x0000000000002e5e       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_stack_blur.c.obj)
+                0x0000000000002e5e       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_rect.c.obj)
  .ARM.attributes
-                0x0000000000002e94       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_texture_cache.c.obj)
+                0x0000000000002e94       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_stack_blur.c.obj)
  .ARM.attributes
-                0x0000000000002eca       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_utils.c.obj)
+                0x0000000000002eca       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_texture_cache.c.obj)
  .ARM.attributes
-                0x0000000000002f00       0x36 modules/lvgl/libmodules__lvgl.a(lv_gpu_stm32_dma2d.c.obj)
+                0x0000000000002f00       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sdl_utils.c.obj)
  .ARM.attributes
-                0x0000000000002f36       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_arc.c.obj)
+                0x0000000000002f36       0x36 modules/lvgl/libmodules__lvgl.a(lv_gpu_stm32_dma2d.c.obj)
  .ARM.attributes
-                0x0000000000002f6c       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_blend.c.obj)
+                0x0000000000002f6c       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_arc.c.obj)
  .ARM.attributes
-                0x0000000000002fa2       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw.c.obj)
+                0x0000000000002fa2       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_blend.c.obj)
  .ARM.attributes
-                0x0000000000002fd8       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_dither.c.obj)
+                0x0000000000002fd8       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw.c.obj)
  .ARM.attributes
-                0x000000000000300e       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_gradient.c.obj)
+                0x000000000000300e       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_dither.c.obj)
  .ARM.attributes
-                0x0000000000003044       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_img.c.obj)
+                0x0000000000003044       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_gradient.c.obj)
  .ARM.attributes
-                0x000000000000307a       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_layer.c.obj)
+                0x000000000000307a       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_img.c.obj)
  .ARM.attributes
-                0x00000000000030b0       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_letter.c.obj)
+                0x00000000000030b0       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_layer.c.obj)
  .ARM.attributes
-                0x00000000000030e6       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_line.c.obj)
+                0x00000000000030e6       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_letter.c.obj)
  .ARM.attributes
-                0x000000000000311c       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_polygon.c.obj)
+                0x000000000000311c       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_line.c.obj)
  .ARM.attributes
-                0x0000000000003152       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_rect.c.obj)
+                0x0000000000003152       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_polygon.c.obj)
  .ARM.attributes
-                0x0000000000003188       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_transform.c.obj)
+                0x0000000000003188       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_rect.c.obj)
  .ARM.attributes
-                0x00000000000031be       0x36 modules/lvgl/libmodules__lvgl.a(lv_gpu_swm341_dma2d.c.obj)
+                0x00000000000031be       0x36 modules/lvgl/libmodules__lvgl.a(lv_draw_sw_transform.c.obj)
  .ARM.attributes
-                0x00000000000031f4       0x36 modules/lvgl/libmodules__lvgl.a(lv_flex.c.obj)
+                0x00000000000031f4       0x36 modules/lvgl/libmodules__lvgl.a(lv_gpu_swm341_dma2d.c.obj)
  .ARM.attributes
-                0x000000000000322a       0x36 modules/lvgl/libmodules__lvgl.a(lv_grid.c.obj)
+                0x000000000000322a       0x36 modules/lvgl/libmodules__lvgl.a(lv_flex.c.obj)
  .ARM.attributes
-                0x0000000000003260       0x36 modules/lvgl/libmodules__lvgl.a(lv_bmp.c.obj)
+                0x0000000000003260       0x36 modules/lvgl/libmodules__lvgl.a(lv_grid.c.obj)
  .ARM.attributes
-                0x0000000000003296       0x36 modules/lvgl/libmodules__lvgl.a(lv_ffmpeg.c.obj)
+                0x0000000000003296       0x36 modules/lvgl/libmodules__lvgl.a(lv_bmp.c.obj)
  .ARM.attributes
-                0x00000000000032cc       0x36 modules/lvgl/libmodules__lvgl.a(lv_freetype.c.obj)
+                0x00000000000032cc       0x36 modules/lvgl/libmodules__lvgl.a(lv_ffmpeg.c.obj)
  .ARM.attributes
-                0x0000000000003302       0x36 modules/lvgl/libmodules__lvgl.a(lv_fs_fatfs.c.obj)
+                0x0000000000003302       0x36 modules/lvgl/libmodules__lvgl.a(lv_freetype.c.obj)
  .ARM.attributes
-                0x0000000000003338       0x36 modules/lvgl/libmodules__lvgl.a(lv_fs_littlefs.c.obj)
+                0x0000000000003338       0x36 modules/lvgl/libmodules__lvgl.a(lv_fs_fatfs.c.obj)
  .ARM.attributes
-                0x000000000000336e       0x36 modules/lvgl/libmodules__lvgl.a(lv_fs_posix.c.obj)
+                0x000000000000336e       0x36 modules/lvgl/libmodules__lvgl.a(lv_fs_littlefs.c.obj)
  .ARM.attributes
-                0x00000000000033a4       0x36 modules/lvgl/libmodules__lvgl.a(lv_fs_stdio.c.obj)
+                0x00000000000033a4       0x36 modules/lvgl/libmodules__lvgl.a(lv_fs_posix.c.obj)
  .ARM.attributes
-                0x00000000000033da       0x36 modules/lvgl/libmodules__lvgl.a(lv_fs_win32.c.obj)
+                0x00000000000033da       0x36 modules/lvgl/libmodules__lvgl.a(lv_fs_stdio.c.obj)
  .ARM.attributes
-                0x0000000000003410       0x36 modules/lvgl/libmodules__lvgl.a(gifdec.c.obj)
+                0x0000000000003410       0x36 modules/lvgl/libmodules__lvgl.a(lv_fs_win32.c.obj)
  .ARM.attributes
-                0x0000000000003446       0x36 modules/lvgl/libmodules__lvgl.a(lv_gif.c.obj)
+                0x0000000000003446       0x36 modules/lvgl/libmodules__lvgl.a(gifdec.c.obj)
  .ARM.attributes
-                0x000000000000347c       0x36 modules/lvgl/libmodules__lvgl.a(lodepng.c.obj)
+                0x000000000000347c       0x36 modules/lvgl/libmodules__lvgl.a(lv_gif.c.obj)
  .ARM.attributes
-                0x00000000000034b2       0x36 modules/lvgl/libmodules__lvgl.a(lv_png.c.obj)
+                0x00000000000034b2       0x36 modules/lvgl/libmodules__lvgl.a(lodepng.c.obj)
  .ARM.attributes
-                0x00000000000034e8       0x36 modules/lvgl/libmodules__lvgl.a(lv_qrcode.c.obj)
+                0x00000000000034e8       0x36 modules/lvgl/libmodules__lvgl.a(lv_png.c.obj)
  .ARM.attributes
-                0x000000000000351e       0x36 modules/lvgl/libmodules__lvgl.a(qrcodegen.c.obj)
+                0x000000000000351e       0x36 modules/lvgl/libmodules__lvgl.a(lv_qrcode.c.obj)
  .ARM.attributes
-                0x0000000000003554       0x36 modules/lvgl/libmodules__lvgl.a(lv_rlottie.c.obj)
+                0x0000000000003554       0x36 modules/lvgl/libmodules__lvgl.a(qrcodegen.c.obj)
  .ARM.attributes
-                0x000000000000358a       0x36 modules/lvgl/libmodules__lvgl.a(lv_sjpg.c.obj)
+                0x000000000000358a       0x36 modules/lvgl/libmodules__lvgl.a(lv_rlottie.c.obj)
  .ARM.attributes
-                0x00000000000035c0       0x36 modules/lvgl/libmodules__lvgl.a(tjpgd.c.obj)
+                0x00000000000035c0       0x36 modules/lvgl/libmodules__lvgl.a(lv_sjpg.c.obj)
  .ARM.attributes
-                0x00000000000035f6       0x36 modules/lvgl/libmodules__lvgl.a(lv_tiny_ttf.c.obj)
+                0x00000000000035f6       0x36 modules/lvgl/libmodules__lvgl.a(tjpgd.c.obj)
  .ARM.attributes
-                0x000000000000362c       0x36 modules/lvgl/libmodules__lvgl.a(lv_extra.c.obj)
+                0x000000000000362c       0x36 modules/lvgl/libmodules__lvgl.a(lv_tiny_ttf.c.obj)
  .ARM.attributes
-                0x0000000000003662       0x36 modules/lvgl/libmodules__lvgl.a(lv_fragment.c.obj)
+                0x0000000000003662       0x36 modules/lvgl/libmodules__lvgl.a(lv_extra.c.obj)
  .ARM.attributes
-                0x0000000000003698       0x36 modules/lvgl/libmodules__lvgl.a(lv_fragment_manager.c.obj)
+                0x0000000000003698       0x36 modules/lvgl/libmodules__lvgl.a(lv_fragment.c.obj)
  .ARM.attributes
-                0x00000000000036ce       0x36 modules/lvgl/libmodules__lvgl.a(lv_gridnav.c.obj)
+                0x00000000000036ce       0x36 modules/lvgl/libmodules__lvgl.a(lv_fragment_manager.c.obj)
  .ARM.attributes
-                0x0000000000003704       0x36 modules/lvgl/libmodules__lvgl.a(lv_ime_pinyin.c.obj)
+                0x0000000000003704       0x36 modules/lvgl/libmodules__lvgl.a(lv_gridnav.c.obj)
  .ARM.attributes
-                0x000000000000373a       0x36 modules/lvgl/libmodules__lvgl.a(lv_imgfont.c.obj)
+                0x000000000000373a       0x36 modules/lvgl/libmodules__lvgl.a(lv_ime_pinyin.c.obj)
  .ARM.attributes
-                0x0000000000003770       0x36 modules/lvgl/libmodules__lvgl.a(lv_monkey.c.obj)
+                0x0000000000003770       0x36 modules/lvgl/libmodules__lvgl.a(lv_imgfont.c.obj)
  .ARM.attributes
-                0x00000000000037a6       0x36 modules/lvgl/libmodules__lvgl.a(lv_msg.c.obj)
+                0x00000000000037a6       0x36 modules/lvgl/libmodules__lvgl.a(lv_monkey.c.obj)
  .ARM.attributes
-                0x00000000000037dc       0x36 modules/lvgl/libmodules__lvgl.a(lv_snapshot.c.obj)
+                0x00000000000037dc       0x36 modules/lvgl/libmodules__lvgl.a(lv_msg.c.obj)
  .ARM.attributes
-                0x0000000000003812       0x36 modules/lvgl/libmodules__lvgl.a(lv_theme_basic.c.obj)
+                0x0000000000003812       0x36 modules/lvgl/libmodules__lvgl.a(lv_snapshot.c.obj)
  .ARM.attributes
-                0x0000000000003848       0x36 modules/lvgl/libmodules__lvgl.a(lv_theme_default.c.obj)
+                0x0000000000003848       0x36 modules/lvgl/libmodules__lvgl.a(lv_theme_basic.c.obj)
  .ARM.attributes
-                0x000000000000387e       0x36 modules/lvgl/libmodules__lvgl.a(lv_theme_mono.c.obj)
+                0x000000000000387e       0x36 modules/lvgl/libmodules__lvgl.a(lv_theme_default.c.obj)
  .ARM.attributes
-                0x00000000000038b4       0x36 modules/lvgl/libmodules__lvgl.a(lv_animimg.c.obj)
+                0x00000000000038b4       0x36 modules/lvgl/libmodules__lvgl.a(lv_theme_mono.c.obj)
  .ARM.attributes
-                0x00000000000038ea       0x36 modules/lvgl/libmodules__lvgl.a(lv_calendar.c.obj)
+                0x00000000000038ea       0x36 modules/lvgl/libmodules__lvgl.a(lv_animimg.c.obj)
  .ARM.attributes
-                0x0000000000003920       0x36 modules/lvgl/libmodules__lvgl.a(lv_calendar_header_arrow.c.obj)
+                0x0000000000003920       0x36 modules/lvgl/libmodules__lvgl.a(lv_calendar.c.obj)
  .ARM.attributes
-                0x0000000000003956       0x36 modules/lvgl/libmodules__lvgl.a(lv_calendar_header_dropdown.c.obj)
+                0x0000000000003956       0x36 modules/lvgl/libmodules__lvgl.a(lv_calendar_header_arrow.c.obj)
  .ARM.attributes
-                0x000000000000398c       0x36 modules/lvgl/libmodules__lvgl.a(lv_chart.c.obj)
+                0x000000000000398c       0x36 modules/lvgl/libmodules__lvgl.a(lv_calendar_header_dropdown.c.obj)
  .ARM.attributes
-                0x00000000000039c2       0x36 modules/lvgl/libmodules__lvgl.a(lv_colorwheel.c.obj)
+                0x00000000000039c2       0x36 modules/lvgl/libmodules__lvgl.a(lv_chart.c.obj)
  .ARM.attributes
-                0x00000000000039f8       0x36 modules/lvgl/libmodules__lvgl.a(lv_imgbtn.c.obj)
+                0x00000000000039f8       0x36 modules/lvgl/libmodules__lvgl.a(lv_colorwheel.c.obj)
  .ARM.attributes
-                0x0000000000003a2e       0x36 modules/lvgl/libmodules__lvgl.a(lv_keyboard.c.obj)
+                0x0000000000003a2e       0x36 modules/lvgl/libmodules__lvgl.a(lv_imgbtn.c.obj)
  .ARM.attributes
-                0x0000000000003a64       0x36 modules/lvgl/libmodules__lvgl.a(lv_led.c.obj)
+                0x0000000000003a64       0x36 modules/lvgl/libmodules__lvgl.a(lv_keyboard.c.obj)
  .ARM.attributes
-                0x0000000000003a9a       0x36 modules/lvgl/libmodules__lvgl.a(lv_list.c.obj)
+                0x0000000000003a9a       0x36 modules/lvgl/libmodules__lvgl.a(lv_led.c.obj)
  .ARM.attributes
-                0x0000000000003ad0       0x36 modules/lvgl/libmodules__lvgl.a(lv_menu.c.obj)
+                0x0000000000003ad0       0x36 modules/lvgl/libmodules__lvgl.a(lv_list.c.obj)
  .ARM.attributes
-                0x0000000000003b06       0x36 modules/lvgl/libmodules__lvgl.a(lv_meter.c.obj)
+                0x0000000000003b06       0x36 modules/lvgl/libmodules__lvgl.a(lv_menu.c.obj)
  .ARM.attributes
-                0x0000000000003b3c       0x36 modules/lvgl/libmodules__lvgl.a(lv_msgbox.c.obj)
+                0x0000000000003b3c       0x36 modules/lvgl/libmodules__lvgl.a(lv_meter.c.obj)
  .ARM.attributes
-                0x0000000000003b72       0x36 modules/lvgl/libmodules__lvgl.a(lv_span.c.obj)
+                0x0000000000003b72       0x36 modules/lvgl/libmodules__lvgl.a(lv_msgbox.c.obj)
  .ARM.attributes
-                0x0000000000003ba8       0x36 modules/lvgl/libmodules__lvgl.a(lv_spinbox.c.obj)
+                0x0000000000003ba8       0x36 modules/lvgl/libmodules__lvgl.a(lv_span.c.obj)
  .ARM.attributes
-                0x0000000000003bde       0x36 modules/lvgl/libmodules__lvgl.a(lv_spinner.c.obj)
+                0x0000000000003bde       0x36 modules/lvgl/libmodules__lvgl.a(lv_spinbox.c.obj)
  .ARM.attributes
-                0x0000000000003c14       0x36 modules/lvgl/libmodules__lvgl.a(lv_tabview.c.obj)
+                0x0000000000003c14       0x36 modules/lvgl/libmodules__lvgl.a(lv_spinner.c.obj)
  .ARM.attributes
-                0x0000000000003c4a       0x36 modules/lvgl/libmodules__lvgl.a(lv_tileview.c.obj)
+                0x0000000000003c4a       0x36 modules/lvgl/libmodules__lvgl.a(lv_tabview.c.obj)
  .ARM.attributes
-                0x0000000000003c80       0x36 modules/lvgl/libmodules__lvgl.a(lv_win.c.obj)
+                0x0000000000003c80       0x36 modules/lvgl/libmodules__lvgl.a(lv_tileview.c.obj)
  .ARM.attributes
-                0x0000000000003cb6       0x36 modules/lvgl/libmodules__lvgl.a(lv_font.c.obj)
+                0x0000000000003cb6       0x36 modules/lvgl/libmodules__lvgl.a(lv_win.c.obj)
  .ARM.attributes
-                0x0000000000003cec       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_dejavu_16_persian_hebrew.c.obj)
+                0x0000000000003cec       0x36 modules/lvgl/libmodules__lvgl.a(lv_font.c.obj)
  .ARM.attributes
-                0x0000000000003d22       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_fmt_txt.c.obj)
+                0x0000000000003d22       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_dejavu_16_persian_hebrew.c.obj)
  .ARM.attributes
-                0x0000000000003d58       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_loader.c.obj)
+                0x0000000000003d58       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_fmt_txt.c.obj)
  .ARM.attributes
-                0x0000000000003d8e       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_10.c.obj)
+                0x0000000000003d8e       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_loader.c.obj)
  .ARM.attributes
-                0x0000000000003dc4       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_12.c.obj)
+                0x0000000000003dc4       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_10.c.obj)
  .ARM.attributes
-                0x0000000000003dfa       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_12_subpx.c.obj)
+                0x0000000000003dfa       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_12.c.obj)
  .ARM.attributes
-                0x0000000000003e30       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_14.c.obj)
+                0x0000000000003e30       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_12_subpx.c.obj)
  .ARM.attributes
-                0x0000000000003e66       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_16.c.obj)
+                0x0000000000003e66       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_14.c.obj)
  .ARM.attributes
-                0x0000000000003e9c       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_18.c.obj)
+                0x0000000000003e9c       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_16.c.obj)
  .ARM.attributes
-                0x0000000000003ed2       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_20.c.obj)
+                0x0000000000003ed2       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_18.c.obj)
  .ARM.attributes
-                0x0000000000003f08       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_22.c.obj)
+                0x0000000000003f08       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_20.c.obj)
  .ARM.attributes
-                0x0000000000003f3e       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_24.c.obj)
+                0x0000000000003f3e       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_22.c.obj)
  .ARM.attributes
-                0x0000000000003f74       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_26.c.obj)
+                0x0000000000003f74       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_24.c.obj)
  .ARM.attributes
-                0x0000000000003faa       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_28.c.obj)
+                0x0000000000003faa       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_26.c.obj)
  .ARM.attributes
-                0x0000000000003fe0       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_28_compressed.c.obj)
+                0x0000000000003fe0       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_28.c.obj)
  .ARM.attributes
-                0x0000000000004016       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_30.c.obj)
+                0x0000000000004016       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_28_compressed.c.obj)
  .ARM.attributes
-                0x000000000000404c       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_32.c.obj)
+                0x000000000000404c       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_30.c.obj)
  .ARM.attributes
-                0x0000000000004082       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_34.c.obj)
+                0x0000000000004082       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_32.c.obj)
  .ARM.attributes
-                0x00000000000040b8       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_36.c.obj)
+                0x00000000000040b8       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_34.c.obj)
  .ARM.attributes
-                0x00000000000040ee       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_38.c.obj)
+                0x00000000000040ee       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_36.c.obj)
  .ARM.attributes
-                0x0000000000004124       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_40.c.obj)
+                0x0000000000004124       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_38.c.obj)
  .ARM.attributes
-                0x000000000000415a       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_42.c.obj)
+                0x000000000000415a       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_40.c.obj)
  .ARM.attributes
-                0x0000000000004190       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_44.c.obj)
+                0x0000000000004190       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_42.c.obj)
  .ARM.attributes
-                0x00000000000041c6       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_46.c.obj)
+                0x00000000000041c6       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_44.c.obj)
  .ARM.attributes
-                0x00000000000041fc       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_48.c.obj)
+                0x00000000000041fc       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_46.c.obj)
  .ARM.attributes
-                0x0000000000004232       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_8.c.obj)
+                0x0000000000004232       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_48.c.obj)
  .ARM.attributes
-                0x0000000000004268       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_simsun_16_cjk.c.obj)
+                0x0000000000004268       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_montserrat_8.c.obj)
  .ARM.attributes
-                0x000000000000429e       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_unscii_16.c.obj)
+                0x000000000000429e       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_simsun_16_cjk.c.obj)
  .ARM.attributes
-                0x00000000000042d4       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_unscii_8.c.obj)
+                0x00000000000042d4       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_unscii_16.c.obj)
  .ARM.attributes
-                0x000000000000430a       0x36 modules/lvgl/libmodules__lvgl.a(lv_hal_disp.c.obj)
+                0x000000000000430a       0x36 modules/lvgl/libmodules__lvgl.a(lv_font_unscii_8.c.obj)
  .ARM.attributes
-                0x0000000000004340       0x36 modules/lvgl/libmodules__lvgl.a(lv_hal_indev.c.obj)
+                0x0000000000004340       0x36 modules/lvgl/libmodules__lvgl.a(lv_hal_disp.c.obj)
  .ARM.attributes
-                0x0000000000004376       0x36 modules/lvgl/libmodules__lvgl.a(lv_hal_tick.c.obj)
+                0x0000000000004376       0x36 modules/lvgl/libmodules__lvgl.a(lv_hal_indev.c.obj)
  .ARM.attributes
-                0x00000000000043ac       0x36 modules/lvgl/libmodules__lvgl.a(lv_anim.c.obj)
+                0x00000000000043ac       0x36 modules/lvgl/libmodules__lvgl.a(lv_hal_tick.c.obj)
  .ARM.attributes
-                0x00000000000043e2       0x36 modules/lvgl/libmodules__lvgl.a(lv_anim_timeline.c.obj)
+                0x00000000000043e2       0x36 modules/lvgl/libmodules__lvgl.a(lv_anim.c.obj)
  .ARM.attributes
-                0x0000000000004418       0x36 modules/lvgl/libmodules__lvgl.a(lv_area.c.obj)
+                0x0000000000004418       0x36 modules/lvgl/libmodules__lvgl.a(lv_anim_timeline.c.obj)
  .ARM.attributes
-                0x000000000000444e       0x36 modules/lvgl/libmodules__lvgl.a(lv_async.c.obj)
+                0x000000000000444e       0x36 modules/lvgl/libmodules__lvgl.a(lv_area.c.obj)
  .ARM.attributes
-                0x0000000000004484       0x36 modules/lvgl/libmodules__lvgl.a(lv_bidi.c.obj)
+                0x0000000000004484       0x36 modules/lvgl/libmodules__lvgl.a(lv_async.c.obj)
  .ARM.attributes
-                0x00000000000044ba       0x36 modules/lvgl/libmodules__lvgl.a(lv_color.c.obj)
+                0x00000000000044ba       0x36 modules/lvgl/libmodules__lvgl.a(lv_bidi.c.obj)
  .ARM.attributes
-                0x00000000000044f0       0x36 modules/lvgl/libmodules__lvgl.a(lv_fs.c.obj)
+                0x00000000000044f0       0x36 modules/lvgl/libmodules__lvgl.a(lv_color.c.obj)
  .ARM.attributes
-                0x0000000000004526       0x36 modules/lvgl/libmodules__lvgl.a(lv_gc.c.obj)
+                0x0000000000004526       0x36 modules/lvgl/libmodules__lvgl.a(lv_fs.c.obj)
  .ARM.attributes
-                0x000000000000455c       0x36 modules/lvgl/libmodules__lvgl.a(lv_ll.c.obj)
+                0x000000000000455c       0x36 modules/lvgl/libmodules__lvgl.a(lv_gc.c.obj)
  .ARM.attributes
-                0x0000000000004592       0x36 modules/lvgl/libmodules__lvgl.a(lv_log.c.obj)
+                0x0000000000004592       0x36 modules/lvgl/libmodules__lvgl.a(lv_ll.c.obj)
  .ARM.attributes
-                0x00000000000045c8       0x36 modules/lvgl/libmodules__lvgl.a(lv_lru.c.obj)
+                0x00000000000045c8       0x36 modules/lvgl/libmodules__lvgl.a(lv_log.c.obj)
  .ARM.attributes
-                0x00000000000045fe       0x36 modules/lvgl/libmodules__lvgl.a(lv_math.c.obj)
+                0x00000000000045fe       0x36 modules/lvgl/libmodules__lvgl.a(lv_lru.c.obj)
  .ARM.attributes
-                0x0000000000004634       0x36 modules/lvgl/libmodules__lvgl.a(lv_mem.c.obj)
+                0x0000000000004634       0x36 modules/lvgl/libmodules__lvgl.a(lv_math.c.obj)
  .ARM.attributes
-                0x000000000000466a       0x36 modules/lvgl/libmodules__lvgl.a(lv_printf.c.obj)
+                0x000000000000466a       0x36 modules/lvgl/libmodules__lvgl.a(lv_mem.c.obj)
  .ARM.attributes
-                0x00000000000046a0       0x36 modules/lvgl/libmodules__lvgl.a(lv_style.c.obj)
+                0x00000000000046a0       0x36 modules/lvgl/libmodules__lvgl.a(lv_printf.c.obj)
  .ARM.attributes
-                0x00000000000046d6       0x36 modules/lvgl/libmodules__lvgl.a(lv_style_gen.c.obj)
+                0x00000000000046d6       0x36 modules/lvgl/libmodules__lvgl.a(lv_style.c.obj)
  .ARM.attributes
-                0x000000000000470c       0x36 modules/lvgl/libmodules__lvgl.a(lv_templ.c.obj)
+                0x000000000000470c       0x36 modules/lvgl/libmodules__lvgl.a(lv_style_gen.c.obj)
  .ARM.attributes
-                0x0000000000004742       0x36 modules/lvgl/libmodules__lvgl.a(lv_timer.c.obj)
+                0x0000000000004742       0x36 modules/lvgl/libmodules__lvgl.a(lv_templ.c.obj)
  .ARM.attributes
-                0x0000000000004778       0x36 modules/lvgl/libmodules__lvgl.a(lv_tlsf.c.obj)
+                0x0000000000004778       0x36 modules/lvgl/libmodules__lvgl.a(lv_timer.c.obj)
  .ARM.attributes
-                0x00000000000047ae       0x36 modules/lvgl/libmodules__lvgl.a(lv_txt_ap.c.obj)
+                0x00000000000047ae       0x36 modules/lvgl/libmodules__lvgl.a(lv_tlsf.c.obj)
  .ARM.attributes
-                0x00000000000047e4       0x36 modules/lvgl/libmodules__lvgl.a(lv_txt.c.obj)
+                0x00000000000047e4       0x36 modules/lvgl/libmodules__lvgl.a(lv_txt_ap.c.obj)
  .ARM.attributes
-                0x000000000000481a       0x36 modules/lvgl/libmodules__lvgl.a(lv_utils.c.obj)
+                0x000000000000481a       0x36 modules/lvgl/libmodules__lvgl.a(lv_txt.c.obj)
  .ARM.attributes
-                0x0000000000004850       0x36 modules/lvgl/libmodules__lvgl.a(lv_arc.c.obj)
+                0x0000000000004850       0x36 modules/lvgl/libmodules__lvgl.a(lv_utils.c.obj)
  .ARM.attributes
-                0x0000000000004886       0x36 modules/lvgl/libmodules__lvgl.a(lv_bar.c.obj)
+                0x0000000000004886       0x36 modules/lvgl/libmodules__lvgl.a(lv_arc.c.obj)
  .ARM.attributes
-                0x00000000000048bc       0x36 modules/lvgl/libmodules__lvgl.a(lv_btn.c.obj)
+                0x00000000000048bc       0x36 modules/lvgl/libmodules__lvgl.a(lv_bar.c.obj)
  .ARM.attributes
-                0x00000000000048f2       0x36 modules/lvgl/libmodules__lvgl.a(lv_btnmatrix.c.obj)
+                0x00000000000048f2       0x36 modules/lvgl/libmodules__lvgl.a(lv_btn.c.obj)
  .ARM.attributes
-                0x0000000000004928       0x36 modules/lvgl/libmodules__lvgl.a(lv_canvas.c.obj)
+                0x0000000000004928       0x36 modules/lvgl/libmodules__lvgl.a(lv_btnmatrix.c.obj)
  .ARM.attributes
-                0x000000000000495e       0x36 modules/lvgl/libmodules__lvgl.a(lv_checkbox.c.obj)
+                0x000000000000495e       0x36 modules/lvgl/libmodules__lvgl.a(lv_canvas.c.obj)
  .ARM.attributes
-                0x0000000000004994       0x36 modules/lvgl/libmodules__lvgl.a(lv_dropdown.c.obj)
+                0x0000000000004994       0x36 modules/lvgl/libmodules__lvgl.a(lv_checkbox.c.obj)
  .ARM.attributes
-                0x00000000000049ca       0x36 modules/lvgl/libmodules__lvgl.a(lv_img.c.obj)
+                0x00000000000049ca       0x36 modules/lvgl/libmodules__lvgl.a(lv_dropdown.c.obj)
  .ARM.attributes
-                0x0000000000004a00       0x36 modules/lvgl/libmodules__lvgl.a(lv_label.c.obj)
+                0x0000000000004a00       0x36 modules/lvgl/libmodules__lvgl.a(lv_img.c.obj)
  .ARM.attributes
-                0x0000000000004a36       0x36 modules/lvgl/libmodules__lvgl.a(lv_line.c.obj)
+                0x0000000000004a36       0x36 modules/lvgl/libmodules__lvgl.a(lv_label.c.obj)
  .ARM.attributes
-                0x0000000000004a6c       0x36 modules/lvgl/libmodules__lvgl.a(lv_objx_templ.c.obj)
+                0x0000000000004a6c       0x36 modules/lvgl/libmodules__lvgl.a(lv_line.c.obj)
  .ARM.attributes
-                0x0000000000004aa2       0x36 modules/lvgl/libmodules__lvgl.a(lv_roller.c.obj)
+                0x0000000000004aa2       0x36 modules/lvgl/libmodules__lvgl.a(lv_objx_templ.c.obj)
  .ARM.attributes
-                0x0000000000004ad8       0x36 modules/lvgl/libmodules__lvgl.a(lv_slider.c.obj)
+                0x0000000000004ad8       0x36 modules/lvgl/libmodules__lvgl.a(lv_roller.c.obj)
  .ARM.attributes
-                0x0000000000004b0e       0x36 modules/lvgl/libmodules__lvgl.a(lv_switch.c.obj)
+                0x0000000000004b0e       0x36 modules/lvgl/libmodules__lvgl.a(lv_slider.c.obj)
  .ARM.attributes
-                0x0000000000004b44       0x36 modules/lvgl/libmodules__lvgl.a(lv_table.c.obj)
+                0x0000000000004b44       0x36 modules/lvgl/libmodules__lvgl.a(lv_switch.c.obj)
  .ARM.attributes
-                0x0000000000004b7a       0x36 modules/lvgl/libmodules__lvgl.a(lv_textarea.c.obj)
+                0x0000000000004b7a       0x36 modules/lvgl/libmodules__lvgl.a(lv_table.c.obj)
  .ARM.attributes
-                0x0000000000004bb0       0x36 modules/lvgl/libmodules__lvgl.a(lvgl.c.obj)
+                0x0000000000004bb0       0x36 modules/lvgl/libmodules__lvgl.a(lv_textarea.c.obj)
  .ARM.attributes
-                0x0000000000004be6       0x36 modules/lvgl/libmodules__lvgl.a(lvgl_display.c.obj)
+                0x0000000000004be6       0x36 modules/lvgl/libmodules__lvgl.a(lvgl.c.obj)
  .ARM.attributes
-                0x0000000000004c1c       0x36 modules/lvgl/libmodules__lvgl.a(lvgl_display_mono.c.obj)
+                0x0000000000004c1c       0x36 modules/lvgl/libmodules__lvgl.a(lvgl_display.c.obj)
  .ARM.attributes
-                0x0000000000004c52       0x36 modules/lvgl/libmodules__lvgl.a(lvgl_display_16bit.c.obj)
+                0x0000000000004c52       0x36 modules/lvgl/libmodules__lvgl.a(lvgl_display_mono.c.obj)
  .ARM.attributes
-                0x0000000000004c88       0x36 modules/lvgl/libmodules__lvgl.a(lvgl_display_24bit.c.obj)
+                0x0000000000004c88       0x36 modules/lvgl/libmodules__lvgl.a(lvgl_display_16bit.c.obj)
  .ARM.attributes
-                0x0000000000004cbe       0x36 modules/lvgl/libmodules__lvgl.a(lvgl_display_32bit.c.obj)
+                0x0000000000004cbe       0x36 modules/lvgl/libmodules__lvgl.a(lvgl_display_24bit.c.obj)
  .ARM.attributes
-                0x0000000000004cf4       0x36 modules/lvgl/libmodules__lvgl.a(lvgl_fs.c.obj)
+                0x0000000000004cf4       0x36 modules/lvgl/libmodules__lvgl.a(lvgl_display_32bit.c.obj)
  .ARM.attributes
-                0x0000000000004d2a       0x36 modules/lvgl/libmodules__lvgl.a(lvgl_mem.c.obj)
+                0x0000000000004d2a       0x36 modules/lvgl/libmodules__lvgl.a(lvgl_fs.c.obj)
  .ARM.attributes
-                0x0000000000004d60       0x36 modules/lvgl/libmodules__lvgl.a(lvgl_shell.c.obj)
+                0x0000000000004d60       0x36 modules/lvgl/libmodules__lvgl.a(lvgl_mem.c.obj)
  .ARM.attributes
-                0x0000000000004d96       0x36 modules/lvgl/libmodules__lvgl.a(lvgl_common_input.c.obj)
+                0x0000000000004d96       0x36 modules/lvgl/libmodules__lvgl.a(lvgl_shell.c.obj)
  .ARM.attributes
-                0x0000000000004dcc       0x36 modules/segger/libmodules__segger.a(SEGGER_RTT.c.obj)
+                0x0000000000004dcc       0x36 modules/lvgl/libmodules__lvgl.a(lvgl_common_input.c.obj)
  .ARM.attributes
-                0x0000000000004e02       0x36 modules/segger/libmodules__segger.a(SEGGER_RTT_zephyr.c.obj)
+                0x0000000000004e02       0x36 modules/segger/libmodules__segger.a(SEGGER_RTT.c.obj)
  .ARM.attributes
-                0x0000000000004e38       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(nrf_modem.c.obj)
+                0x0000000000004e38       0x36 modules/segger/libmodules__segger.a(SEGGER_RTT_zephyr.c.obj)
  .ARM.attributes
-                0x0000000000004e6e       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(nrf_modem_fault.c.obj)
+                0x0000000000004e6e       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(nrf_modem.c.obj)
  .ARM.attributes
-                0x0000000000004ea4       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(nrf_modem_state.c.obj)
+                0x0000000000004ea4       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(nrf_modem_fault.c.obj)
  .ARM.attributes
-                0x0000000000004eda       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(nrf_modem_bootloader.c.obj)
+                0x0000000000004eda       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(nrf_modem_state.c.obj)
  .ARM.attributes
-                0x0000000000004f10       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(ipc_bootloader.c.obj)
+                0x0000000000004f10       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(nrf_modem_bootloader.c.obj)
  .ARM.attributes
-                0x0000000000004f46       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(rpc_framework.c.obj)
+                0x0000000000004f46       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(ipc_bootloader.c.obj)
  .ARM.attributes
-                0x0000000000004f7c       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(rpc_transport.c.obj)
+                0x0000000000004f7c       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(rpc_framework.c.obj)
  .ARM.attributes
-                0x0000000000004fb2       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(rpc_transport_ipc.c.obj)
+                0x0000000000004fb2       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(rpc_transport.c.obj)
  .ARM.attributes
-                0x0000000000004fe8       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(rpc_client.c.obj)
+                0x0000000000004fe8       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(rpc_transport_ipc.c.obj)
  .ARM.attributes
-                0x000000000000501e       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(nrf_modem_at.c.obj)
+                0x000000000000501e       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(rpc_client.c.obj)
  .ARM.attributes
-                0x0000000000005054       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(addr.c.obj)
+                0x0000000000005054       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(nrf_modem_at.c.obj)
  .ARM.attributes
-                0x000000000000508a       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(sock.c.obj)
+                0x000000000000508a       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(addr.c.obj)
  .ARM.attributes
-                0x00000000000050c0       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(packet.c.obj)
+                0x00000000000050c0       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(sock.c.obj)
  .ARM.attributes
-                0x00000000000050f6       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(dns.c.obj)
+                0x00000000000050f6       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(packet.c.obj)
  .ARM.attributes
-                0x000000000000512c       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(ifaddrs.c.obj)
+                0x000000000000512c       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(dns.c.obj)
  .ARM.attributes
-                0x0000000000005162       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(ip.c.obj)
+                0x0000000000005162       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(ifaddrs.c.obj)
  .ARM.attributes
-                0x0000000000005198       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(tls.c.obj)
+                0x0000000000005198       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(ip.c.obj)
  .ARM.attributes
-                0x00000000000051ce       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(poll.c.obj)
+                0x00000000000051ce       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(tls.c.obj)
  .ARM.attributes
-                0x0000000000005204       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(fcntl.c.obj)
+                0x0000000000005204       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(poll.c.obj)
  .ARM.attributes
-                0x000000000000523a       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(ntop.c.obj)
+                0x000000000000523a       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(fcntl.c.obj)
  .ARM.attributes
-                0x0000000000005270       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(pton.c.obj)
+                0x0000000000005270       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(ntop.c.obj)
  .ARM.attributes
-                0x00000000000052a6       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(tables.c.obj)
+                0x00000000000052a6       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(pton.c.obj)
  .ARM.attributes
-                0x00000000000052dc       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(reqres.c.obj)
+                0x00000000000052dc       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(tables.c.obj)
  .ARM.attributes
-                0x0000000000005312       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(sockopt.c.obj)
+                0x0000000000005312       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(reqres.c.obj)
  .ARM.attributes
-                0x0000000000005348       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(nrf_modem_gnss.c.obj)
+                0x0000000000005348       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(sockopt.c.obj)
  .ARM.attributes
-                0x000000000000537e       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(rpc_gnss_agnss_serializer.c.obj)
+                0x000000000000537e       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(nrf_modem_gnss.c.obj)
  .ARM.attributes
-                0x00000000000053b4       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(nrf_modem_delta_dfu.c.obj)
+                0x00000000000053b4       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(rpc_gnss_agnss_serializer.c.obj)
  .ARM.attributes
-                0x00000000000053ea       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(delta_dfu_reqres.c.obj)
+                0x00000000000053ea       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(nrf_modem_delta_dfu.c.obj)
  .ARM.attributes
-                0x0000000000005420       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(nrf_modem_softsim.c.obj)
+                0x0000000000005420       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(delta_dfu_reqres.c.obj)
  .ARM.attributes
-                0x0000000000005456       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(ipc_trace.c.obj)
+                0x0000000000005456       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(nrf_modem_softsim.c.obj)
  .ARM.attributes
-                0x000000000000548c       0x36 zephyr/kernel/libkernel.a(busy_wait.c.obj)
+                0x000000000000548c       0x36 /home/abdullah/ncs/v2.9.0/nrfxlib/nrf_modem/lib/cellular/nrf9120/soft-float/libmodem.a(ipc_trace.c.obj)
  .ARM.attributes
-                0x00000000000054c2       0x36 zephyr/kernel/libkernel.a(device.c.obj)
+                0x00000000000054c2       0x36 zephyr/kernel/libkernel.a(busy_wait.c.obj)
  .ARM.attributes
-                0x00000000000054f8       0x36 zephyr/kernel/libkernel.a(fatal.c.obj)
+                0x00000000000054f8       0x36 zephyr/kernel/libkernel.a(device.c.obj)
  .ARM.attributes
-                0x000000000000552e       0x36 zephyr/kernel/libkernel.a(init.c.obj)
+                0x000000000000552e       0x36 zephyr/kernel/libkernel.a(fatal.c.obj)
  .ARM.attributes
-                0x0000000000005564       0x36 zephyr/kernel/libkernel.a(init_static.c.obj)
+                0x0000000000005564       0x36 zephyr/kernel/libkernel.a(init.c.obj)
  .ARM.attributes
-                0x000000000000559a       0x36 zephyr/kernel/libkernel.a(kheap.c.obj)
+                0x000000000000559a       0x36 zephyr/kernel/libkernel.a(init_static.c.obj)
  .ARM.attributes
-                0x00000000000055d0       0x36 zephyr/kernel/libkernel.a(mem_slab.c.obj)
+                0x00000000000055d0       0x36 zephyr/kernel/libkernel.a(kheap.c.obj)
  .ARM.attributes
-                0x0000000000005606       0x36 zephyr/kernel/libkernel.a(idle.c.obj)
+                0x0000000000005606       0x36 zephyr/kernel/libkernel.a(mem_slab.c.obj)
  .ARM.attributes
-                0x000000000000563c       0x36 zephyr/kernel/libkernel.a(msg_q.c.obj)
+                0x000000000000563c       0x36 zephyr/kernel/libkernel.a(idle.c.obj)
  .ARM.attributes
-                0x0000000000005672       0x36 zephyr/kernel/libkernel.a(mutex.c.obj)
+                0x0000000000005672       0x36 zephyr/kernel/libkernel.a(msg_q.c.obj)
  .ARM.attributes
-                0x00000000000056a8       0x36 zephyr/kernel/libkernel.a(sem.c.obj)
+                0x00000000000056a8       0x36 zephyr/kernel/libkernel.a(mutex.c.obj)
  .ARM.attributes
-                0x00000000000056de       0x36 zephyr/kernel/libkernel.a(thread.c.obj)
+                0x00000000000056de       0x36 zephyr/kernel/libkernel.a(sem.c.obj)
  .ARM.attributes
-                0x0000000000005714       0x36 zephyr/kernel/libkernel.a(sched.c.obj)
+                0x0000000000005714       0x36 zephyr/kernel/libkernel.a(thread.c.obj)
  .ARM.attributes
-                0x000000000000574a       0x36 zephyr/kernel/libkernel.a(timeslicing.c.obj)
+                0x000000000000574a       0x36 zephyr/kernel/libkernel.a(sched.c.obj)
  .ARM.attributes
-                0x0000000000005780       0x36 zephyr/kernel/libkernel.a(thread_monitor.c.obj)
+                0x0000000000005780       0x36 zephyr/kernel/libkernel.a(timeslicing.c.obj)
  .ARM.attributes
-                0x00000000000057b6       0x36 zephyr/kernel/libkernel.a(xip.c.obj)
+                0x00000000000057b6       0x36 zephyr/kernel/libkernel.a(thread_monitor.c.obj)
  .ARM.attributes
-                0x00000000000057ec       0x36 zephyr/kernel/libkernel.a(timeout.c.obj)
+                0x00000000000057ec       0x36 zephyr/kernel/libkernel.a(xip.c.obj)
  .ARM.attributes
-                0x0000000000005822       0x36 zephyr/kernel/libkernel.a(timer.c.obj)
+                0x0000000000005822       0x36 zephyr/kernel/libkernel.a(timeout.c.obj)
  .ARM.attributes
-                0x0000000000005858       0x36 zephyr/kernel/libkernel.a(poll.c.obj)
+                0x0000000000005858       0x36 zephyr/kernel/libkernel.a(timer.c.obj)
  .ARM.attributes
-                0x000000000000588e       0x36 zephyr/kernel/libkernel.a(mempool.c.obj)
+                0x000000000000588e       0x36 zephyr/kernel/libkernel.a(poll.c.obj)
  .ARM.attributes
-                0x00000000000058c4       0x36 zephyr/kernel/libkernel.a(system_work_q.c.obj)
+                0x00000000000058c4       0x36 zephyr/kernel/libkernel.a(mempool.c.obj)
  .ARM.attributes
-                0x00000000000058fa       0x36 zephyr/kernel/libkernel.a(work.c.obj)
+                0x00000000000058fa       0x36 zephyr/kernel/libkernel.a(system_work_q.c.obj)
  .ARM.attributes
-                0x0000000000005930       0x36 zephyr/arch/common/libisr_tables.a(isr_tables.c.obj)
+                0x0000000000005930       0x36 zephyr/kernel/libkernel.a(work.c.obj)
  .ARM.attributes
-                0x0000000000005966       0x20 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(strcmp.S.o)
+                0x0000000000005966       0x36 zephyr/arch/common/libisr_tables.a(isr_tables.c.obj)
  .ARM.attributes
-                0x0000000000005986       0x20 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(strcpy.S.o)
+                0x000000000000599c       0x20 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(strcmp.S.o)
  .ARM.attributes
-                0x00000000000059a6       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(memchr.c.o)
+                0x00000000000059bc       0x20 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(strcpy.S.o)
  .ARM.attributes
-                0x00000000000059dc       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(memcpy.c.o)
+                0x00000000000059dc       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(memchr.c.o)
  .ARM.attributes
-                0x0000000000005a12       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(memmove.c.o)
+                0x0000000000005a12       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(memcpy.c.o)
  .ARM.attributes
-                0x0000000000005a48       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(memset.c.o)
+                0x0000000000005a48       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(memmove.c.o)
  .ARM.attributes
-                0x0000000000005a7e       0x20 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(strlen.S.o)
+                0x0000000000005a7e       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(memset.c.o)
  .ARM.attributes
-                0x0000000000005a9e       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_ctype_ctype_.c.o)
+                0x0000000000005ab4       0x20 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(strlen.S.o)
  .ARM.attributes
-                0x0000000000005ad4       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_errno_errno.c.o)
+                0x0000000000005ad4       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_ctype_ctype_.c.o)
  .ARM.attributes
-                0x0000000000005b0a       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_memcmp.c.o)
+                0x0000000000005b0a       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_errno_errno.c.o)
  .ARM.attributes
-                0x0000000000005b40       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_strchr.c.o)
+                0x0000000000005b40       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_memcmp.c.o)
  .ARM.attributes
-                0x0000000000005b76       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_strcspn.c.o)
+                0x0000000000005b76       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_strchr.c.o)
  .ARM.attributes
-                0x0000000000005bac       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_strlcpy.c.o)
+                0x0000000000005bac       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_strcspn.c.o)
  .ARM.attributes
-                0x0000000000005be2       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_strncasecmp.c.o)
+                0x0000000000005be2       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_strlcpy.c.o)
  .ARM.attributes
-                0x0000000000005c18       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_strncmp.c.o)
+                0x0000000000005c18       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_strncasecmp.c.o)
  .ARM.attributes
-                0x0000000000005c4e       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_strncpy.c.o)
+                0x0000000000005c4e       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_strncmp.c.o)
  .ARM.attributes
-                0x0000000000005c84       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_strnlen.c.o)
+                0x0000000000005c84       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_strncpy.c.o)
  .ARM.attributes
-                0x0000000000005cba       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_strspn.c.o)
+                0x0000000000005cba       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_strnlen.c.o)
  .ARM.attributes
-                0x0000000000005cf0       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_strstr.c.o)
+                0x0000000000005cf0       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_strspn.c.o)
  .ARM.attributes
-                0x0000000000005d26       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_printf.c.o)
+                0x0000000000005d26       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_string_strstr.c.o)
  .ARM.attributes
-                0x0000000000005d5c       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_snprintf.c.o)
+                0x0000000000005d5c       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_printf.c.o)
  .ARM.attributes
-                0x0000000000005d92       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_strtol.c.o)
+                0x0000000000005d92       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_snprintf.c.o)
  .ARM.attributes
-                0x0000000000005dc8       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_strtoul.c.o)
+                0x0000000000005dc8       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_strtol.c.o)
  .ARM.attributes
-                0x0000000000005dfe       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_strtoull.c.o)
+                0x0000000000005dfe       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_strtoul.c.o)
  .ARM.attributes
-                0x0000000000005e34       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_vflprintf.c.o)
+                0x0000000000005e34       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_strtoull.c.o)
  .ARM.attributes
-                0x0000000000005e6a       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_vflscanf.c.o)
+                0x0000000000005e6a       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_vflprintf.c.o)
  .ARM.attributes
-                0x0000000000005ea0       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_vsnprintf.c.o)
+                0x0000000000005ea0       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_vflscanf.c.o)
  .ARM.attributes
-                0x0000000000005ed6       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_vsscanf.c.o)
+                0x0000000000005ed6       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_vsnprintf.c.o)
  .ARM.attributes
-                0x0000000000005f0c       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libm_machine_arm_s_sqrt.c.o)
+                0x0000000000005f0c       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_vsscanf.c.o)
  .ARM.attributes
-                0x0000000000005f42       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libm_common_s_fpclassify.c.o)
+                0x0000000000005f42       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libm_machine_arm_s_sqrt.c.o)
  .ARM.attributes
-                0x0000000000005f78       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libm_common_math_err_invalid.c.o)
+                0x0000000000005f78       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libm_common_s_fpclassify.c.o)
  .ARM.attributes
-                0x0000000000005fae       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_fgetc.c.o)
+                0x0000000000005fae       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libm_common_math_err_invalid.c.o)
  .ARM.attributes
-                0x0000000000005fe4       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_filestrget.c.o)
+                0x0000000000005fe4       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_fgetc.c.o)
  .ARM.attributes
-                0x000000000000601a       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_filestrput.c.o)
+                0x000000000000601a       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_filestrget.c.o)
  .ARM.attributes
-                0x0000000000006050       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_ungetc.c.o)
+                0x0000000000006050       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_filestrput.c.o)
  .ARM.attributes
-                0x0000000000006086       0x32 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(cmse.o)
+                0x0000000000006086       0x36 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/../../picolibc/arm-zephyr-eabi/lib/thumb/v8-m.main/nofp/libc.a(libc_tinystdio_ungetc.c.o)
  .ARM.attributes
-                0x00000000000060b8       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_muldf3.o)
+                0x00000000000060bc       0x32 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(cmse.o)
  .ARM.attributes
-                0x00000000000060da       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_mulsf3.o)
+                0x00000000000060ee       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_muldf3.o)
  .ARM.attributes
-                0x00000000000060fc       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_addsubdf3.o)
+                0x0000000000006110       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_mulsf3.o)
  .ARM.attributes
-                0x000000000000611e       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_muldivdf3.o)
+                0x0000000000006132       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_addsubdf3.o)
  .ARM.attributes
-                0x0000000000006140       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_cmpdf2.o)
+                0x0000000000006154       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_muldivdf3.o)
  .ARM.attributes
-                0x0000000000006162       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_fixdfsi.o)
+                0x0000000000006176       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_cmpdf2.o)
  .ARM.attributes
-                0x0000000000006184       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_truncdfsf2.o)
+                0x0000000000006198       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_fixdfsi.o)
  .ARM.attributes
-                0x00000000000061a6       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_addsubsf3.o)
+                0x00000000000061ba       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_truncdfsf2.o)
  .ARM.attributes
-                0x00000000000061c8       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_cmpsf2.o)
+                0x00000000000061dc       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_addsubsf3.o)
  .ARM.attributes
-                0x00000000000061ea       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_fixsfsi.o)
+                0x00000000000061fe       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_cmpsf2.o)
  .ARM.attributes
-                0x000000000000620c       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_aeabi_ldivmod.o)
+                0x0000000000006220       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_fixsfsi.o)
  .ARM.attributes
-                0x000000000000622e       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_aeabi_uldivmod.o)
+                0x0000000000006242       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_aeabi_ldivmod.o)
  .ARM.attributes
-                0x0000000000006250       0x32 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_popcountsi2.o)
+                0x0000000000006264       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
-                0x0000000000006282       0x32 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_fixdfdi.o)
+                0x0000000000006286       0x32 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_popcountsi2.o)
  .ARM.attributes
-                0x00000000000062b4       0x32 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_fixunsdfdi.o)
+                0x00000000000062b8       0x32 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_fixdfdi.o)
  .ARM.attributes
-                0x00000000000062e6       0x32 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_udivmoddi4.o)
+                0x00000000000062ea       0x32 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_fixunsdfdi.o)
  .ARM.attributes
-                0x0000000000006318       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_dvmd_tls.o)
+                0x000000000000631c       0x32 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_udivmoddi4.o)
  .ARM.attributes
-                0x000000000000633a       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_fixunsdfsi.o)
+                0x000000000000634e       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x0000000000006370       0x22 /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/thumb/v8-m.main/nofp/libgcc.a(_arm_fixunsdfsi.o)
  *(SORT_BY_ALIGNMENT(.gnu.attributes))
 
 .last_section   0x00000000000650fc        0x4
