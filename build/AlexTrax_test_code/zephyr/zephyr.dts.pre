@@ -1232,5 +1232,21 @@ arduino_spi: &spi3 {
 &spi0 {
     status = "disabled";
 };
+
+/ {
+ vbatt {
+  compatible = "voltage-divider";
+  io-channels = <&adc 4>;
+  output-ohms = <100000>;
+  full-ohms = <(100000 + 100000)>;
+  power-gpios = <&gpio0 18 (0 << 0)>;
+ };
+ vin {
+  compatible = "voltage-divider";
+  io-channels = <&adc 6>;
+  output-ohms = <12000>;
+  full-ohms = <(100000 + 12000)>;
+ };
+};
 # 0 "<command-line>" 2
 # 1 "/home/abdullah/ncs/v2.9.0/zephyr/misc/empty_file.c"
