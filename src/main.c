@@ -8,8 +8,11 @@
 #include "../components/ext_flash/max25r16.h"
 #include "../components/WiFi/wifi.h"
 
+#include <zephyr/logging/log.h>
 
-    const struct device *sensor = DEVICE_DT_GET(DT_NODELABEL(lis2dh12));
+LOG_MODULE_REGISTER(Alertrax);
+
+const struct device *sensor = DEVICE_DT_GET(DT_NODELABEL(lis2dh12));
 
 
 #define SLEEP_TIME_MS 2000
@@ -25,7 +28,13 @@ void main(void) {
     if (ret) {
         return;
     }
+         ret = wifi_connect();
+    if (ret != 0) {
+        LOG_ERR("Wi-Fi connection failed");
+        return ret;
+    }
 
+    LOG_INF("Wi-Fi connected! Starting main loop...");
    
 
     // const struct device *sensor = DEVICE_DT_GET_ANY(st_lis2dh);
