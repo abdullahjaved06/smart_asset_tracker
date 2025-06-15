@@ -10,6 +10,7 @@
         "stdio.h": "c",
         "sensor.h": "c",
         "max25r16.h": "c",
-        "wifi_mgmt.h": "c"
+        "wifi_mgmt.h": "c",
+        "log.h": "c"
     }
 }

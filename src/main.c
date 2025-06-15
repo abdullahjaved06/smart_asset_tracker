@@ -7,6 +7,7 @@
 #include "../components/sht4x/sht4x.h"
 #include "../components/ext_flash/max25r16.h"
 #include "../components/WiFi/wifi.h"
+#include "../components/voltage_monitor/voltage_monitor.h"
 
 #include <zephyr/logging/log.h>
 
