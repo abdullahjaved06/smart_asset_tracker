@@ -75,6 +75,13 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //No help, variable specified on the command line.
 NCS_TOOLCHAIN_VERSION:UNINITIALIZED=NONE
 
+//If desired, you can build the application with   SYSbuild configuration
+// settings specified in an alternate .conf file using this parameter.
+//   These settings will override the settings in the application’s
+// SYSBuild config file or its   default .conf file. Multiple files
+// may be listed, e.g. SB_CONF_FILE="sys1.conf sys2.conf"
+SB_CONF_FILE:STRING=/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/sysbuild.conf
+
 //No help, variable specified on the command line.
 WEST_PYTHON:UNINITIALIZED=/home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/python3.12
 

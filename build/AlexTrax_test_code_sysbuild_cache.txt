@@ -12,6 +12,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/abdullah/ncs/toolchains/b77
 HWM:INTERNAL=v2
 HWMv2:INTERNAL=True
 NCS_TOOLCHAIN_VERSION:UNINITIALIZED=NONE
+SB_CONF_FILE:STRING=/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/sysbuild.conf
 WEST:INTERNAL=/home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/python3.12;-m;west
 WEST_PYTHON:UNINITIALIZED=/home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/python3.12
 ZEPHYR_BASE:PATH=/home/abdullah/ncs/v2.9.0/zephyr

@@ -8,9 +8,9 @@ cmake:
   kconfig:
     files:
      - /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/_sysbuild/empty.conf
-     - /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/_sysbuild/empty.conf
+     - /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/sysbuild.conf
     user-files:
-     - /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/_sysbuild/empty.conf
+     - /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/sysbuild.conf
   sysbuild: true
 version: 0.1.0
 west:

@@ -84,7 +84,7 @@ CMAKE_ASM_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_ASM_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //Build type: [Debug, Release, RelWithDebInfo, MinSizeRel]
-CMAKE_BUILD_TYPE:STRING=Debug
+CMAKE_BUILD_TYPE:STRING=MinSizeRel
 
 //CXX compiler
 CMAKE_CXX_COMPILER:STRING=/home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-g++
@@ -477,6 +477,10 @@ MBEDTLS_PSA_CRYPTO_USER_CONFIG_FILE:STRING=nrf-psa-crypto-user-config.h
 //No help, variable specified on the command line.
 MCUBOOT_IMAGE_NUMBER:UNINITIALIZED=1
 
+//Level of logging to use for MCUboot [OFF, ERROR, WARNING, INFO,
+// DEBUG]
+MCUBOOT_LOG_LEVEL:STRING=OFF
+
 //Path to MCUboot (or DOWNLOAD to fetch automatically
 MCUBOOT_PATH:PATH=DOWNLOAD
 
@@ -640,6 +644,9 @@ SECURE_UART1:BOOL=y
 //Use symmetric crypto for inital attestation
 SYMMETRIC_INITIAL_ATTESTATION:BOOL=OFF
 
+//Whether BL1 will log to uart
+TFM_BL1_LOGGING:BOOL=OFF
+
 //Whether to build the binary for lcov tools
 TFM_CODE_COVERAGE:BOOL=OFF
 
@@ -781,7 +788,7 @@ TFM_PXN_ENABLE:BOOL=OFF
 //Enable a runtime sanitizer for the TF-M runtime
 TFM_SANITIZE:STRING=OFF
 
-//Set debug SPM log level as Debug level
+//Set minsizerel SPM log level as Silence level
 TFM_SPM_LOG_LEVEL:STRING=TFM_SPM_LOG_LEVEL_INFO
 
 //Whether to perform checks on the tf-m-tests repository revision.

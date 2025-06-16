@@ -22,18 +22,18 @@ const struct device *sensor = DEVICE_DT_GET(DT_NODELABEL(lis2dh12));
 void main(void) {
     
     const struct device *sht4x_sensor = DEVICE_DT_GET(SHT4X_NODE);
-    int ret;
+    int ret=0;
     ili9341_display_init();
        /* Initialize the SHT4x sensor */
     // ret = init_sht4x_sensor(&sht4x_sensor);
-    if (ret) {
-        return;
-    }
-         ret = wifi_connect();
-    if (ret != 0) {
-        LOG_ERR("Wi-Fi connection failed");
-        return ret;
-    }
+    // if (ret) {
+    //     return;
+    // }
+    //      ret = wifi_connect();
+    // if (ret != 0) {
+    //     LOG_ERR("Wi-Fi connection failed");
+    //     return ret;
+    // }
 
     LOG_INF("Wi-Fi connected! Starting main loop...");
    

@@ -156,6 +156,25 @@ ztest :
  shell_subcmds_area : SUBALIGN(4) { _shell_subcmds_list_start = .; KEEP(*(SORT_BY_NAME(._shell_subcmds.static.*))); _shell_subcmds_list_end = .; } > FLASH
  shell_dynamic_subcmds_area : SUBALIGN(4) { _shell_dynamic_subcmds_list_start = .; KEEP(*(SORT_BY_NAME(._shell_dynamic_subcmds.static.*))); _shell_dynamic_subcmds_list_end = .; } > FLASH
  cfb_font_area : SUBALIGN(4) { _cfb_font_list_start = .; KEEP(*(SORT_BY_NAME(._cfb_font.static.*))); _cfb_font_list_end = .; } > FLASH
+ tdata : ALIGN_WITH_INPUT
+ {
+  *(.tdata .tdata.* .gnu.linkonce.td.*);
+ } > FLASH
+ tbss : ALIGN_WITH_INPUT
+ {
+  *(.tbss .tbss.* .gnu.linkonce.tb.* .tcommon);
+ } > FLASH
+ PROVIDE(__tdata_start = LOADADDR(tdata));
+ PROVIDE(__tdata_align = ALIGNOF(tdata));
+ PROVIDE(__tdata_size = (SIZEOF(tdata) + __tdata_align - 1) & ~(__tdata_align - 1));
+ PROVIDE(__tdata_end = __tdata_start + __tdata_size);
+ PROVIDE(__tbss_align = ALIGNOF(tbss));
+ PROVIDE(__tbss_start = ADDR(tbss));
+ PROVIDE(__tbss_size = (SIZEOF(tbss) + __tbss_align - 1) & ~(__tbss_align - 1));
+ PROVIDE(__tbss_end = __tbss_start + __tbss_size);
+ PROVIDE(__tls_start = __tdata_start);
+ PROVIDE(__tls_end = __tbss_end);
+ PROVIDE(__tls_size = __tbss_end - __tdata_start);
     rodata :
  {
  *(.rodata)
@@ -191,13 +210,6 @@ _nrf_modem_lib_shutdown_cb_list_end = .;
  . = 0x2000c568;
  . = ALIGN(_region_min_align);
  _image_ram_start = .;
-_RTT_SECTION_NAME (NOLOAD) : ALIGN_WITH_INPUT
-{
-__rtt_buff_data_start = .;
-*(".rtt_buff_data")
-__rtt_buff_data_end = ALIGN(4);
-} > RAM AT > RAM
-__rtt_buff_data_size = __rtt_buff_data_end - __rtt_buff_data_start;
 .ramfunc : ALIGN_WITH_INPUT
 {
  . = ALIGN(_region_min_align);
@@ -249,7 +261,6 @@ __ramfunc_load_start = LOADADDR(.ramfunc);
  sys_mem_blocks_ptr_area : ALIGN_WITH_INPUT { _sys_mem_blocks_ptr_list_start = .; *(SORT_BY_NAME(._sys_mem_blocks_ptr.static.*)); _sys_mem_blocks_ptr_list_end = .; } > RAM AT > FLASH
  net_buf_pool_area : ALIGN_WITH_INPUT { _net_buf_pool_list_start = .; KEEP(*(SORT_BY_NAME(._net_buf_pool.static.*))); _net_buf_pool_list_end = .; } > RAM AT > FLASH
  net_if_area : ALIGN_WITH_INPUT { _net_if_list_start = .; KEEP(*(SORT_BY_NAME(._net_if.static.*))); _net_if_list_end = .; } > RAM AT > FLASH net_if_dev_area : ALIGN_WITH_INPUT { _net_if_dev_list_start = .; KEEP(*(SORT_BY_NAME(._net_if_dev.static.*))); _net_if_dev_list_end = .; } > RAM AT > FLASH net_l2_area : ALIGN_WITH_INPUT { _net_l2_list_start = .; KEEP(*(SORT_BY_NAME(._net_l2.static.*))); _net_l2_list_end = .; } > RAM AT > FLASH eth_bridge_area : ALIGN_WITH_INPUT { _eth_bridge_list_start = .; KEEP(*(SORT_BY_NAME(._eth_bridge.static.*))); _eth_bridge_list_end = .; } > RAM AT > FLASH
-conn_mgr_conn_binding_area : ALIGN_WITH_INPUT { _conn_mgr_conn_binding_list_start = .; KEEP(*(SORT_BY_NAME(._conn_mgr_conn_binding.static.*))); _conn_mgr_conn_binding_list_end = .; } > RAM AT > FLASH
 wifi_nm_instance_area : ALIGN_WITH_INPUT { _wifi_nm_instance_list_start = .; KEEP(*(SORT_BY_NAME(._wifi_nm_instance.static.*))); _wifi_nm_instance_list_end = .; } > RAM AT > FLASH
     __data_region_end = .;
    bss (NOLOAD) : ALIGN_WITH_INPUT

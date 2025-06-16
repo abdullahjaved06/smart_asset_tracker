@@ -42,8 +42,3 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/net/lib/cmake_install.cmake")
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/modules/nrf/subsys/net/l2_wifi_if_conn/cmake_install.cmake")
-endif()
-
