@@ -126,7 +126,7 @@ rule C_STATIC_LIBRARY_LINKER__tfm_sprt_MinSizeRel
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__tfm_psa_rot_partition_crypto_relwithdebinfo
+rule C_COMPILER__tfm_psa_rot_partition_crypto_MinSizeRel
   depfile = $DEP_FILE
   deps = gcc
   command = /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -136,7 +136,7 @@ rule C_COMPILER__tfm_psa_rot_partition_crypto_relwithdebinfo
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__tfm_psa_rot_partition_crypto_relwithdebinfo
+rule C_STATIC_LIBRARY_LINKER__tfm_psa_rot_partition_crypto_MinSizeRel
   command = $PRE_LINK && /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -145,7 +145,7 @@ rule C_STATIC_LIBRARY_LINKER__tfm_psa_rot_partition_crypto_relwithdebinfo
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__mbedcrypto_base_relwithdebinfo
+rule C_COMPILER__crypto_service_mbedcrypto_MinSizeRel
   depfile = $DEP_FILE
   deps = gcc
   command = /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -155,7 +155,7 @@ rule C_COMPILER__mbedcrypto_base_relwithdebinfo
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__mbedcrypto_base_relwithdebinfo
+rule C_STATIC_LIBRARY_LINKER__crypto_service_mbedcrypto_MinSizeRel
   command = $PRE_LINK && /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -164,7 +164,7 @@ rule C_STATIC_LIBRARY_LINKER__mbedcrypto_base_relwithdebinfo
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__crypto_service_mbedcrypto_relwithdebinfo
+rule C_COMPILER__nrf_security_utils_MinSizeRel
   depfile = $DEP_FILE
   deps = gcc
   command = /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -174,7 +174,7 @@ rule C_COMPILER__crypto_service_mbedcrypto_relwithdebinfo
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__crypto_service_mbedcrypto_relwithdebinfo
+rule C_STATIC_LIBRARY_LINKER__nrf_security_utils_MinSizeRel
   command = $PRE_LINK && /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -183,7 +183,7 @@ rule C_STATIC_LIBRARY_LINKER__crypto_service_mbedcrypto_relwithdebinfo
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__mbedtls_relwithdebinfo
+rule C_COMPILER__mbedcrypto_base_MinSizeRel
   depfile = $DEP_FILE
   deps = gcc
   command = /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -193,7 +193,7 @@ rule C_COMPILER__mbedtls_relwithdebinfo
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__mbedtls_relwithdebinfo
+rule C_STATIC_LIBRARY_LINKER__mbedcrypto_base_MinSizeRel
   command = $PRE_LINK && /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -202,7 +202,7 @@ rule C_STATIC_LIBRARY_LINKER__mbedtls_relwithdebinfo
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__nrf_security_utils_relwithdebinfo
+rule C_COMPILER__oberon_psa_core_MinSizeRel
   depfile = $DEP_FILE
   deps = gcc
   command = /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -212,7 +212,7 @@ rule C_COMPILER__nrf_security_utils_relwithdebinfo
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__nrf_security_utils_relwithdebinfo
+rule C_STATIC_LIBRARY_LINKER__oberon_psa_core_MinSizeRel
   command = $PRE_LINK && /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -221,7 +221,7 @@ rule C_STATIC_LIBRARY_LINKER__nrf_security_utils_relwithdebinfo
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__mbedx509_relwithdebinfo
+rule C_COMPILER__oberon_psa_driver_MinSizeRel
   depfile = $DEP_FILE
   deps = gcc
   command = /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -231,45 +231,7 @@ rule C_COMPILER__mbedx509_relwithdebinfo
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__mbedx509_relwithdebinfo
-  command = $PRE_LINK && /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
-  description = Linking C static library $TARGET_FILE
-  restat = $RESTAT
-
-
-#############################################
-# Rule for compiling C files.
-
-rule C_COMPILER__oberon_psa_core_relwithdebinfo
-  depfile = $DEP_FILE
-  deps = gcc
-  command = /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for linking C static library.
-
-rule C_STATIC_LIBRARY_LINKER__oberon_psa_core_relwithdebinfo
-  command = $PRE_LINK && /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
-  description = Linking C static library $TARGET_FILE
-  restat = $RESTAT
-
-
-#############################################
-# Rule for compiling C files.
-
-rule C_COMPILER__oberon_psa_driver_relwithdebinfo
-  depfile = $DEP_FILE
-  deps = gcc
-  command = /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for linking C static library.
-
-rule C_STATIC_LIBRARY_LINKER__oberon_psa_driver_relwithdebinfo
+rule C_STATIC_LIBRARY_LINKER__oberon_psa_driver_MinSizeRel
   command = $PRE_LINK && /home/abdullah/ncs/toolchains/b77d8c1312/usr/local/bin/cmake -E rm -f $TARGET_FILE && /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && /home/abdullah/ncs/toolchains/b77d8c1312/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT

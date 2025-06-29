@@ -77,7 +77,6 @@ zephyr/linker_zephyr_pre0.cmd: \
   /home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/linker/kobject-data.ld \
   /home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/linker/cplusplus-ram.ld \
   zephyr/include/generated/snippets-data-sections.ld \
-  /home/abdullah/ncs/v2.9.0/zephyr/subsys/net/l2/wifi/wifi_nm.ld \
   zephyr/include/generated/snippets-noinit.ld \
   zephyr/include/generated/snippets-sections.ld \
   /home/abdullah/ncs/v2.9.0/zephyr/soc/nordic/common/arm_platform_init.ld \

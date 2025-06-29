@@ -1051,7 +1051,7 @@ arduino_spi: &spi3 {
 / {
     chosen {
         zephyr,display = &ili9341;
-        zephyr,wifi = &wlan0;
+
     };
 
     aliases {
@@ -1130,41 +1130,7 @@ arduino_spi: &spi3 {
     pinctrl-0 = <&spi3_default>;
     pinctrl-1 = <&spi3_sleep>;
     pinctrl-names = "default", "sleep";
-
-
-   nrf70: nrf7002-spi@0 {
-        compatible = "nordic,nrf7002-spi";
-  status = "okay";
-  reg = <0>;
-  spi-max-frequency = <((8) * 1000 * 1000)>;
-
-
-        iovdd-ctrl-gpios = <&gpio0 5 (1 << 5)>;
-        bucken-gpios = <&gpio0 6 ((0 << 0) | (1 << 5))>;
-        host-irq-gpios = <&gpio0 8 (0 << 0)>;
-
-
-
-
-        wifi-max-tx-pwr-2g-dsss = <21>;
-        wifi-max-tx-pwr-2g-mcs0 = <16>;
-        wifi-max-tx-pwr-2g-mcs7 = <16>;
-
-
-        wlan0: wlan0 {
-            compatible = "nordic,wlan";
-        };
-
-  wifi-max-tx-pwr-5g-low-mcs0 = <13>;
-        wifi-max-tx-pwr-5g-low-mcs7 = <13>;
-        wifi-max-tx-pwr-5g-mid-mcs0 = <13>;
-        wifi-max-tx-pwr-5g-mid-mcs7 = <13>;
-        wifi-max-tx-pwr-5g-high-mcs0 = <12>;
-        wifi-max-tx-pwr-5g-high-mcs7 = <12>;
- };
-
-
-
+# 122 "/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/boards/nrf9151dk_nrf9151_ns.overlay"
     mx25r16: mx25r16@2 {
         compatible = "jedec,spi-nor";
         reg = <2>;

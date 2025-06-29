@@ -70,7 +70,6 @@ zephyr/linker.cmd: \
   /home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/linker/kobject-rom.ld \
   /home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/linker/cplusplus-rom.ld \
   zephyr/include/generated/snippets-ram-sections.ld \
-  /home/abdullah/ncs/v2.9.0/zephyr/modules/segger/segger_rtt.ld \
   /home/abdullah/ncs/v2.9.0/zephyr/arch/common/ramfunc.ld \
   zephyr/include/generated/snippets-ramfunc-section.ld \
   zephyr/include/generated/snippets-rwdata.ld \

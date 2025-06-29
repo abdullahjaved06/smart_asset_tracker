@@ -23,7 +23,7 @@ void main(void) {
     
     const struct device *sht4x_sensor = DEVICE_DT_GET(SHT4X_NODE);
     int ret=0;
-    ili9341_display_init();
+    // ili9341_display_init();
        /* Initialize the SHT4x sensor */
     // ret = init_sht4x_sensor(&sht4x_sensor);
     // if (ret) {
@@ -43,7 +43,7 @@ void main(void) {
     // lisd2h_init(sensor);
 
     while (1) {
-        lv_timer_handler();                 // Update display
+        // lv_timer_handler();                 // Update display
         // lisd2h_poll_once(sensor);          // Read sensor and print
         //  /* Fetch sensor data and print it */
         // ret = sht4x_sensor_data(sht4x_sensor);

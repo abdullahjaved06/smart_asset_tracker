@@ -33,14 +33,6 @@
     ],
     [
         [
-            "int __posix_clock_get_base",
-            "clockid_t clock_id, struct timespec *ts"
-        ],
-        "posix_clock.h",
-        true
-    ],
-    [
-        [
             "int z_sys_mutex_kernel_lock",
             "struct sys_mutex *mutex,\n\t\t\t\t      k_timeout_t timeout"
         ],
@@ -437,6 +429,30 @@
             "int nfds, zsock_fd_set *readfds,\n\t\t\t   zsock_fd_set *writefds,\n\t\t\t   zsock_fd_set *exceptfds,\n\t\t\t   struct zsock_timeval *timeout"
         ],
         "socket_select.h",
+        true
+    ],
+    [
+        [
+            "int adc_channel_setup",
+            "const struct device *dev,\n\t\t\t\tconst struct adc_channel_cfg *channel_cfg"
+        ],
+        "adc.h",
+        true
+    ],
+    [
+        [
+            "int adc_read",
+            "const struct device *dev,\n\t\t       const struct adc_sequence *sequence"
+        ],
+        "adc.h",
+        true
+    ],
+    [
+        [
+            "int adc_read_async",
+            "const struct device *dev,\n\t\t\t     const struct adc_sequence *sequence,\n\t\t\t     struct k_poll_signal *async"
+        ],
+        "adc.h",
         true
     ],
     [
@@ -1773,30 +1789,6 @@
             "unsigned int reason"
         ],
         "arch.h",
-        false
-    ],
-    [
-        [
-            "int adc_channel_setup",
-            "const struct device *dev,\n\t\t\t\tconst struct adc_channel_cfg *channel_cfg"
-        ],
-        "adc.h",
-        false
-    ],
-    [
-        [
-            "int adc_read",
-            "const struct device *dev,\n\t\t       const struct adc_sequence *sequence"
-        ],
-        "adc.h",
-        false
-    ],
-    [
-        [
-            "int adc_read_async",
-            "const struct device *dev,\n\t\t\t     const struct adc_sequence *sequence,\n\t\t\t     struct k_poll_signal *async"
-        ],
-        "adc.h",
         false
     ],
     [

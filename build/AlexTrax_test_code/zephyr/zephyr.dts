@@ -15,7 +15,6 @@
 		zephyr,sram = &sram0_ns_app;
 		zephyr,code-partition = &slot0_ns_partition;
 		zephyr,display = &ili9341;
-		zephyr,wifi = &wlan0;
 	};
 	aliases {
 		led0 = &led0;
@@ -356,27 +355,6 @@
 					t-exit-dpd = < 0x9c40 >;
 					sfdp-bfp = [ E5 20 F3 FF FF FF FF 0F 44 EB 08 6B 08 3B 42 BB EE FF FF FF FF FF 00 FF FF FF 00 FF 0C 20 0F 52 10 D8 00 FF 44 7A C9 FE 83 67 26 62 EC 82 18 44 7A 75 7A 75 04 C4 D5 5C 00 06 74 00 08 50 00 01 ];
 					jedec-id = [ C8 65 19 ];
-				};
-				nrf70: nrf7002-spi@0 {
-					compatible = "nordic,nrf7002-spi";
-					status = "okay";
-					reg = < 0x0 >;
-					spi-max-frequency = < 0x7a1200 >;
-					iovdd-ctrl-gpios = < &gpio0 0x5 0x20 >;
-					bucken-gpios = < &gpio0 0x6 0x20 >;
-					host-irq-gpios = < &gpio0 0x8 0x0 >;
-					wifi-max-tx-pwr-2g-dsss = < 0x15 >;
-					wifi-max-tx-pwr-2g-mcs0 = < 0x10 >;
-					wifi-max-tx-pwr-2g-mcs7 = < 0x10 >;
-					wifi-max-tx-pwr-5g-low-mcs0 = < 0xd >;
-					wifi-max-tx-pwr-5g-low-mcs7 = < 0xd >;
-					wifi-max-tx-pwr-5g-mid-mcs0 = < 0xd >;
-					wifi-max-tx-pwr-5g-mid-mcs7 = < 0xd >;
-					wifi-max-tx-pwr-5g-high-mcs0 = < 0xc >;
-					wifi-max-tx-pwr-5g-high-mcs7 = < 0xc >;
-					wlan0: wlan0 {
-						compatible = "nordic,wlan";
-					};
 				};
 				mx25r16: mx25r16@2 {
 					compatible = "jedec,spi-nor";

@@ -5,7 +5,7 @@
 / {
     chosen {
         zephyr,display = &ili9341;
-        zephyr,wifi = &wlan0;
+        // zephyr,wifi = &wlan0;
     };
 
     aliases {
@@ -86,36 +86,36 @@
     pinctrl-names = "default", "sleep";
 
     /* nRF7002 Wi-Fi */
-   nrf70: nrf7002-spi@0 {
-        compatible = "nordic,nrf7002-spi";
-		status = "okay";
-		reg = <0>;
-		spi-max-frequency = <DT_FREQ_M(8)>;
+//    nrf70: nrf7002-spi@0 {
+//         compatible = "nordic,nrf7002-spi";
+// 		status = "okay";
+// 		reg = <0>;
+// 		spi-max-frequency = <DT_FREQ_M(8)>;
 
-		// Pin assignments for nrf7002 chip
-        iovdd-ctrl-gpios = <&gpio0 5 GPIO_PULL_DOWN>;
-        bucken-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-        host-irq-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
-        // Short-range (SR) co-existence (disabled)
-        //srrf-switch-gpios = <&gpio2 6 GPIO_ACTIVE_HIGH>;
+// 		// Pin assignments for nrf7002 chip
+//         iovdd-ctrl-gpios = <&gpio0 5 GPIO_PULL_DOWN>;
+//         bucken-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+//         host-irq-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
+//         // Short-range (SR) co-existence (disabled)
+//         //srrf-switch-gpios = <&gpio2 6 GPIO_ACTIVE_HIGH>;
 
-        /* Maximum TX power limits for 2.4 GHz */
-        wifi-max-tx-pwr-2g-dsss = <21>;
-        wifi-max-tx-pwr-2g-mcs0 = <16>;
-        wifi-max-tx-pwr-2g-mcs7 = <16>;
+//         /* Maximum TX power limits for 2.4 GHz */
+//         wifi-max-tx-pwr-2g-dsss = <21>;
+//         wifi-max-tx-pwr-2g-mcs0 = <16>;
+//         wifi-max-tx-pwr-2g-mcs7 = <16>;
 
-        /* List of interfaces */
-        wlan0: wlan0 {
-            compatible = "nordic,wlan";
-        };
+//         /* List of interfaces */
+//         wlan0: wlan0 {
+//             compatible = "nordic,wlan";
+//         };
 
-		wifi-max-tx-pwr-5g-low-mcs0 = <13>;
-        wifi-max-tx-pwr-5g-low-mcs7 = <13>;
-        wifi-max-tx-pwr-5g-mid-mcs0 = <13>;
-        wifi-max-tx-pwr-5g-mid-mcs7 = <13>;
-        wifi-max-tx-pwr-5g-high-mcs0 = <12>;
-        wifi-max-tx-pwr-5g-high-mcs7 = <12>;
-	};
+// 		wifi-max-tx-pwr-5g-low-mcs0 = <13>;
+//         wifi-max-tx-pwr-5g-low-mcs7 = <13>;
+//         wifi-max-tx-pwr-5g-mid-mcs0 = <13>;
+//         wifi-max-tx-pwr-5g-mid-mcs7 = <13>;
+//         wifi-max-tx-pwr-5g-high-mcs0 = <12>;
+//         wifi-max-tx-pwr-5g-high-mcs7 = <12>;
+// 	};
 
 
     /* MX25R16 External SPI NOR Flash */

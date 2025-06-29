@@ -2,7 +2,7 @@
 _region_min_align = 32;
 MEMORY
     {
-    FLASH (rx) : ORIGIN = 0x10000, LENGTH = 0xe8000
+    FLASH (rx) : ORIGIN = 0x8000, LENGTH = 0xf0000
     RAM (wx) : ORIGIN = 0x2000c568, LENGTH = 0x33a98
    
     IDT_LIST (wx) : ORIGIN = 0xFFFF7FFF, LENGTH = 32K
@@ -41,7 +41,7 @@ SECTIONS
  *(.iplt)
  }
    
- __rom_region_start = 0x10000;
+ __rom_region_start = 0x8000;
     rom_start :
  {
 HIDDEN(__rom_start_address = .);
@@ -210,13 +210,6 @@ _nrf_modem_lib_shutdown_cb_list_end = .;
  . = 0x2000c568;
  . = ALIGN(_region_min_align);
  _image_ram_start = .;
-_RTT_SECTION_NAME (NOLOAD) : ALIGN_WITH_INPUT
-{
-__rtt_buff_data_start = .;
-*(".rtt_buff_data")
-__rtt_buff_data_end = ALIGN(4);
-} > RAM AT > RAM
-__rtt_buff_data_size = __rtt_buff_data_end - __rtt_buff_data_start;
 .ramfunc : ALIGN_WITH_INPUT
 {
  . = ALIGN(_region_min_align);
