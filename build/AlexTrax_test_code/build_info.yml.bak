@@ -4,7 +4,7 @@ cmake:
     source-dir: /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code
   board:
     name: nrf9151dk
-    qualifiers: nrf9151/ns
+    qualifiers: nrf9151
     revision: 
   devicetree:
     bindings-dirs:
@@ -12,8 +12,8 @@ cmake:
      - /home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk/dts/bindings
      - /home/abdullah/ncs/v2.9.0/zephyr/dts/bindings
     files:
-     - /home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk/nrf9151dk_nrf9151_ns.dts
-     - /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/boards/nrf9151dk_nrf9151_ns.overlay
+     - /home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk/nrf9151dk_nrf9151.dts
+     - /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/boards/nrf9151dk_nrf9151.overlay
     include-dirs:
      - /home/abdullah/ncs/v2.9.0/nrf/include
      - /home/abdullah/ncs/v2.9.0/nrf/dts
@@ -32,10 +32,10 @@ cmake:
      - /home/abdullah/ncs/v2.9.0/zephyr/dts/arc
      - /home/abdullah/ncs/v2.9.0/zephyr/dts
     user-files:
-     - /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/boards/nrf9151dk_nrf9151_ns.overlay
+     - /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/boards/nrf9151dk_nrf9151.overlay
   kconfig:
     files:
-     - /home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk/nrf9151dk_nrf9151_ns_defconfig
+     - /home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk/nrf9151dk_nrf9151_defconfig
      - /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/prj.conf
      - /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/build/AlexTrax_test_code/zephyr/.config.sysbuild
     user-files:

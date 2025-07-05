@@ -24,7 +24,7 @@ APPLICATION_SOURCE_DIR:PATH=/home/abdullah/ncs/v2.9.0/zephyr/share/sysbuild/temp
 APP_DIR:PATH=/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code
 
 //Selected board
-BOARD:STRING=nrf9151dk/nrf9151/ns
+BOARD:STRING=nrf9151dk/nrf9151
 
 //Main board directory for board (nrf9151dk)
 BOARD_DIR:PATH=/home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk
@@ -36,7 +36,7 @@ BOARD_EXTENSIONS:BOOL=ON
 BOARD_ROOT:PATH=/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code
 
 //Selected board
-CACHED_BOARD:STRING=nrf9151dk/nrf9151/ns
+CACHED_BOARD:STRING=nrf9151dk/nrf9151
 
 //Selected shield
 CACHED_SHIELD:STRING=

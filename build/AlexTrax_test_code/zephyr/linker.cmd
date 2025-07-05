@@ -2,8 +2,8 @@
 _region_min_align = 32;
 MEMORY
     {
-    FLASH (rx) : ORIGIN = 0x8000, LENGTH = 0xf0000
-    RAM (wx) : ORIGIN = 0x2000c568, LENGTH = 0x33a98
+    FLASH (rx) : ORIGIN = 0x0, LENGTH = 0xfa000
+    RAM (wx) : ORIGIN = 0x20000000, LENGTH = 0x40000
    
     IDT_LIST (wx) : ORIGIN = 0xFFFF7FFF, LENGTH = 32K
     }
@@ -41,7 +41,7 @@ SECTIONS
  *(.iplt)
  }
    
- __rom_region_start = 0x8000;
+ __rom_region_start = 0x0;
     rom_start :
  {
 HIDDEN(__rom_start_address = .);
@@ -180,20 +180,6 @@ ztest :
  *(.rodata)
  *(".rodata.*")
  *(.gnu.linkonce.r.*)
-. = ALIGN(4);
-_nrf_modem_lib_at_cfun_cb_list_start = .;
-KEEP(*(SORT_BY_NAME("._nrf_modem_lib_at_cfun_cb.*")));
-_nrf_modem_lib_at_cfun_cb_list_end = .;
-. = ALIGN(4);
-_nrf_modem_lib_dfu_cb_list_start = .;
-KEEP(*(SORT_BY_NAME("._nrf_modem_lib_dfu_cb.*")));
-_nrf_modem_lib_dfu_cb_list_end = .;
-_nrf_modem_lib_init_cb_list_start = .;
-KEEP(*(SORT_BY_NAME("._nrf_modem_lib_init_cb.*")));
-_nrf_modem_lib_init_cb_list_end = .;
-_nrf_modem_lib_shutdown_cb_list_start = .;
-KEEP(*(SORT_BY_NAME("._nrf_modem_lib_shutdown_cb.*")));
-_nrf_modem_lib_shutdown_cb_list_end = .;
  . = ALIGN(4);
  } > FLASH
  __rodata_region_end = .;
@@ -207,9 +193,16 @@ _nrf_modem_lib_shutdown_cb_list_end = .;
  *(.igot)
  }
    
- . = 0x2000c568;
+ . = 0x20000000;
  . = ALIGN(_region_min_align);
  _image_ram_start = .;
+_RTT_SECTION_NAME (NOLOAD) : ALIGN_WITH_INPUT
+{
+__rtt_buff_data_start = .;
+*(".rtt_buff_data")
+__rtt_buff_data_end = ALIGN(4);
+} > RAM AT > RAM
+__rtt_buff_data_size = __rtt_buff_data_end - __rtt_buff_data_start;
 .ramfunc : ALIGN_WITH_INPUT
 {
  . = ALIGN(_region_min_align);
@@ -261,6 +254,7 @@ __ramfunc_load_start = LOADADDR(.ramfunc);
  sys_mem_blocks_ptr_area : ALIGN_WITH_INPUT { _sys_mem_blocks_ptr_list_start = .; *(SORT_BY_NAME(._sys_mem_blocks_ptr.static.*)); _sys_mem_blocks_ptr_list_end = .; } > RAM AT > FLASH
  net_buf_pool_area : ALIGN_WITH_INPUT { _net_buf_pool_list_start = .; KEEP(*(SORT_BY_NAME(._net_buf_pool.static.*))); _net_buf_pool_list_end = .; } > RAM AT > FLASH
  net_if_area : ALIGN_WITH_INPUT { _net_if_list_start = .; KEEP(*(SORT_BY_NAME(._net_if.static.*))); _net_if_list_end = .; } > RAM AT > FLASH net_if_dev_area : ALIGN_WITH_INPUT { _net_if_dev_list_start = .; KEEP(*(SORT_BY_NAME(._net_if_dev.static.*))); _net_if_dev_list_end = .; } > RAM AT > FLASH net_l2_area : ALIGN_WITH_INPUT { _net_l2_list_start = .; KEEP(*(SORT_BY_NAME(._net_l2.static.*))); _net_l2_list_end = .; } > RAM AT > FLASH eth_bridge_area : ALIGN_WITH_INPUT { _eth_bridge_list_start = .; KEEP(*(SORT_BY_NAME(._eth_bridge.static.*))); _eth_bridge_list_end = .; } > RAM AT > FLASH
+wifi_nm_instance_area : ALIGN_WITH_INPUT { _wifi_nm_instance_list_start = .; KEEP(*(SORT_BY_NAME(._wifi_nm_instance.static.*))); _wifi_nm_instance_list_end = .; } > RAM AT > FLASH
     __data_region_end = .;
    bss (NOLOAD) : ALIGN_WITH_INPUT
  {
@@ -279,7 +273,7 @@ __ramfunc_load_start = LOADADDR(.ramfunc);
         *(".noinit.*")
  *(".kernel_noinit.*")
         } > RAM AT > RAM
-    __kernel_ram_end = 0x2000c568 + 0x33a98;
+    __kernel_ram_end = 0x20000000 + 0x40000;
     __kernel_ram_size = __kernel_ram_end - __kernel_ram_start;
 PROVIDE(soc_reset_hook = SystemInit);
 /DISCARD/ :

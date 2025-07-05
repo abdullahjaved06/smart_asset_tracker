@@ -64,12 +64,11 @@ zephyr/linker.cmd: \
   zephyr/include/generated/snippets-rom-sections.ld \
   /home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/linker/thread-local-storage.ld \
   zephyr/include/generated/snippets-rodata.ld \
-  /home/abdullah/ncs/v2.9.0/nrf/lib/nrf_modem_lib/cfun_hooks.ld \
-  /home/abdullah/ncs/v2.9.0/nrf/lib/nrf_modem_lib/nrf_modem_lib.ld \
   /home/abdullah/ncs/v2.9.0/zephyr/arch/arm/core/swi_tables.ld \
   /home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/linker/kobject-rom.ld \
   /home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/linker/cplusplus-rom.ld \
   zephyr/include/generated/snippets-ram-sections.ld \
+  /home/abdullah/ncs/v2.9.0/zephyr/modules/segger/segger_rtt.ld \
   /home/abdullah/ncs/v2.9.0/zephyr/arch/common/ramfunc.ld \
   zephyr/include/generated/snippets-ramfunc-section.ld \
   zephyr/include/generated/snippets-rwdata.ld \
@@ -77,6 +76,7 @@ zephyr/linker.cmd: \
   /home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/linker/kobject-data.ld \
   /home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/linker/cplusplus-ram.ld \
   zephyr/include/generated/snippets-data-sections.ld \
+  /home/abdullah/ncs/v2.9.0/zephyr/subsys/net/l2/wifi/wifi_nm.ld \
   zephyr/include/generated/snippets-noinit.ld \
   zephyr/include/generated/snippets-sections.ld \
   /home/abdullah/ncs/v2.9.0/zephyr/soc/nordic/common/arm_platform_init.ld \

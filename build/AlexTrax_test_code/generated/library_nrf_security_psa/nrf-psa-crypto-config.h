@@ -14,27 +14,27 @@
 #define PSA_WANT_AES_KEY_SIZE_128                          1
 #define PSA_WANT_AES_KEY_SIZE_192                          1
 #define PSA_WANT_AES_KEY_SIZE_256                          1
-/* #undef PSA_WANT_ALG_CBC_NO_PADDING */
-/* #undef PSA_WANT_ALG_CBC_PKCS7 */
-/* #undef PSA_WANT_ALG_CCM */
+#define PSA_WANT_ALG_CBC_NO_PADDING                        1
+#define PSA_WANT_ALG_CBC_PKCS7                             1
+#define PSA_WANT_ALG_CCM                                   1
 /* #undef PSA_WANT_ALG_CCM_STAR_NO_TAG */
-/* #undef PSA_WANT_ALG_CHACHA20_POLY1305 */
-/* #undef PSA_WANT_ALG_CMAC */
-/* #undef PSA_WANT_ALG_CTR */
+#define PSA_WANT_ALG_CHACHA20_POLY1305                     1
+#define PSA_WANT_ALG_CMAC                                  1
+#define PSA_WANT_ALG_CTR                                   1
 /* #undef PSA_WANT_ALG_CTR_DRBG */
-/* #undef PSA_WANT_ALG_DETERMINISTIC_ECDSA */
-/* #undef PSA_WANT_ALG_ECB_NO_PADDING */
-/* #undef PSA_WANT_ALG_ECDH */
-/* #undef PSA_WANT_ALG_ECDSA */
+#define PSA_WANT_ALG_DETERMINISTIC_ECDSA                   1
+#define PSA_WANT_ALG_ECB_NO_PADDING                        1
+#define PSA_WANT_ALG_ECDH                                  1
+#define PSA_WANT_ALG_ECDSA                                 1
 /* #undef PSA_WANT_ALG_ECDSA_ANY */
 /* #undef PSA_WANT_ALG_ED25519PH */
 /* #undef PSA_WANT_ALG_ED448PH */
-/* #undef PSA_WANT_ALG_GCM */
-/* #undef PSA_WANT_ALG_HKDF */
+#define PSA_WANT_ALG_GCM                                   1
+#define PSA_WANT_ALG_HKDF                                  1
 /* #undef PSA_WANT_ALG_HKDF_EXPAND */
 /* #undef PSA_WANT_ALG_HKDF_EXTRACT */
-/* #undef PSA_WANT_ALG_HMAC */
-#define PSA_WANT_ALG_HMAC_DRBG                             1
+#define PSA_WANT_ALG_HMAC                                  1
+/* #undef PSA_WANT_ALG_HMAC_DRBG */
 /* #undef PSA_WANT_ALG_JPAKE */
 /* #undef PSA_WANT_ALG_MD5 */
 /* #undef PSA_WANT_ALG_PBKDF2_AES_CMAC_PRF_128 */
@@ -50,11 +50,11 @@
 /* #undef PSA_WANT_ALG_SHA3_256 */
 /* #undef PSA_WANT_ALG_SHA3_384 */
 /* #undef PSA_WANT_ALG_SHA3_512 */
-/* #undef PSA_WANT_ALG_SHA_1 */
-/* #undef PSA_WANT_ALG_SHA_224 */
-/* #undef PSA_WANT_ALG_SHA_256 */
-/* #undef PSA_WANT_ALG_SHA_384 */
-/* #undef PSA_WANT_ALG_SHA_512 */
+#define PSA_WANT_ALG_SHA_1                                 1
+#define PSA_WANT_ALG_SHA_224                               1
+#define PSA_WANT_ALG_SHA_256                               1
+#define PSA_WANT_ALG_SHA_384                               1
+#define PSA_WANT_ALG_SHA_512                               1
 /* #undef PSA_WANT_ALG_SHA_512_224 */
 /* #undef PSA_WANT_ALG_SHA_512_256 */
 /* #undef PSA_WANT_ALG_SPAKE2P_CMAC */
@@ -62,10 +62,10 @@
 /* #undef PSA_WANT_ALG_SPAKE2P_MATTER */
 /* #undef PSA_WANT_ALG_SRP_6 */
 /* #undef PSA_WANT_ALG_SRP_PASSWORD_HASH */
-/* #undef PSA_WANT_ALG_STREAM_CIPHER */
-/* #undef PSA_WANT_ALG_TLS12_ECJPAKE_TO_PMS */
-/* #undef PSA_WANT_ALG_TLS12_PRF */
-/* #undef PSA_WANT_ALG_TLS12_PSK_TO_MS */
+#define PSA_WANT_ALG_STREAM_CIPHER                         1
+#define PSA_WANT_ALG_TLS12_ECJPAKE_TO_PMS                  1
+#define PSA_WANT_ALG_TLS12_PRF                             1
+#define PSA_WANT_ALG_TLS12_PSK_TO_MS                       1
 /* #undef PSA_WANT_ALG_XTS */
 /* #undef PSA_WANT_ECC_BRAINPOOL_P_R1_160 */
 /* #undef PSA_WANT_ECC_BRAINPOOL_P_R1_192 */
@@ -82,7 +82,7 @@
 /* #undef PSA_WANT_ECC_SECP_K1_256 */
 /* #undef PSA_WANT_ECC_SECP_R1_192 */
 /* #undef PSA_WANT_ECC_SECP_R1_224 */
-/* #undef PSA_WANT_ECC_SECP_R1_256 */
+#define PSA_WANT_ECC_SECP_R1_256                           1
 /* #undef PSA_WANT_ECC_SECP_R1_384 */
 /* #undef PSA_WANT_ECC_SECP_R1_521 */
 /* #undef PSA_WANT_ECC_SECP_R2_160 */
@@ -100,16 +100,16 @@
 /* #undef PSA_WANT_ECC_SECT_R2_163 */
 /* #undef PSA_WANT_ECC_TWISTED_EDWARDS_255 */
 /* #undef PSA_WANT_ECC_TWISTED_EDWARDS_448 */
-#define PSA_WANT_GENERATE_RANDOM                           1
-/* #undef PSA_WANT_KEY_TYPE_AES */
-/* #undef PSA_WANT_KEY_TYPE_CHACHA20 */
+/* #undef PSA_WANT_GENERATE_RANDOM */
+#define PSA_WANT_KEY_TYPE_AES                              1
+#define PSA_WANT_KEY_TYPE_CHACHA20                         1
 /* #undef PSA_WANT_KEY_TYPE_DERIVE */
-/* #undef PSA_WANT_KEY_TYPE_ECC_KEY_PAIR_BASIC */
-/* #undef PSA_WANT_KEY_TYPE_ECC_KEY_PAIR_DERIVE */
-/* #undef PSA_WANT_KEY_TYPE_ECC_KEY_PAIR_EXPORT */
-/* #undef PSA_WANT_KEY_TYPE_ECC_KEY_PAIR_GENERATE */
-/* #undef PSA_WANT_KEY_TYPE_ECC_KEY_PAIR_IMPORT */
-/* #undef PSA_WANT_KEY_TYPE_ECC_PUBLIC_KEY */
+#define PSA_WANT_KEY_TYPE_ECC_KEY_PAIR_BASIC               1
+#define PSA_WANT_KEY_TYPE_ECC_KEY_PAIR_DERIVE              1
+#define PSA_WANT_KEY_TYPE_ECC_KEY_PAIR_EXPORT              1
+#define PSA_WANT_KEY_TYPE_ECC_KEY_PAIR_GENERATE            1
+#define PSA_WANT_KEY_TYPE_ECC_KEY_PAIR_IMPORT              1
+#define PSA_WANT_KEY_TYPE_ECC_PUBLIC_KEY                   1
 /* #undef PSA_WANT_KEY_TYPE_HMAC */
 /* #undef PSA_WANT_KEY_TYPE_PASSWORD */
 /* #undef PSA_WANT_KEY_TYPE_PASSWORD_HASH */

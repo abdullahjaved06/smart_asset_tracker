@@ -1,7 +1,7 @@
 # 0 "/home/abdullah/ncs/v2.9.0/zephyr/misc/empty_file.c"
 # 0 "<built-in>"
 # 0 "<command-line>"
-# 1 "/home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk/nrf9151dk_nrf9151_ns.dts" 1
+# 1 "/home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk/nrf9151dk_nrf9151.dts" 1
 
 
 
@@ -9,7 +9,7 @@
 
 
 /dts-v1/;
-# 1 "/home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf9151ns_laca.dtsi" 1 3 4
+# 1 "/home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf9151_laca.dtsi" 1 3 4
 
 
 
@@ -17,8 +17,8 @@
 
 
 # 1 "/home/abdullah/ncs/v2.9.0/zephyr/dts/common/mem.h" 1 3 4
-# 8 "/home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf9151ns_laca.dtsi" 2 3 4
-# 1 "/home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf91ns.dtsi" 1 3 4
+# 8 "/home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf9151_laca.dtsi" 2 3 4
+# 1 "/home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf91.dtsi" 1 3 4
 
 
 
@@ -60,7 +60,7 @@
   };
  };
 };
-# 8 "/home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf91ns.dtsi" 2 3 4
+# 8 "/home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf91.dtsi" 2 3 4
 # 1 "/home/abdullah/ncs/v2.9.0/zephyr/dts/common/nordic/nrf_common.dtsi" 1 3 4
 
 
@@ -137,12 +137,12 @@
   #pwm-cells = <3>;
  };
 };
-# 9 "/home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf91ns.dtsi" 2 3 4
+# 9 "/home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf91.dtsi" 2 3 4
 # 1 "/home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/dt-bindings/adc/nrf-saadc-v2.h" 1 3 4
 # 10 "/home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/dt-bindings/adc/nrf-saadc-v2.h" 3 4
 # 1 "/home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/dt-bindings/adc/nrf-saadc.h" 1 3 4
 # 11 "/home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/dt-bindings/adc/nrf-saadc-v2.h" 2 3 4
-# 10 "/home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf91ns.dtsi" 2 3 4
+# 10 "/home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf91.dtsi" 2 3 4
 
 / {
  cpus {
@@ -164,7 +164,7 @@
  };
 
  chosen {
-  zephyr,entropy = &psa_rng;
+  zephyr,entropy = &cryptocell;
   zephyr,flash-controller = &flash_controller;
  };
 
@@ -173,10 +173,10 @@
    compatible = "mmio-sram";
   };
 
-  peripheral@40000000 {
+  peripheral@50000000 {
    #address-cells = <1>;
    #size-cells = <1>;
-   ranges = <0x0 0x40000000 0x10000000>;
+   ranges = <0x0 0x50000000 0x10000000>;
 
 
 # 1 "/home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf91_peripherals.dtsi" 1 3 4
@@ -587,7 +587,22 @@ timer2: timer@11000 {
  interrupts = <17 1>;
  prescaler = <0>;
 };
-# 47 "/home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf91ns.dtsi" 2 3 4
+# 47 "/home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf91.dtsi" 2 3 4
+  };
+
+
+  cryptocell: crypto@50840000 {
+   compatible = "nordic,cryptocell", "arm,cryptocell-310";
+   reg = <0x50840000 0x1000>, <0x50841000 0x1000>;
+   reg-names = "wrapper", "core";
+   interrupts = <64 1>;
+   status = "okay";
+  };
+
+  ctrlap: ctrlap@50006000 {
+   compatible = "nordic,nrf-ctrlapperi";
+   reg = <0x50006000 0x1000>;
+   status = "okay";
   };
 
 
@@ -595,18 +610,42 @@ timer2: timer@11000 {
 
 
 
-  gpiote: gpiote1: gpiote@40031000 {
+   gpiote: gpiote0: gpiote@5000d000 {
+   compatible = "nordic,nrf-gpiote";
+   reg = <0x5000d000 0x1000>;
+   interrupts = <13 5>;
+   status = "disabled";
+   instance = <0>;
+  };
+
+
+  gpiote1: gpiote@40031000 {
    compatible = "nordic,nrf-gpiote";
    reg = <0x40031000 0x1000>;
    interrupts = <49 5>;
    status = "disabled";
    instance = <1>;
   };
- };
 
- psa_rng: psa-rng {
-  compatible = "zephyr,psa-crypto-rng";
-  status = "okay";
+  spu: spu@50003000 {
+   compatible = "nordic,nrf-spu";
+   reg = <0x50003000 0x1000>;
+   interrupts = <3 1>;
+   status = "okay";
+  };
+
+  ficr: ficr@ff0000 {
+   compatible = "nordic,nrf-ficr";
+   reg = <0xff0000 0x1000>;
+   #nordic,ficr-cells = <1>;
+   status = "okay";
+  };
+
+  uicr: uicr@ff8000 {
+   compatible = "nordic,nrf-uicr";
+   reg = <0xff8000 0x1000>;
+   status = "okay";
+  };
  };
 };
 
@@ -618,7 +657,7 @@ timer2: timer@11000 {
 
  status = "disabled";
 };
-# 9 "/home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf9151ns_laca.dtsi" 2 3 4
+# 9 "/home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf9151_laca.dtsi" 2 3 4
 
 &flash0 {
  reg = <0x00000000 ((1024) * 1024)>;
@@ -634,7 +673,7 @@ timer2: timer@11000 {
         "nordic,nrf91", "simple-bus";
  };
 };
-# 9 "/home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk/nrf9151dk_nrf9151_ns.dts" 2
+# 9 "/home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk/nrf9151dk_nrf9151.dts" 2
 # 1 "/home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk/nrf9151dk_nrf9151_common.dtsi" 1
 
 
@@ -1026,32 +1065,29 @@ arduino_spi: &spi3 {
  };
 };
 # 218 "/home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk/nrf9151dk_nrf9151_common.dtsi" 2
-# 10 "/home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk/nrf9151dk_nrf9151_ns.dts" 2
+# 10 "/home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk/nrf9151dk_nrf9151.dts" 2
 
 / {
  chosen {
+  zephyr,sram = &sram0_s;
   zephyr,flash = &flash0;
-  zephyr,sram = &sram0_ns_app;
-  zephyr,code-partition = &slot0_ns_partition;
+  zephyr,code-partition = &slot0_partition;
+  zephyr,sram-secure-partition = &sram0_s;
+  zephyr,sram-non-secure-partition = &sram0_ns;
  };
 };
-
-
-&uart1 {
- status = "disabled";
-};
 # 0 "<command-line>" 2
-# 1 "/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/boards/nrf9151dk_nrf9151_ns.overlay" 1
+# 1 "/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/boards/nrf9151dk_nrf9151.overlay" 1
 # 1 "/home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/dt-bindings/mipi_dbi/mipi_dbi.h" 1 3 4
-# 2 "/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/boards/nrf9151dk_nrf9151_ns.overlay" 2
+# 2 "/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/boards/nrf9151dk_nrf9151.overlay" 2
 # 1 "/home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/dt-bindings/display/ili9xxx.h" 1 3 4
-# 3 "/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/boards/nrf9151dk_nrf9151_ns.overlay" 2
+# 3 "/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/boards/nrf9151dk_nrf9151.overlay" 2
 
 
 / {
     chosen {
         zephyr,display = &ili9341;
-
+        zephyr,wifi = &wlan0;
     };
 
     aliases {
@@ -1130,7 +1166,41 @@ arduino_spi: &spi3 {
     pinctrl-0 = <&spi3_default>;
     pinctrl-1 = <&spi3_sleep>;
     pinctrl-names = "default", "sleep";
-# 122 "/home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/boards/nrf9151dk_nrf9151_ns.overlay"
+
+
+   nrf70: nrf7002-spi@0 {
+        compatible = "nordic,nrf7002-spi";
+  status = "okay";
+  reg = <0>;
+  spi-max-frequency = <((8) * 1000 * 1000)>;
+
+
+        iovdd-ctrl-gpios = <&gpio0 5 (1 << 5)>;
+        bucken-gpios = <&gpio0 6 ((0 << 0) | (1 << 5))>;
+        host-irq-gpios = <&gpio0 8 (0 << 0)>;
+
+
+
+
+        wifi-max-tx-pwr-2g-dsss = <21>;
+        wifi-max-tx-pwr-2g-mcs0 = <16>;
+        wifi-max-tx-pwr-2g-mcs7 = <16>;
+
+
+        wlan0: wlan0 {
+            compatible = "nordic,wlan";
+        };
+
+  wifi-max-tx-pwr-5g-low-mcs0 = <13>;
+        wifi-max-tx-pwr-5g-low-mcs7 = <13>;
+        wifi-max-tx-pwr-5g-mid-mcs0 = <13>;
+        wifi-max-tx-pwr-5g-mid-mcs7 = <13>;
+        wifi-max-tx-pwr-5g-high-mcs0 = <12>;
+        wifi-max-tx-pwr-5g-high-mcs7 = <12>;
+ };
+
+
+
     mx25r16: mx25r16@2 {
         compatible = "jedec,spi-nor";
         reg = <2>;
@@ -1146,7 +1216,7 @@ arduino_spi: &spi3 {
 
 
 
-&i2c0 {
+&i2c1 {
     status = "okay";
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
@@ -1204,11 +1274,35 @@ arduino_spi: &spi3 {
 };
 
 &uart0 {
-    status = "disabled";
+    status = "okay";
 };
 
 &spi0 {
     status = "disabled";
+};
+
+&spi1{
+    status = "disabled";
+};
+
+&uart1{
+    status="disabled";
+};
+
+/ {
+ vbat:vbatt {
+  compatible = "voltage-divider";
+  io-channels = <&adc 4>;
+  output-ohms = <100000>;
+  full-ohms = <(100000 + 100000)>;
+  power-gpios = <&gpio0 18 (0 << 0)>;
+ };
+ vin:vin {
+  compatible = "voltage-divider";
+  io-channels = <&adc 6>;
+  output-ohms = <12000>;
+  full-ohms = <(100000 + 12000)>;
+ };
 };
 # 0 "<command-line>" 2
 # 1 "/home/abdullah/ncs/v2.9.0/zephyr/misc/empty_file.c"

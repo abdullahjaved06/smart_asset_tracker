@@ -1,8 +1,8 @@
 empty_file.o: /home/abdullah/ncs/v2.9.0/zephyr/misc/empty_file.c \
- /home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk/nrf9151dk_nrf9151_ns.dts \
- /home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf9151ns_laca.dtsi \
+ /home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk/nrf9151dk_nrf9151.dts \
+ /home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf9151_laca.dtsi \
  /home/abdullah/ncs/v2.9.0/zephyr/dts/common/mem.h \
- /home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf91ns.dtsi \
+ /home/abdullah/ncs/v2.9.0/zephyr/dts/arm/nordic/nrf91.dtsi \
  /home/abdullah/ncs/v2.9.0/zephyr/dts/arm/armv8-m.dtsi \
  /home/abdullah/ncs/v2.9.0/zephyr/dts/common/skeleton.dtsi \
  /home/abdullah/ncs/v2.9.0/zephyr/dts/common/nordic/nrf_common.dtsi \
@@ -29,6 +29,6 @@ empty_file.o: /home/abdullah/ncs/v2.9.0/zephyr/misc/empty_file.c \
  /home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk/nrf9151dk_nrf9151_common.dtsi \
  /home/abdullah/ncs/v2.9.0/zephyr/boards/nordic/nrf9151dk/nrf9151dk_nrf9151_common-pinctrl.dtsi \
  /home/abdullah/ncs/v2.9.0/zephyr/dts/common/nordic/nrf91xx_partition.dtsi \
- /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/boards/nrf9151dk_nrf9151_ns.overlay \
+ /home/abdullah/Abdullah/Projects/projects/Alertrax_Tracker_Project/Firmware/AlexTrax_test_code/boards/nrf9151dk_nrf9151.overlay \
  /home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/dt-bindings/mipi_dbi/mipi_dbi.h \
  /home/abdullah/ncs/v2.9.0/zephyr/include/zephyr/dt-bindings/display/ili9xxx.h
