@@ -2,6 +2,7 @@
 #include <zephyr/device.h>
 #include <zephyr/devicetree.h>
 #include <math.h> 
+#include <stdio.h>
 
 #include "../components/ILI9341_display/ili9341_display.h"
 #include "../components/lis2dh/lis2dh.h"
@@ -12,22 +13,33 @@
 
 #include <zephyr/logging/log.h>
 
-LOG_MODULE_REGISTER(Alertrax);
-
-
+LOG_MODULE_REGISTER(AlertraxTestFirmware);
 
 void main(void)
 {
-    double temp = tempC();
-    double hum = getHumidity();
+    ili9341_display_init();  // Initialize display and styles
+    display_text_at("Test Firmware v1.0", 10, 10);
 
-    if (!isnan(temp) && !isnan(hum)) {
+    // Sensor Read
+    bool sht4x_ok = initTemp();
+    double temp = tempC();
+    double hum  = getHumidity();
+
+    char buffer[64];
+
+    if (sht4x_ok && !isnan(temp) && !isnan(hum)) {
         printk("Temperature: %.2f C\n", temp);
         printk("Humidity: %.2f %%\n", hum);
+
+        display_text_at("SHT4X: OK", 10, 50);
+
+        snprintf(buffer, sizeof(buffer), "Temp: %.2f C", temp);
+        display_text_at(buffer, 10, 90);
+
+        snprintf(buffer, sizeof(buffer), "Humidity: %.2f %%", hum);
+        display_text_at(buffer, 10, 130);
     } else {
         printk("SHT4X read failed!\n");
+        display_text_at("SHT4X: FAIL", 10, 50);
     }
 }
-
-
- 
