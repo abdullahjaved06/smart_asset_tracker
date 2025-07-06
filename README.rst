@@ -55,3 +55,14 @@ CONFIG_LV_USE_BTN=y
 CONFIG_LV_FONT_MONTSERRAT_14=y
 CONFIG_USE_SEGGER_RTT=y
 CONFIG_SHELL=y
+
+
+#Important Note:
+Wifi driver takes 177KB of RAM.
+LVGL dirver consumes 77KB of RAM, but if used with minimum settigns and configrations, it consumes less RAM upto 35KB.
+CONFIG_LV_Z_MEM_POOL_SIZE=8384
+CONFIG_LV_Z_BITS_PER_PIXEL=1
+
+
+If build with TFM, it takes 32KB of RAM.
+so total RAM of nrf9151 is 256KB, so you must build this firmware without tfm (build = nrf9151dk_nrf9151)

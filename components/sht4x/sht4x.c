@@ -26,13 +26,17 @@ K_MUTEX_DEFINE(tempMutex);
 
 int initTemp()
 {
-	if (!device_is_ready(tempDev)) {
-		LOG_ERR("Could not get %s device\n", tempDev->name);
-	} else
-		LOG_INF("Bound %s device\n", tempDev->name);
+	bool ready = device_is_ready(tempDev);
 
-	return (tempDev != NULL);
+	if (!ready) {
+		LOG_ERR("Could not get %s device\n", tempDev ? tempDev->name : "NULL");
+	} else {
+		LOG_INF("Bound %s device\n", tempDev->name);
+	}
+
+	return ready;
 }
+
 
 SYS_INIT(initTemp, APPLICATION, CONFIG_APPLICATION_INIT_PRIORITY);
 
@@ -45,29 +49,32 @@ double tempC()
 	rc = sensor_sample_fetch(tempDev);
 	if (rc != 0) {
 		LOG_DBG("sensor_sample_fetch error: %d\n", rc);
-		return -99;
+		k_mutex_unlock(&tempMutex);
+		return NAN;
 	}
 
 	rc = sensor_channel_get(tempDev, SENSOR_CHAN_AMBIENT_TEMP, &temp);
 	if (rc != 0) {
 		LOG_DBG("sensor_channel_get error: %d\n", rc);
-		return -99;
+		k_mutex_unlock(&tempMutex);
+		return NAN;
 	}
 
-	// printf("%g C\n", sensor_value_to_double(&temp));
 	k_mutex_unlock(&tempMutex);
 	return sensor_value_to_double(&temp);
 }
+
 
 double tempF()
 {
 	double temp = tempC();
 
-	if (temp != -99.0)
+	if (!isnan(temp))
 		temp = temp * 1.8 + 32.0;
 
 	return temp;
 }
+
 
 double getHumidity()
 {
@@ -78,16 +85,17 @@ double getHumidity()
 	rc = sensor_sample_fetch(tempDev);
 	if (rc != 0) {
 		LOG_DBG("sensor_sample_fetch error: %d\n", rc);
-		return -99;
+		k_mutex_unlock(&tempMutex);
+		return NAN;
 	}
 
 	rc = sensor_channel_get(tempDev, SENSOR_CHAN_HUMIDITY, &humidity);
 	if (rc != 0) {
 		LOG_DBG("sensor_channel_get error: %d\n", rc);
-		return -99;
+		k_mutex_unlock(&tempMutex);
+		return NAN;
 	}
 
-	// printf("%g C\n", sensor_value_to_double(&temp));
 	k_mutex_unlock(&tempMutex);
 	return sensor_value_to_double(&humidity);
 }

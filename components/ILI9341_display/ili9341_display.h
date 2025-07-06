@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-// void ili9341_display_init(void);
+void ili9341_display_init(void);
 
 #ifdef __cplusplus
 }
