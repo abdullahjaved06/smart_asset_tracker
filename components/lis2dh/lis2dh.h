@@ -20,4 +20,7 @@ bool readMotionData(double *x, double *y, double *z, double *g);
 int accel_data();
 void motion_data(const struct device *dev);
 
+bool lis2dh_available(void);
+
+
 #endif

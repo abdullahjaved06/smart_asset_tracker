@@ -76,4 +76,13 @@ void main(void)
         display_text_at("VBAT: FAIL", 10, 210);
         printk("VBAT: Read failed\n");
     }
+
+    if (lis2dh_available()) {
+    display_text_at("LIS2DH: OK", 10, 250);
+    printk("LIS2DH: OK\n");
+} else {
+    display_text_at("LIS2DH: FAIL", 10, 250);
+    printk("LIS2DH: FAIL\n");
+}
+
 }

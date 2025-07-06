@@ -298,3 +298,26 @@ void motion_data(const struct device *dev)
 	// k_sleep(K_MSEC(500));
 	// setRedLED(false);
 }
+
+bool lis2dh_available(void)
+{
+    if (!device_is_ready(devMotion)) {
+        LOG_ERR("LIS2DH device not ready");
+        return false;
+    }
+
+    struct sensor_value dummy[3];
+    int rc = sensor_sample_fetch(devMotion);
+    if (rc != 0) {
+        LOG_ERR("LIS2DH sensor fetch failed: %d", rc);
+        return false;
+    }
+
+    rc = sensor_channel_get(devMotion, SENSOR_CHAN_ACCEL_XYZ, dummy);
+    if (rc != 0) {
+        LOG_ERR("LIS2DH sensor get failed: %d", rc);
+        return false;
+    }
+
+    return true;
+}
