@@ -1,7 +1,7 @@
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/devicetree.h>
-#include <math.h> 
+#include <math.h>
 #include <stdio.h>
 
 #include "../components/ILI9341_display/ili9341_display.h"
@@ -17,17 +17,18 @@ LOG_MODULE_REGISTER(AlertraxTestFirmware);
 
 void main(void)
 {
-    ili9341_display_init();  // Initialize display and styles
+    ili9341_display_init(); // Initialize display and styles
     display_text_at("Test Firmware v1.0", 10, 10);
 
     // Sensor Read
     bool sht4x_ok = initTemp();
     double temp = tempC();
-    double hum  = getHumidity();
+    double hum = getHumidity();
 
     char buffer[64];
 
-    if (sht4x_ok && !isnan(temp) && !isnan(hum)) {
+    if (sht4x_ok && !isnan(temp) && !isnan(hum))
+    {
         printk("Temperature: %.2f C\n", temp);
         printk("Humidity: %.2f %%\n", hum);
 
@@ -38,8 +39,41 @@ void main(void)
 
         snprintf(buffer, sizeof(buffer), "Humidity: %.2f %%", hum);
         display_text_at(buffer, 10, 130);
-    } else {
+    }
+    else
+    {
         printk("SHT4X read failed!\n");
         display_text_at("SHT4X: FAIL", 10, 50);
+    }
+
+    double vin = get_vin_voltage();
+    double vbat = get_vbat_voltage();
+
+    char buf[32];
+
+    // --- VIN ---
+    if (!isnan(vin))
+    {
+        snprintf(buf, sizeof(buf), "VIN: %.2f V", vin);
+        display_text_at(buf, 10, 170);
+        printk("%s\n", buf);
+    }
+    else
+    {
+        display_text_at("VIN: FAIL", 10, 170);
+        printk("VIN: Read failed\n");
+    }
+
+    // --- VBAT ---
+    if (!isnan(vbat))
+    {
+        snprintf(buf, sizeof(buf), "VBAT: %.2f V", vbat);
+        display_text_at(buf, 10, 210);
+        printk("%s\n", buf);
+    }
+    else
+    {
+        display_text_at("VBAT: FAIL", 10, 210);
+        printk("VBAT: Read failed\n");
     }
 }

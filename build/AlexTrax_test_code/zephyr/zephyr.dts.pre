@@ -1092,7 +1092,7 @@ arduino_spi: &spi3 {
 
     aliases {
 
-         lis2dh = &lis2dh12;
+        lis2dh = &lis2dh12;
     };
 
     CUSTOM_PINS_PCB {
@@ -1126,30 +1126,26 @@ arduino_spi: &spi3 {
             height = <320>;
             rotation = <0>;
 
-            ifmode = [40];
-            ifctl = [01 00 00];
-            pwctrla = [39 2c 00 34 02];
-            pwctrlb = [00 8b 30];
-            pwseqctrl = [55 01 23 01];
-            timctrla = [84 11 7a];
-            timctrlb = [00 00];
-            pumpratioctrl = [10];
-            enable3g = [02];
-            etmod = [06];
-            gamset = [01];
-            frmctr1 = [00 1b];
-            disctrl = [0a 82 27 04];
-            pwctrl1 = [21];
-            pwctrl2 = [10];
-            vmctrl1 = [31 3c];
-            vmctrl2 = [c0];
+            ifmode = [ 40 ];
+            ifctl = [ 01 00 00 ];
+            pwctrla = [ 39 2c 00 34 02 ];
+            pwctrlb = [ 00 8b 30 ];
+            pwseqctrl = [ 55 01 23 01 ];
+            timctrla = [ 84 11 7a ];
+            timctrlb = [ 00 00 ];
+            pumpratioctrl = [ 10 ];
+            enable3g = [ 02 ];
+            etmod = [ 06 ];
+            gamset = [ 01 ];
+            frmctr1 = [ 00 1b ];
+            disctrl = [ 0a 82 27 04 ];
+            pwctrl1 = [ 21 ];
+            pwctrl2 = [ 10 ];
+            vmctrl1 = [ 31 3c ];
+            vmctrl2 = [ c0 ];
 
-            pgamctrl = [
-                0f 22 1f 0a 0e 06 4d 76 3b 03 0e 04 13 0e 0c
-            ];
-            ngamctrl = [
-                0c 23 26 04 10 04 39 24 4b 03 0b 0b 33 37 0f
-            ];
+            pgamctrl = [ 0f 22 1f 0a 0e 06 4d 76 3b 03 0e 04 13 0e 0c ];
+            ngamctrl = [ 0c 23 26 04 10 04 39 24 4b 03 0b 0b 33 37 0f ];
 
             status = "okay";
         };
@@ -1160,19 +1156,19 @@ arduino_spi: &spi3 {
     status = "okay";
 
     cs-gpios = <&gpio0 22 (1 << 0)>,
-               <&gpio0 1 (1 << 0)>,
-               <&gpio0 0 (1 << 0)>;
+    <&gpio0 1 (1 << 0)>,
+    <&gpio0 0 (1 << 0)>;
 
     pinctrl-0 = <&spi3_default>;
     pinctrl-1 = <&spi3_sleep>;
     pinctrl-names = "default", "sleep";
 
 
-   nrf70: nrf7002-spi@0 {
+    nrf70: nrf7002-spi@0 {
         compatible = "nordic,nrf7002-spi";
-  status = "okay";
-  reg = <0>;
-  spi-max-frequency = <((8) * 1000 * 1000)>;
+        status = "okay";
+        reg = <0>;
+        spi-max-frequency = <((8) * 1000 * 1000)>;
 
 
         iovdd-ctrl-gpios = <&gpio0 5 (1 << 5)>;
@@ -1191,13 +1187,13 @@ arduino_spi: &spi3 {
             compatible = "nordic,wlan";
         };
 
-  wifi-max-tx-pwr-5g-low-mcs0 = <13>;
+        wifi-max-tx-pwr-5g-low-mcs0 = <13>;
         wifi-max-tx-pwr-5g-low-mcs7 = <13>;
         wifi-max-tx-pwr-5g-mid-mcs0 = <13>;
         wifi-max-tx-pwr-5g-mid-mcs7 = <13>;
         wifi-max-tx-pwr-5g-high-mcs0 = <12>;
         wifi-max-tx-pwr-5g-high-mcs7 = <12>;
- };
+    };
 
 
 
@@ -1206,7 +1202,7 @@ arduino_spi: &spi3 {
         reg = <2>;
         spi-max-frequency = <80000000>;
         label = "MX25R16";
-        jedec-id = [c2 28 15];
+        jedec-id = [ c2 28 15 ];
         size = <0x1000000>;
         has-dpd;
         t-enter-dpd = <10000>;
@@ -1230,8 +1226,8 @@ arduino_spi: &spi3 {
         irq-gpios = <&gpio0 6 (1 << 0)>, <&gpio0 7 (1 << 0)>;
 
     };
-      sht4x: sht4x@44 {
-        compatible="sensirion,sht4x";
+    sht4x: sht4x@44 {
+        compatible = "sensirion,sht4x";
         repeatability = <0>;
         reg = <0x44>;
         label = "SHT4X";
@@ -1255,7 +1251,7 @@ arduino_spi: &spi3 {
         };
     };
 
-     spi3_default: spi3_default {
+    spi3_default: spi3_default {
         group1 {
             psels = <((((((0) * 32U) + (20)) & 0x1FFU) << 0U) | ((4U & 0xFFU) << 24U))>,
                     <((((((0) * 32U) + (3)) & 0x1FFU) << 0U) | ((5U & 0xFFU) << 24U))>,
@@ -1281,28 +1277,28 @@ arduino_spi: &spi3 {
     status = "disabled";
 };
 
-&spi1{
+&spi1 {
     status = "disabled";
 };
 
-&uart1{
-    status="disabled";
+&uart1 {
+    status = "disabled";
 };
 
 / {
- vbat:vbatt {
-  compatible = "voltage-divider";
-  io-channels = <&adc 4>;
-  output-ohms = <100000>;
-  full-ohms = <(100000 + 100000)>;
-  power-gpios = <&gpio0 18 (0 << 0)>;
- };
- vin:vin {
-  compatible = "voltage-divider";
-  io-channels = <&adc 6>;
-  output-ohms = <12000>;
-  full-ohms = <(100000 + 12000)>;
- };
+    vbat: vbatt {
+        compatible = "voltage-divider";
+        io-channels = <&adc 4>;
+        output-ohms = <100000>;
+        full-ohms = <200000>;
+        power-gpios = <&gpio0 18 (0 << 0)>;
+    };
+    vin: vin {
+        compatible = "voltage-divider";
+        io-channels = <&adc 6>;
+        output-ohms = <12000>;
+        full-ohms = <112000>;
+    };
 };
 # 0 "<command-line>" 2
 # 1 "/home/abdullah/ncs/v2.9.0/zephyr/misc/empty_file.c"
