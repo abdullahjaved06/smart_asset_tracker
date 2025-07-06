@@ -40,4 +40,7 @@ int cloudDataFileWrite(const void *src, uint32_t len, uint32_t offset);
 int cloudDataFileRead(void *dst, uint32_t len, uint32_t offset);
 void cloudDataFileDelete(void);
 
+bool external_flash_available(void);
+
+
 #endif

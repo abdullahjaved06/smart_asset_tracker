@@ -77,12 +77,24 @@ void main(void)
         printk("VBAT: Read failed\n");
     }
 
-    if (lis2dh_available()) {
-    display_text_at("LIS2DH: OK", 10, 250);
-    printk("LIS2DH: OK\n");
-} else {
-    display_text_at("LIS2DH: FAIL", 10, 250);
-    printk("LIS2DH: FAIL\n");
-}
-
+    if (lis2dh_available())
+    {
+        display_text_at("LIS2DH: OK", 10, 250);
+        printk("LIS2DH: OK\n");
+    }
+    else
+    {
+        display_text_at("LIS2DH: FAIL", 10, 250);
+        printk("LIS2DH: FAIL\n");
+    }
+    if (external_flash_available())
+    {
+        display_text_at("FLASH: OK", 10, 290);
+        printk("FLASH: OK\n");
+    }
+    else
+    {
+        display_text_at("FLASH: FAIL", 10, 290);
+        printk("FLASH: FAIL\n");
+    }
 }

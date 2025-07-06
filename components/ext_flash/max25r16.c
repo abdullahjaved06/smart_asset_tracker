@@ -567,3 +567,33 @@ void cloudDataFileDelete(void)
 	}
 	suspendFlash();
 }
+
+bool external_flash_available(void)
+{
+    if (!device_is_ready(flash_dev)) {
+        LOG_ERR("Flash device not ready");
+        return false;
+    }
+
+    resumeFlash();
+
+    int rc = fs_mount(logMP);
+    if (rc < 0) {
+        LOG_ERR("Flash mount failed: %d", rc);
+        suspendFlash();
+        return false;
+    }
+
+    struct fs_dirent dummy;
+    rc = fs_stat(LOG_FILENAME_PATH, &dummy);
+
+    fs_unmount(logMP);
+    suspendFlash();
+
+    if (rc == 0) {
+        return true;
+    } else {
+        LOG_ERR("Flash stat failed: %d", rc);
+        return false;
+    }
+}
