@@ -10,7 +10,7 @@
 
     aliases {
         // wifi0 = &nrf700x;
-         lis2dh = &lis2dh12; 
+        lis2dh = &lis2dh12;
     };
 
     CUSTOM_PINS_PCB {
@@ -22,9 +22,9 @@
         };
     };
     // nordic_wlan0: nordic_wlan0 {
-	// 	compatible = "nordic,wlan0";
-	// 	status = "okay";
-	// };
+        //     compatible = "nordic,wlan0";
+        //     status = "okay";
+    // };
 
     mipi_dbi {
         compatible = "zephyr,mipi-dbi-spi";
@@ -44,30 +44,26 @@
             height = <320>;
             rotation = <0>;
 
-            ifmode = [40];
-            ifctl = [01 00 00];
-            pwctrla = [39 2c 00 34 02];
-            pwctrlb = [00 8b 30];
-            pwseqctrl = [55 01 23 01];
-            timctrla = [84 11 7a];
-            timctrlb = [00 00];
-            pumpratioctrl = [10];
-            enable3g = [02];
-            etmod = [06];
-            gamset = [01];
-            frmctr1 = [00 1b];
-            disctrl = [0a 82 27 04];
-            pwctrl1 = [21];
-            pwctrl2 = [10];
-            vmctrl1 = [31 3c];
-            vmctrl2 = [c0];
+            ifmode = [ 40  ];
+            ifctl = [ 01 00 00  ];
+            pwctrla = [ 39 2c 00 34 02  ];
+            pwctrlb = [ 00 8b 30  ];
+            pwseqctrl = [ 55 01 23 01  ];
+            timctrla = [ 84 11 7a  ];
+            timctrlb = [ 00 00  ];
+            pumpratioctrl = [ 10  ];
+            enable3g = [ 02  ];
+            etmod = [ 06  ];
+            gamset = [ 01  ];
+            frmctr1 = [ 00 1b  ];
+            disctrl = [ 0a 82 27 04  ];
+            pwctrl1 = [ 21  ];
+            pwctrl2 = [ 10  ];
+            vmctrl1 = [ 31 3c  ];
+            vmctrl2 = [ c0  ];
 
-            pgamctrl = [
-                0f 22 1f 0a 0e 06 4d 76 3b 03 0e 04 13 0e 0c
-            ];
-            ngamctrl = [
-                0c 23 26 04 10 04 39 24 4b 03 0b 0b 33 37 0f
-            ];
+            pgamctrl = [ 0f 22 1f 0a 0e 06 4d 76 3b 03 0e 04 13 0e 0c  ];
+            ngamctrl = [ 0c 23 26 04 10 04 39 24 4b 03 0b 0b 33 37 0f  ];
 
             status = "okay";
         };
@@ -78,21 +74,21 @@
     status = "okay";
 
     cs-gpios = <&gpio0 22 GPIO_ACTIVE_LOW>,   // CS0: Display
-               <&gpio0 1 GPIO_ACTIVE_LOW>,    // CS1: nRF7002
-               <&gpio0 0 GPIO_ACTIVE_LOW>;    // CS2: Flash
+    <&gpio0 1 GPIO_ACTIVE_LOW>,    // CS1: nRF7002
+    <&gpio0 0 GPIO_ACTIVE_LOW>;    // CS2: Flash
 
     pinctrl-0 = <&spi3_default>;
     pinctrl-1 = <&spi3_sleep>;
     pinctrl-names = "default", "sleep";
 
-//     /* nRF7002 Wi-Fi */
-   nrf70: nrf7002-spi@0 {
+    //     /* nRF7002 Wi-Fi */
+    nrf70: nrf7002-spi@0 {
         compatible = "nordic,nrf7002-spi";
-		status = "okay";
-		reg = <0>;
-		spi-max-frequency = <DT_FREQ_M(8)>;
+        status = "okay";
+        reg = <0>;
+        spi-max-frequency = <DT_FREQ_M(8)>;
 
-		// Pin assignments for nrf7002 chip
+        // Pin assignments for nrf7002 chip
         iovdd-ctrl-gpios = <&gpio0 5 GPIO_PULL_DOWN>;
         bucken-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
         host-irq-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
@@ -109,13 +105,13 @@
             compatible = "nordic,wlan";
         };
 
-		wifi-max-tx-pwr-5g-low-mcs0 = <13>;
+        wifi-max-tx-pwr-5g-low-mcs0 = <13>;
         wifi-max-tx-pwr-5g-low-mcs7 = <13>;
         wifi-max-tx-pwr-5g-mid-mcs0 = <13>;
         wifi-max-tx-pwr-5g-mid-mcs7 = <13>;
         wifi-max-tx-pwr-5g-high-mcs0 = <12>;
         wifi-max-tx-pwr-5g-high-mcs7 = <12>;
-	};
+    };
 
 
     /* MX25R16 External SPI NOR Flash */
@@ -124,7 +120,7 @@
         reg = <2>;                                 // CS index 2
         spi-max-frequency = <80000000>;
         label = "MX25R16";
-        jedec-id = [c2 28 15];
+        jedec-id = [ c2 28 15  ];
         size = <0x1000000>;                        // 2 MB
         has-dpd;
         t-enter-dpd = <10000>;                     // 10 us
@@ -134,7 +130,7 @@
 
 
 
-&i2c0 {
+&i2c1 {
     status = "okay";
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
@@ -148,8 +144,8 @@
         irq-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>, <&gpio0 7 GPIO_ACTIVE_LOW>;
 
     };
-      sht4x: sht4x@44 {
-        compatible="sensirion,sht4x";
+    sht4x: sht4x@44 {
+        compatible = "sensirion,sht4x";
         repeatability = <0>;
         reg = <0x44>;  // Check I2C address
         label = "SHT4X";
@@ -173,7 +169,7 @@
         };
     };
 
-     spi3_default: spi3_default {
+    spi3_default: spi3_default {
         group1 {
             psels = <NRF_PSEL(SPIM_SCK, 0, 20)>,
                     <NRF_PSEL(SPIM_MOSI, 0, 3)>,
@@ -199,18 +195,26 @@
     status = "disabled";
 };
 
+&spi1 {
+    status = "disabled";
+};
+
+&uart1 {
+    status = "disabled";
+};
+
 / {
-	vbat:vbatt {
-		compatible = "voltage-divider";
-		io-channels = <&adc 4>;
-		output-ohms = <100000>;
-		full-ohms = <(100000 + 100000)>;
-		power-gpios = <&gpio0 18 GPIO_ACTIVE_HIGH>;
-	};
-	vin:vin {
-		compatible = "voltage-divider";
-		io-channels = <&adc 6>;
-		output-ohms = <12000>;
-		full-ohms = <(100000 + 12000)>;
-	};
+    vbat: vbatt {
+        compatible = "voltage-divider";
+        io-channels = <&adc 4>;
+        output-ohms = <100000>;
+        full-ohms = <200000>;   // 100k + 100k
+        power-gpios = <&gpio0 18 GPIO_ACTIVE_HIGH>;
+    };
+    vin: vin {
+        compatible = "voltage-divider";
+        io-channels = <&adc 6>;
+        output-ohms = <12000>;
+        full-ohms = <112000>;   // 100k + 12k
+    };
 };
