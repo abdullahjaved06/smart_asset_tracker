@@ -1,0 +1,20 @@
+boards:
+- name: alertrax60
+  vendor: alertrax
+  socs:
+  - name: nrf9160
+    variants:
+    - name: ns
+- name: alertrax61
+  vendor: alertrax
+  socs:
+  - name: nrf9161
+    variants:
+    - name: ns
+- name: alertrax51
+  vendor: alertrax
+  socs:
+  - name: nrf9151
+    variants:
+    - name: ns
+  

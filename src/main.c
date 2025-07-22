@@ -23,7 +23,7 @@ void test_flash(bool *ok);
 void main(void)
 {
     ili9341_display_init(); // Initialize display and styles
-    display_text_at("Test Firmware v1.0", 10, 10);
+    // display_text_at("Test Firmware", 10, 10);
 
     bool sht4x_ok = false;
     bool voltage_ok = false;
@@ -31,33 +31,37 @@ void main(void)
     bool flash_ok = false;
 
     test_sht4x(&sht4x_ok);
-    test_voltage(&voltage_ok);
     test_lis2dh(&lis2dh_ok);
+    test_voltage(&voltage_ok);
     test_flash(&flash_ok);
 
     // --- Wi-Fi Connect ---
     if (sht4x_ok && voltage_ok && lis2dh_ok && flash_ok)
     {
-        display_text_at("All checks passed!", 10, 330);
+        display_text_at("TESTS PASS", 100, 150);
         printk("All tests passed. Attempting Wi-Fi connection...\n");
 
         if (wifi_connect() == 0)
         {
-            display_text_at("Wi-Fi: CONNECTED", 10, 370);
+            display_text_at("Wi-Fi:Connected ", 100, 180);
             printk("Wi-Fi connection successful.\n");
         }
         else
         {
-            display_text_at("Wi-Fi: FAIL", 10, 370);
+            display_text_at("Wi-Fi: FAIL", 100, 180);
             printk("Wi-Fi connection failed.\n");
         }
     }
     else
     {
-        display_text_at("Wi-Fi: SKIPPED", 10, 370);
-        printk("One or more tests failed. Skipping Wi-Fi connection.\n");
+        display_text_at("TESTS FAIL", 100, 150);
+        display_text_at("Wi-Fi: SKIPPED", 100, 180);
+        printk("One or more tests failed. Skipping Wi-Fi connection.\n");   
     }
-
+     while (1) {
+        lv_task_handler();
+        k_msleep(10);  // Every 10ms is enough
+    }
    
 }
 
@@ -76,14 +80,25 @@ void test_sht4x(bool *ok)
     if (sht4x_ready && !isnan(temp) && !isnan(hum)) {
         *ok = true;
         printk("SHT4X OK: Temp=%.2f C, Hum=%.2f%%\n", temp, hum);
-        display_text_at("SHT4X: OK", 10, 50);
+        display_text_at("SHT4X: OK", 0, 5);
         snprintf(buf, sizeof(buf), "Temp: %.2f C", temp);
-        display_text_at(buf, 10, 90);
-        snprintf(buf, sizeof(buf), "Humidity: %.2f %%", hum);
-        display_text_at(buf, 10, 130);
+        display_text_at(buf, 180, 5);
+        snprintf(buf, sizeof(buf), "Humi: %.2f %%", hum);
+        display_text_at(buf, 180, 30);
     } else {
         printk("SHT4X: FAIL\n");
-        display_text_at("SHT4X: FAIL", 10, 50);
+        display_text_at("SHT4X: FAIL", 0, 5);
+    }
+}
+void test_lis2dh(bool *ok)
+{
+    *ok = lis2dh_available();
+    if (*ok) {
+        display_text_at("LIS2DH: OK", 0, 40);
+        printk("LIS2DH: OK\n");
+    } else {
+        display_text_at("LIS2DH: FAIL", 0, 40);
+        printk("LIS2DH: FAIL\n");
     }
 }
 
@@ -98,46 +113,36 @@ void test_voltage(bool *ok)
     if (!isnan(vin)) {
         *ok = true;
         snprintf(buf, sizeof(buf), "VIN: %.2f V", vin);
-        display_text_at(buf, 10, 170);
+        display_text_at(buf, 180, 60);
         printk("%s\n", buf);
     } else {
-        display_text_at("VIN: FAIL", 10, 170);
+        display_text_at("VIN:    FAIL", 180, 60);
         printk("VIN: Read failed\n");
     }
 
     if (!isnan(vbat)) {
         snprintf(buf, sizeof(buf), "VBAT: %.2f V", vbat);
-        display_text_at(buf, 10, 210);
+        display_text_at(buf, 180, 90);
         printk("%s\n", buf);
     } else {
-        display_text_at("VBAT: FAIL", 10, 210);
+        display_text_at("VBAT: FAIL", 180, 90);
         printk("VBAT: Read failed\n");
         *ok = false;
     }
 }
 
 
-void test_lis2dh(bool *ok)
-{
-    *ok = lis2dh_available();
-    if (*ok) {
-        display_text_at("LIS2DH: OK", 10, 250);
-        printk("LIS2DH: OK\n");
-    } else {
-        display_text_at("LIS2DH: FAIL", 10, 250);
-        printk("LIS2DH: FAIL\n");
-    }
-}
+
 
 
 void test_flash(bool *ok)
 {
     *ok = external_flash_available();
     if (*ok) {
-        display_text_at("FLASH: OK", 10, 290);
+        display_text_at("FLASH: OK", 0, 80);
         printk("FLASH: OK\n");
     } else {
-        display_text_at("FLASH: FAIL", 10, 290);
+        display_text_at("FLASH: FAIL", 0, 80);
         printk("FLASH: FAIL\n");
     }
 }

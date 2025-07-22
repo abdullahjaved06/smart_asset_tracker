@@ -65,4 +65,4 @@ CONFIG_LV_Z_BITS_PER_PIXEL=1
 
 
 If build with TFM, it takes 32KB of RAM.
-so total RAM of nrf9151 is 256KB, so you must build this firmware without tfm (build = nrf9151dk_nrf9151)
+so total RAM of nrf9151 is 256KB, so you must build this firmware without tfm (build = alertrax51/nrf9151)

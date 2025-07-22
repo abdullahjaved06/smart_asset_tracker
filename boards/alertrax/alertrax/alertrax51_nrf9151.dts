@@ -1,0 +1,29 @@
+/*
+ * Copyright (c) 2018-2020 Nordic Semiconductor ASA
+ * Copyright (c) 2020 Circuit Dojo LLC
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/dts-v1/;
+#include <nordic/nrf9151_laca.dtsi>
+#include "alertrax_common.dtsi"
+
+/ {
+	chosen {
+		zephyr,sram = &sram0_s;
+		zephyr,flash = &flash0;
+		zephyr,code-partition = &slot0_partition;
+		zephyr,sram-secure-partition = &sram0_s;
+		zephyr,sram-non-secure-partition = &sram0_ns;
+		nordic,pm-ext-flash = &mx25r16;
+	};
+};
+
+&uart0 {
+	status = "okay";
+	current-speed = <1000000>;
+};
+
+/* Include partition configuration file */
+#include "alertrax51_nrf9151_partition_conf.dtsi"

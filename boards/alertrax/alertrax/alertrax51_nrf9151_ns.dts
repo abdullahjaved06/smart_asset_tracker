@@ -1,0 +1,26 @@
+/*
+ * Copyright (c) 2018-2022 Nordic Semiconductor ASA
+ * Copyright (c) 2022 NautAlert, LLC.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/dts-v1/;
+#include <nordic/nrf9151ns_laca.dtsi>
+#include "alertrax_common.dtsi"
+
+/ {
+	chosen {
+		zephyr,flash = &flash0;
+		zephyr,sram = &sram0_ns;
+		zephyr,code-partition = &slot0_ns_partition;
+	};
+};
+
+/* Disable UART1, because it is used by default in TF-M */
+&uart1 {
+	status = "disabled";
+};
+
+/* Include partition configuration file */
+#include "alertrax51_nrf9151_partition_conf.dtsi"

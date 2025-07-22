@@ -1,0 +1,17 @@
+identifier: alertrax60/nrf9160
+name: AlerTrax-nRF91-V3
+type: mcu
+arch: arm
+toolchain:
+  - gnuarmemb
+  - xtools
+  - zephyr
+ram: 88
+flash: 1024
+supported:
+  - i2c
+  - gpio
+  - pwm
+  - spi
+  - watchdog
+  - counter

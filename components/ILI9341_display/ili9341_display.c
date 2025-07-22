@@ -40,11 +40,11 @@ static void init_label_style(void)
     if (style_ready) return;
 
     lv_style_init(&label_style);
-    lv_style_set_text_font(&label_style, &lv_font_montserrat_28);
+    lv_style_set_text_font(&label_style, &lv_font_montserrat_20);
     lv_style_set_text_color(&label_style, lv_color_black());
     lv_style_set_bg_opa(&label_style, LV_OPA_TRANSP);  // transparent background
-    lv_style_set_pad_all(&label_style, 10);
-    lv_style_set_radius(&label_style, 10);
+    // lv_style_set_pad_all(&label_style, 10);
+    // lv_style_set_radius(&label_style, 10);
 
     style_ready = true;
 }
@@ -68,7 +68,7 @@ void display_text_at(const char *text, lv_coord_t x, lv_coord_t y)
 
     lv_obj_t *label = lv_label_create(lv_scr_act());
     lv_obj_add_style(label, &label_style, LV_PART_MAIN);
-    lv_obj_set_width(label, 300);  // Optional: limit label width for wrapping
+    // lv_obj_set_width(label, 300);  // Optional: limit label width for wrapping
     lv_label_set_long_mode(label, LV_LABEL_LONG_WRAP);
     lv_label_set_text(label, text);
     lv_obj_align(label, LV_ALIGN_TOP_LEFT, x, y);

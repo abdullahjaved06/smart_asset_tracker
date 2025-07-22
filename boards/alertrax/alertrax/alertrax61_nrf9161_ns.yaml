@@ -1,0 +1,17 @@
+identifier: alertrax61/nrf9161/ns
+name: AlerTrax-nRF9161-Non-Secure
+type: mcu
+arch: arm
+toolchain:
+  - gnuarmemb
+  - xtools
+  - zephyr
+ram: 128
+flash: 192
+supported:
+  - i2c
+  - spi
+  - pwm
+  - watchdog
+  - netif:modem
+  - gpio
